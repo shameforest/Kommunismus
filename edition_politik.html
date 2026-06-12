@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marx-Politik-Audit V1 — Die politischen Maßnahmen des Marxismus, empirisch geprüft</title>
+<meta name="description" content="Die normativen, politischen und praktischen Maßnahmen des politischen Marxismus — von Marx' Manifest bis zu den realsozialistischen Staaten — quellenbasiert dokumentiert und an heutiger Empirie geprüft. 12 Module, 6-stufige Verdikt-Skala, Selbst-Audit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --einband:#101C33;
+  --einband-tief:#0A1326;
+  --einband-hell:#1B2B4D;
+  --papier:#F4F1E8;
+  --papier-schatten:#E6E1D2;
+  --gold:#C9A24B;
+  --gold-hell:#E3C87F;
+  --karmin:#B23A3A;
+  --tinte:#1E2433;
+  --tinte-soft:#4A5266;
+  --petrol:#2E6E6A;
+  --ocker:#C07A2D;
+  --linie:rgba(201,162,75,.35);
+  --serif:'Fraunces', Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --text:'Spectral', Georgia, serif;
+  --ui:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
+  --nav-b:236px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{background:var(--einband);color:var(--papier);font-family:var(--text);font-size:17px;line-height:1.65;
+  background-image:radial-gradient(ellipse 80% 60% at 70% -10%, rgba(201,162,75,.07), transparent 60%),
+                   radial-gradient(ellipse 60% 50% at 0% 100%, rgba(46,110,106,.06), transparent 60%)}
+::selection{background:var(--gold);color:var(--einband-tief)}
+a{color:var(--gold-hell)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+#band{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hell));z-index:60}
+
+nav.ruecken{position:fixed;top:0;left:0;bottom:0;width:var(--nav-b);background:linear-gradient(180deg,var(--einband-tief),#0D1830 70%);
+  border-right:1px solid var(--linie);padding:1.4rem 0 2rem;overflow-y:auto;z-index:50;scrollbar-width:thin}
+nav.ruecken .marke{font-family:var(--serif);font-weight:700;color:var(--gold);font-size:1.05rem;letter-spacing:.06em;padding:0 1.2rem .35rem;display:block;text-decoration:none}
+nav.ruecken .marke small{display:block;font-family:var(--mono);font-weight:400;font-size:.62rem;color:var(--papier);opacity:.55;letter-spacing:.18em;margin-top:.2rem}
+nav.ruecken .gruppe{margin-top:1.1rem;padding:0 .65rem}
+nav.ruecken .gtitel{font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);opacity:.8;padding:0 .55rem .3rem}
+nav.ruecken a.nlink{display:block;font-family:var(--ui);font-size:.78rem;color:#C9CFDC;text-decoration:none;padding:.32rem .55rem;border-left:2px solid transparent;border-radius:0 3px 3px 0;line-height:1.35}
+nav.ruecken a.nlink:hover{color:#fff;background:rgba(201,162,75,.08)}
+nav.ruecken a.nlink .rn{font-family:var(--mono);font-size:.62rem;color:var(--gold);opacity:.75;margin-right:.4rem}
+main{margin-left:var(--nav-b);min-height:100vh}
+.bahn{max-width:980px;margin:0 auto;padding:0 clamp(1.1rem,4vw,3rem)}
+@media(max-width:900px){
+  nav.ruecken{display:none}
+  main{margin-left:0}
+}
+
+header.hero{padding:clamp(3rem,8vh,5.5rem) 0 2.5rem;border-bottom:1px solid var(--linie);position:relative}
+.hero .ober{font-family:var(--mono);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,5.2vw,3.4rem);line-height:1.08;color:var(--papier);max-width:23ch}
+.hero h1 em{font-style:normal;color:var(--gold-hell)}
+.hero .unter{font-family:var(--ui);font-size:clamp(.95rem,1.4vw,1.05rem);color:#B9C1D2;max-width:64ch;margin-top:1.2rem}
+.hero .siegel{position:absolute;top:clamp(2.6rem,7vh,5rem);right:0;width:118px;height:118px;opacity:.95}
+@media(max-width:760px){.hero .siegel{display:none}}
+
+.v06{margin:2.4rem 0;background:linear-gradient(135deg, rgba(201,162,75,.13), rgba(201,162,75,.04));border:1px solid var(--linie);border-radius:6px;padding:1.4rem 1.6rem;display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start}
+.v06 svg{width:46px;height:46px;flex:none}
+.v06 h2{font-family:var(--serif);font-size:1.15rem;color:var(--gold-hell);font-weight:600;margin-bottom:.4rem}
+.v06 p{font-family:var(--ui);font-size:.92rem;color:#D4D9E4;line-height:1.6}
+.v06 p b{color:var(--gold-hell)}
+
+section.kapitel{padding:3.2rem 0 1rem;border-bottom:1px solid rgba(201,162,75,.16)}
+.kapkopf{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem}
+.kapkopf .knum{font-family:var(--serif);font-weight:700;font-size:2.4rem;color:transparent;-webkit-text-stroke:1px var(--gold);line-height:1}
+.kapkopf h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--papier)}
+.kapkopf .keb{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);width:100%;order:-1}
+.kapintro{font-family:var(--ui);color:#BFC6D6;font-size:.95rem;max-width:70ch;margin:.4rem 0 1.6rem}
+
+details.blk{background:var(--papier);color:var(--tinte);border-radius:5px;margin:0 0 .9rem;box-shadow:0 1px 0 var(--papier-schatten) inset, 0 10px 26px rgba(0,0,0,.35);border-left:4px solid var(--gold)}
+details.blk summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.9rem;padding:.95rem 1.15rem;font-family:var(--serif)}
+details.blk summary::-webkit-details-marker{display:none}
+details.blk .bn{font-family:var(--mono);font-size:.72rem;color:var(--gold);background:var(--einband);border-radius:3px;padding:.3rem .5rem;min-width:2.2rem;text-align:center}
+details.blk .bt{font-weight:600;font-size:1.02rem;line-height:1.3;flex:1}
+details.blk .bt small{display:block;font-family:var(--mono);font-weight:400;font-size:.66rem;color:var(--tinte-soft);letter-spacing:.05em;margin-top:.2rem}
+details.blk .pfeil{width:18px;height:18px;color:var(--tinte-soft);transition:transform .25s;flex:none}
+details.blk[open] .pfeil{transform:rotate(90deg)}
+.blk-body{padding:.2rem 1.3rem 1.25rem;font-size:.97rem}
+.blk-body p{margin:.7rem 0}
+.blk-body b{color:#101C33}
+
+blockquote.zit{margin:1.1rem 0;padding:.9rem 1.1rem .9rem 1.3rem;border-left:3px solid var(--karmin);background:rgba(178,58,58,.05);font-size:.97rem;line-height:1.62;font-style:italic;position:relative}
+blockquote.zit::before{content:"„";font-family:var(--serif);font-style:normal;font-size:2.6rem;color:var(--karmin);opacity:.35;position:absolute;left:.35rem;top:-.35rem}
+.qsig{display:inline-block;font-family:var(--mono);font-style:normal;font-size:.72rem;letter-spacing:.04em;background:var(--einband);color:var(--gold-hell);padding:.22rem .55rem;border-radius:3px;margin-top:.6rem}
+.qsig.web{background:#243a25;color:#BFE3B6}
+.qsig.web::before{content:"WEB ✓ ";letter-spacing:0}
+
+.begr{margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.45rem}
+.begr span{font-family:var(--ui);font-size:.72rem;letter-spacing:.05em;background:rgba(16,28,51,.08);border:1px solid rgba(16,28,51,.18);color:var(--tinte);padding:.22rem .6rem;border-radius:99px}
+
+.ednote{background:rgba(46,110,106,.1);border:1px dashed rgba(46,110,106,.5);border-radius:4px;padding:.75rem 1rem;margin:1rem 0;font-family:var(--ui);font-size:.84rem;color:#CFE5E3}
+.ednote b{color:#8FD0CB;font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:.25rem}
+.blk-body .ednote{color:#1E4A47;background:rgba(46,110,106,.08)}
+.blk-body .ednote b{color:var(--petrol)}
+
+.kontro{background:#FBF6EE;color:var(--tinte);border:1px solid rgba(178,58,58,.45);border-left:5px solid var(--karmin);border-radius:5px;margin:1.2rem 0 1.6rem;padding:1.1rem 1.3rem;position:relative;box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.kontro .ksig{position:absolute;top:-11px;left:14px;background:var(--karmin);color:#FBF6EE;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;padding:.25rem .7rem;border-radius:3px}
+.kontro h3{font-family:var(--serif);font-size:1.05rem;margin:.4rem 0 .5rem}
+.kontro p{font-family:var(--ui);font-size:.88rem;line-height:1.6;margin:.45rem 0}
+.kontro .pos{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:.7rem}
+@media(max-width:700px){.kontro .pos{grid-template-columns:1fr}}
+
+.vbad{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;margin-left:.5rem;vertical-align:2px;white-space:nowrap}
+.vr{background:#2E6E6A;color:#E7F4F2}
+.vu{background:#8a6a1f;color:#F6ECD2}
+.vg{background:#C07A2D;color:#FBEFDE}
+.vk{background:#B23A3A;color:#FBEAEA}
+.vn{background:#6E1F1F;color:#F4D9D9}
+.vt{background:#5A6275;color:#E6E9F0}
+
+.dash{display:grid;grid-template-columns:1.35fr 1fr;gap:1.4rem;margin:1.8rem 0 .6rem}
+@media(max-width:820px){.dash{grid-template-columns:1fr}}
+.karte{background:rgba(255,255,255,.035);border:1px solid var(--linie);border-radius:6px;padding:1.2rem 1.3rem}
+.karte h3{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.null{font-family:var(--serif);font-weight:700;font-size:clamp(4rem,9vw,6.4rem);line-height:.9;color:var(--gold-hell);text-shadow:0 0 34px rgba(201,162,75,.35)}
+.null + p{font-family:var(--ui);font-size:.9rem;color:#C7CEDC;margin-top:.5rem;max-width:34ch}
+.legend{font-family:var(--ui);font-size:.78rem;color:#AEB6C8;display:flex;gap:1rem;flex-wrap:wrap;margin-top:.6rem}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+
+.zeit{overflow-x:auto;padding:1.2rem 0 .6rem;scrollbar-width:thin}
+.zeit svg{min-width:920px;display:block}
+
+table.etab{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:.84rem;margin:1.2rem 0}
+table.etab th{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--linie)}
+table.etab td{padding:.55rem .6rem;border-bottom:1px solid rgba(201,162,75,.12);color:#D6DBE6;vertical-align:top}
+table.etab tr:hover td{background:rgba(201,162,75,.05)}
+
+.glossar{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.8rem;margin:1.4rem 0}
+.glossar .geintrag{background:rgba(255,255,255,.035);border:1px solid rgba(201,162,75,.2);border-radius:5px;padding:.85rem 1rem}
+.glossar .geintrag b{font-family:var(--serif);color:var(--gold-hell);display:block;margin-bottom:.3rem;font-size:.95rem}
+.glossar .geintrag p{font-family:var(--ui);font-size:.83rem;color:#C3CAD9;line-height:1.55}
+
+footer.fuss{padding:3rem 0 4rem;font-family:var(--ui);font-size:.82rem;color:#8E97AB}
+footer.fuss b{color:var(--gold-hell)}
+</style>
+</head>
+<body>
+<div id="band"></div>
+
+<nav class="ruecken" aria-label="Kapitelnavigation">
+  <a class="marke" href="#oben">Marx-Politik-Audit<small>V1 · HTML-Edition · 2026</small></a>
+  <div class="gruppe"><div class="gtitel">Auftakt</div>
+    <a class="nlink" href="#schnellblick"><span class="rn">§</span>Schnellüberblick &amp; Fazit</a>
+    <a class="nlink" href="#dash"><span class="rn">§</span>Audit-Bilanz</a>
+    <a class="nlink" href="#zeit"><span class="rn">§</span>Quellen-Zeitstrahl</a>
+    <a class="nlink" href="#selbstaudit"><span class="rn">§</span>Was dieses Dokument kann</a>
+  </div>
+  <div class="gruppe"><div class="gtitel">Grundlegung</div>
+    <a class="nlink" href="#mod1"><span class="rn">M1</span>Programmatik: Was wollte Marx politisch?</a>
+    <a class="nlink" href="#mod2"><span class="rn">M2</span>Klassenkampf &amp; Revolution</a>
+    <a class="nlink" href="#mod3"><span class="rn">M3</span>Diktatur des Proletariats</a>
+  </div>
+  <div class="gruppe"><div class="gtitel">Eigentum &amp; Wirtschaft</div>
+    <a class="nlink" href="#mod4"><span class="rn">M4</span>Verstaatlichung &amp; Kollektivierung</a>
+    <a class="nlink" href="#mod5"><span class="rn">M5</span>Planwirtschaft</a>
+    <a class="nlink" href="#mod6"><span class="rn">M6</span>Arbeit &amp; Verteilung</a>
+  </div>
+  <div class="gruppe"><div class="gtitel">Staat &amp; Macht</div>
+    <a class="nlink" href="#mod7"><span class="rn">M7</span>Avantgarde-Partei</a>
+    <a class="nlink" href="#mod8"><span class="rn">M8</span>Räte vs. Parlament</a>
+    <a class="nlink" href="#mod9"><span class="rn">M9</span>Repression als System</a>
+  </div>
+  <div class="gruppe"><div class="gtitel">Gesellschaft</div>
+    <a class="nlink" href="#mod10"><span class="rn">M10</span>Soziale Maßnahmen</a>
+    <a class="nlink" href="#mod11"><span class="rn">M11</span>Frauen &amp; Familie</a>
+    <a class="nlink" href="#mod12"><span class="rn">M12</span>Religion · Kultur · Internationalismus</a>
+  </div>
+  <div class="gruppe"><div class="gtitel">Höhepunkt &amp; Apparat</div>
+    <a class="nlink" href="#empirie"><span class="rn">E</span>Empirischer Abgleich</a>
+    <a class="nlink" href="#synthese"><span class="rn">Σ</span>Synthese</a>
+    <a class="nlink" href="#glossar"><span class="rn">✦</span>Glossar</a>
+    <a class="nlink" href="#errata"><span class="rn">Δ</span>Quellenkritik &amp; Hinweise</a>
+    <a class="nlink" href="#methodik"><span class="rn">¶</span>Methodik &amp; Quellen</a>
+  </div>
+</nav>
+
+<main id="oben">
+<div class="bahn">
+
+<header class="hero">
+  <svg class="siegel" viewBox="0 0 120 120" aria-hidden="true">
+    <circle cx="60" cy="60" r="56" fill="none" stroke="#C9A24B" stroke-width="1.4" opacity=".9"/>
+    <circle cx="60" cy="60" r="48" fill="none" stroke="#C9A24B" stroke-width=".6" opacity=".5"/>
+    <text x="60" y="55" text-anchor="middle" font-family="Fraunces, serif" font-size="26" fill="#C9A24B">PA</text>
+    <text x="60" y="76" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#E3C87F">V1 · 2026</text>
+  </svg>
+  <div class="ober">Empirisches Audit · Politischer Marxismus · 1848–2026</div>
+  <h1>Die politischen Maßnahmen des Marxismus — <em>was versprochen wurde, was eintrat</em></h1>
+  <p class="unter">Dieses Dokument prüft nicht Marx' wissenschaftliche Werttheorie, sondern seine politischen Schlussfolgerungen — und die seiner Nachfolger: die Programme, Maßnahmen und Versprechen des politischen Marxismus, von den zehn Punkten des Manifests über Lenins Avantgarde-Partei bis zur realsozialistischen Praxis. Jede Maßnahme wird quellenbasiert dokumentiert (Wer hat was wann gefordert?) und an heutiger Empirie gemessen (Was geschah, als man es umsetzte?).</p>
+</header>
+
+<!-- ============ AUFTAKT: EIN-SATZ-FAZIT + SCHNELLÜBERBLICK ============ -->
+<section class="kapitel" id="schnellblick" style="padding-top:2rem">
+  <div style="margin:0 0 2rem;background:linear-gradient(135deg,rgba(178,58,58,.16),rgba(178,58,58,.05));border:1px solid rgba(178,58,58,.45);border-left:5px solid var(--karmin);border-radius:6px;padding:1.25rem 1.5rem">
+    <div style="font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#E39A9A;margin-bottom:.55rem">Kritisches Fazit · in einem Satz · einfache Sprache</div>
+    <p style="font-family:var(--serif);font-size:1.16rem;line-height:1.55;color:var(--papier)">Von 41 Kernmaßnahmen des politischen Marxismus hat nicht einmal jede vierte gehalten, was sie versprach — gelungen ist fast nur, was Menschen stärkte und ohne Zwang auskam; gescheitert ist alles, was auf Gewalt, Enteignung und Allein-Herrschaft setzte, und dieses Scheitern hat Millionen Menschen das Leben gekostet.</p>
+  </div>
+
+  <div class="kapkopf"><div class="keb">Auftakt · Schnellüberblick</div><h2>Das Wichtigste zum Aufklappen</h2></div>
+  <p class="kapintro">Vier Boxen für eilige Leserinnen und Leser: Aussage, Zahlen, Errungenschaften, Fehler — plus die Schnellübersicht aller 41 Maßnahmen mit Erfolgs-Label. Alle Belege stehen in den Modulen M1–M12.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">S.1</span><span class="bt">Was dieses Dokument aussagt<small>Der Überblick in einfacher Sprache</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Die Frage:</b> Dieses Dokument prüft die <b>politischen Versprechen</b> des Marxismus an der Wirklichkeit. Für jede Maßnahme: Was wurde versprochen (Original-Zitat)? · Was geschah bei der Umsetzung? · Hat es den eigenen Zweck erfüllt?</p>
+      <p><b>Der Befund — zweigeteilt:</b><br>
+      ✓ <b>Wo der Marxismus in Menschen investierte</b> (Schulen, Krankenhäuser, Frauenrechte, soziale Sicherheit), <b>hat er geliefert</b> — diese Ideen sind heute weltweiter Standard, gerade in Demokratien.<br>
+      ✗ <b>Wo er Macht konzentrierte</b> (Avantgardepartei, Diktatur, Planmonopol, Terror, Zwangskollektivierung), <b>ist er ausnahmslos gescheitert</b> — in rund 30 Staaten, über 74 Jahre, ohne eine einzige Ausnahme.</p>
+      <p><b>Die Pointe:</b> Alles, was funktionierte, haben Demokratien ohne Diktatur ebenso gut oder besser erreicht. Der Zwang war für die Erfolge nie nötig — für die Katastrophen aber immer verantwortlich.</p>
+      <div class="begr"><span>3 Prüffragen</span><span>gespaltener Befund</span><span>0 Ausnahmen bei Machtmaßnahmen</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">S.2</span><span class="bt">Die Bilanz in Zahlen und Prozenten<small>41 Kernmaßnahmen · sechs Verdikte</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <table class="etab" style="color:#1E2433">
+        <tr><th>Verdikt</th><th>einfach gesagt</th><th>n</th><th>Anteil</th></tr>
+        <tr><td><span class="vbad vn">nicht haltbar</span></td><td>✗ gescheitert</td><td>20</td><td><b>49 %</b></td></tr>
+        <tr><td><span class="vbad vg">gespalten</span></td><td>~ teils/teils</td><td>7</td><td>17 %</td></tr>
+        <tr><td><span class="vbad vu">gestützt</span></td><td>✓ überwiegend erfolgreich</td><td>5</td><td>12 %</td></tr>
+        <tr><td><span class="vbad vr">robust</span></td><td>✓ erfolgreich</td><td>4</td><td>10 %</td></tr>
+        <tr><td><span class="vbad vk">kontrovers</span></td><td>? strittig</td><td>3</td><td>7 %</td></tr>
+        <tr><td><span class="vbad vt">nicht testbar</span></td><td>– nicht prüfbar</td><td>2</td><td>5 %</td></tr>
+      </table>
+      <p><b>Kurzform:</b> Rund <b>jede zweite</b> Maßnahme ist gescheitert (49 %). Rund <b>jede fünfte</b> hat funktioniert (22 % = robust + gestützt). Der Rest: halb/halb, strittig oder nie prüfbar geworden. Dazu der härteste Einzelwert: <b>0 von ~30</b> realsozialistischen Staaten hat je das Übergangs-Versprechen erfüllt oder eine echte Wahl zugelassen.</p>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">S.3</span><span class="bt">Kern-Errungenschaften<small>Was der politische Marxismus wirklich erreicht hat</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <table class="etab" style="color:#1E2433">
+        <tr><th>Errungenschaft</th><th>Kurzbeleg</th></tr>
+        <tr><td><b>① Bildung für alle</b></td><td>Alphabetisierung UdSSR ~28 % → 99 %; Kuba 1961; Manifest-Punkt 10 (Gratis-Schule, Ende der Kinderfabrikarbeit) ist heute UN-Standard</td></tr>
+        <tr><td><b>② Soziale Grundsicherung</b></td><td>Flächendeckende Gesundheitsversorgung, Renten, bezahlbares Wohnen, Beschäftigungssicherheit — real und geschätzt</td></tr>
+        <tr><td><b>③ Frauen-Pionierphase</b></td><td>1918/1920 modernstes Familienrecht der Welt (Zivilehe, Scheidung, erste Abtreibungslegalisierung); DDR-Erwerbsquote 91 % wirkt nach</td></tr>
+        <tr><td><b>④ Progressivsteuer</b></td><td>Manifest-Punkt 2 — heute Standard jeder Demokratie</td></tr>
+        <tr><td><b>⑤ Druck-Wirkung nach außen</b></td><td>Systemkonkurrenz beschleunigte den Sozialstaats-Ausbau im Westen — indirekt, aber real</td></tr>
+      </table>
+      <div class="ednote"><b>Ehrliche Einschränkung</b>Jede dieser Errungenschaften wurde von Demokratien (Skandinavien, Finnland, Costa Rica) ohne Diktatur erreicht oder übertroffen — sie beweisen Staatsinvestition, nicht Parteimonopol.</div>
+      <div class="begr"><span>Bildung</span><span>Grundsicherung</span><span>Frauenrechte</span><span>Progressivsteuer</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">S.4</span><span class="bt">Kern-Fehler<small>Woran der politische Marxismus gescheitert ist</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <table class="etab" style="color:#1E2433">
+        <tr><th>Fehler</th><th>Folge / Beleg</th></tr>
+        <tr><td><b>① Machtfrage ungelöst gelassen</b></td><td>Marx regelte nie, wer die neue Macht kontrolliert — die Lücke füllte Lenins Avantgardepartei; aus „Übergangs-Diktatur" wurde in 100 % der Fälle Dauer-Diktatur</td></tr>
+        <tr><td><b>② Planmonopol erzeugt Mangel</b></td><td>Ohne Preise und Pleiterisiko horten Betriebe — Knappheit war Systemzustand, nicht Panne (Kornai)</td></tr>
+        <tr><td><b>③ Zwangskollektivierung tötete Millionen</b></td><td>Hungersnöte 1932/33 (≈ 5,5–8,7 Mio.) und 1958–62 (≈ 15–45 Mio.); Rückbau China 1978 = +61 % Ernte in 6 Jahren — der Kausalbeweis</td></tr>
+        <tr><td><b>④ Terror als Werkzeug</b></td><td>Geheimpolizei 6 Wochen nach Machtübernahme, Klassen- statt Tatstrafrecht, Lager — moralisch verheerend, nicht einmal funktional</td></tr>
+        <tr><td><b>⑤ Freiheit als Gegner</b></td><td>Zensur, Staatsatheismus, Reiseverbot — alles scheiterte am Ziel und diskreditierte die eigenen Ideale</td></tr>
+      </table>
+      <div class="begr"><span>Machtkontroll-Leerstelle</span><span>Mangel als System</span><span>Hunger-Katastrophen</span><span>Terror</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">S.5</span><span class="bt">Schnellübersicht: alle 41 Maßnahmen mit Erfolgs-Label<small>Versprechen → Bewertung · Belege im jeweiligen Modul</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <table class="etab" style="color:#1E2433">
+        <tr><th>Maßnahme / Versprechen</th><th>Modul</th><th>Label</th></tr>
+        <tr><td>Progressive Einkommensteuer</td><td>M1</td><td><span class="vbad vr">✓ erfolgreich</span></td></tr>
+        <tr><td>Unentgeltliche Schulbildung, Ende der Kinderfabrikarbeit</td><td>M1</td><td><span class="vbad vr">✓ erfolgreich</span></td></tr>
+        <tr><td>Bildungsexpansion / Alphabetisierung</td><td>M10</td><td><span class="vbad vr">✓ erfolgreich</span></td></tr>
+        <tr><td>Bernstein'sche Reformlinie (Demokratie + Sozialreform)</td><td>M2</td><td><span class="vbad vr">✓ erfolgreich</span></td></tr>
+        <tr><td>Bodenwertbesteuerung (statt Total-Enteignung)</td><td>M1</td><td><span class="vbad vu">✓ überw. erfolgreich</span></td></tr>
+        <tr><td>Strategisches Staatseigentum mit Markteinbettung</td><td>M4</td><td><span class="vbad vu">✓ überw. erfolgreich</span></td></tr>
+        <tr><td>Beschäftigungsgarantie als soziale Sicherheit</td><td>M6</td><td><span class="vbad vu">✓ überw. erfolgreich</span></td></tr>
+        <tr><td>Gesundheitsgrundversorgung für alle</td><td>M10</td><td><span class="vbad vu">✓ überw. erfolgreich</span></td></tr>
+        <tr><td>Rechtsgleichstellung + Erwerbsintegration der Frauen</td><td>M11</td><td><span class="vbad vu">✓ überw. erfolgreich</span></td></tr>
+        <tr><td>Kreditzentralisation / Staats-Nationalbank</td><td>M1</td><td><span class="vbad vg">~ teils/teils</span></td></tr>
+        <tr><td>Transport &amp; Kommunikation beim Staat</td><td>M1</td><td><span class="vbad vg">~ teils/teils</span></td></tr>
+        <tr><td>Partielle Verstaatlichung in Demokratien</td><td>M4</td><td><span class="vbad vg">~ teils/teils</span></td></tr>
+        <tr><td>Indikative Planung / Industriepolitik</td><td>M5</td><td><span class="vbad vg">~ teils/teils</span></td></tr>
+        <tr><td>Verteilungs-Gleichheit (niedriger Gini)</td><td>M6</td><td><span class="vbad vg">~ teils/teils</span></td></tr>
+        <tr><td>Massen-Wohnungsprogramme</td><td>M10</td><td><span class="vbad vg">~ teils/teils</span></td></tr>
+        <tr><td>Gesamtversprechen „Frauenbefreiung durch Sozialismus"</td><td>M11</td><td><span class="vbad vg">~ teils/teils</span></td></tr>
+        <tr><td>Notwendigkeit revolutionärer Gewalt</td><td>M2</td><td><span class="vbad vk">? strittig</span></td></tr>
+        <tr><td>Lenin-Marx-Kontinuität („Verrat oder Konsequenz")</td><td>M3</td><td><span class="vbad vk">? strittig</span></td></tr>
+        <tr><td>Opfer-Gesamtzahl „100 Millionen"</td><td>M9</td><td><span class="vbad vk">? strittig</span></td></tr>
+        <tr><td>Bedürfnisprinzip der „höheren Phase"</td><td>M6</td><td><span class="vbad vt">– nicht prüfbar</span></td></tr>
+        <tr><td>Kommune-Mechanismen (Absetzbarkeit, Arbeiterlohn) im Großmaßstab</td><td>M8</td><td><span class="vbad vt">– nicht prüfbar</span></td></tr>
+        <tr><td>Totale Boden-Expropriation</td><td>M1</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Abschaffung des Erbrechts</td><td>M1</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Konfiskation bei Emigranten/„Rebellen"</td><td>M1</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Staatsfabriken-Vollmodell („gemeinschaftlicher Plan")</td><td>M1</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Arbeitszwang / „industrielle Armeen"</td><td>M1·M6</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Aufhebung des Stadt-Land-Gegensatzes per Dekret</td><td>M1</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Revolution als Emanzipationsmethode</td><td>M2</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Diktatur des Proletariats als befristeter Übergang</td><td>M3</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>„Absterben des Staates"</td><td>M3</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Totalverstaatlichung der Wirtschaft</td><td>M4</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Zwangskollektivierung der Landwirtschaft</td><td>M4</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Vollplanung (Gosplan-Modell)</td><td>M5</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Vollbeschäftigung als Effizienz- &amp; Freiheitsversprechen</td><td>M6</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Avantgardepartei / Berufsrevolutionäre</td><td>M7</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Rätemodell in der realen Staatspraxis</td><td>M8</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Terror als Herrschaftsinstrument</td><td>M9</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>These „nur Sozialismus liefert Soziales"</td><td>M10</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Staatsatheismus / Religionsverfolgung</td><td>M12</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Kulturlenkung / Zensur</td><td>M12</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+        <tr><td>Internationalismus als Staatsmaxime</td><td>M12</td><td><span class="vbad vn">✗ gescheitert</span></td></tr>
+      </table>
+      <div class="ednote"><b>Lesehinweis</b>Die Labels übersetzen die sechsstufige Audit-Skala in Alltagssprache; die differenzierten Verdikte samt Begründung, Quellen und Gegenpositionen stehen im jeweils genannten Modul sowie konsolidiert in Sektion E.1.</div>
+    </div>
+  </details>
+
+  <details class="blk" open>
+    <summary><span class="bn">S.6</span><span class="bt">Ideen ↔ Empirie<small>Jede Idee · wo erprobt · was die Daten zeigen — inklusive des nie Erprobten</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <table class="etab" style="color:#1E2433">
+        <tr><th>Idee / Maßnahme</th><th>Erprobt?</th><th>Was die Empirie zeigt</th></tr>
+        <tr><td colspan="3" style="font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#2E6E6A;background:rgba(46,110,106,.08)">✓ Erprobt und erfolgreich</td></tr>
+        <tr><td>Progressive Einkommensteuer</td><td>weltweit, dauerhaft</td><td>Standard aller Demokratien; Spitzensätze bis 90 % ohne Systemkollaps</td></tr>
+        <tr><td>Gratis-Schulbildung, Ende der Kinderfabrikarbeit</td><td>weltweit</td><td>Heute UN-Norm — von Demokratien wie Diktaturen umgesetzt</td></tr>
+        <tr><td>Alphabetisierungs-Kampagnen</td><td>UdSSR, Kuba u. a.</td><td>UdSSR ~28 → 99 %; schnellste Bildungssprünge — Demokratien (Finnland) gleichauf</td></tr>
+        <tr><td>Reformlinie: Demokratie + Sozialreform (Bernstein)</td><td>Skandinavien, BRD, Österreich …</td><td>Egalitärste Gesellschaften der Geschichte — 0 Tote bei der Etablierung</td></tr>
+        <tr><td>Bodenwert-Besteuerung</td><td>mehrere Demokratien</td><td>Funktioniert; ökonomisch breit als effizient gestützt</td></tr>
+        <tr><td>Staatseigentum mit Markteinbettung</td><td>Norwegen u. a.</td><td>Ölfonds-Modell erfolgreich — die Einbettung entscheidet, nicht das Eigentum</td></tr>
+        <tr><td>Beschäftigungsgarantie (als Sicherheit)</td><td>Ostblock, real</td><td>Sicherheit echt und geschätzt; Kehrseite: Pflicht + verdeckte Arbeitslosigkeit</td></tr>
+        <tr><td>Gesundheits-Grundversorgung für alle</td><td>Ostblock, Kuba</td><td>Zugang real (Ärztedichte Spitze); Qualität/Mittel begrenzt, LE-Stagnation ab 1970ern</td></tr>
+        <tr><td>Frauen: Rechtsgleichheit + Erwerbsarbeit</td><td>UdSSR früh, DDR</td><td>Pionierrecht 1918/20, Erwerbsquote 91 % — Macht blieb dennoch männlich</td></tr>
+        <tr><td colspan="3" style="font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#C07A2D;background:rgba(192,122,45,.08)">~ Erprobt mit gemischtem Ergebnis</td></tr>
+        <tr><td>Kreditzentralisation / Staatsbank-Monopol</td><td>Monobank vs. Zentralbank</td><td>Monobank (Gosbank) scheiterte; Zentralbanken ohne Monopol wurden Standard</td></tr>
+        <tr><td>Transport &amp; Post beim Staat</td><td>breit, beide Systeme</td><td>Lange Normalfall überall; kein messbarer Systemvorteil</td></tr>
+        <tr><td>Partielle Verstaatlichung</td><td>F, UK, Österreich …</td><td>Fallweise erfolgreich, fallweise ineffizient — und reversibel</td></tr>
+        <tr><td>Indikative Planung / Industriepolitik</td><td>F, Südkorea, Taiwan</td><td>Mit Markt und Wettbewerb erfolgreich; ohne beides nicht</td></tr>
+        <tr><td>Einkommens-Gleichheit (niedriger Gini)</td><td>DDR, UdSSR</td><td>Gini niedrig, Wohlstand niedrig; Schweden: gleich gleich, doppelt reich, frei</td></tr>
+        <tr><td>Massen-Wohnungsbau</td><td>Ostblock</td><td>Quantität gelöst (Chruschtschowki), Qualität und Erhalt nicht</td></tr>
+        <tr><td>„Frauenbefreiung durch Sozialismus" (gesamt)</td><td>Ostblock</td><td>Pionierphase echt, Stalin-Rollback echt — Nordics überholten ohne Diktatur</td></tr>
+        <tr><td colspan="3" style="font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#B23A3A;background:rgba(178,58,58,.08)">? Strittig — Forschung uneins</td></tr>
+        <tr><td>„Revolutionäre Gewalt war notwendig"</td><td>—</td><td>Konstituante 1917 (Bolschewiki 24 %) zeigt eine Alternative; Deutung umstritten</td></tr>
+        <tr><td>„Lenin folgt aus Marx" (Kontinuität)</td><td>—</td><td>Texte stützen beide Lesarten; Historiker gespalten (Pipes vs. Draper)</td></tr>
+        <tr><td>Opfer-Gesamtzahl „100 Millionen"</td><td>—</td><td>Addition umstritten (Autorenstreit im Schwarzbuch); Einzelkorridore gesichert</td></tr>
+        <tr><td colspan="3" style="font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#5A6275;background:rgba(90,98,117,.1)">– Nie oder nur in Ansätzen erprobt</td></tr>
+        <tr><td>Bedürfnisprinzip („höhere Phase")</td><td><b>nie</b></td><td>Voraussetzungen nirgends erreicht — Versprechen blieb unfalsifiziert</td></tr>
+        <tr><td>Kommune-Mechanismen (Absetzbarkeit, Arbeiterlohn) im Großmaßstab</td><td>nur Kurzepisoden</td><td>72 Tage Kommune, frühe Sowjets, Räterepubliken 1918/19 — stets schnell beendet, kein Langzeit-Urteil möglich</td></tr>
+        <tr><td>Lange-Modell (Marktsozialismus mit simulierten Preisen)</td><td>nie konsequent</td><td>Nur Hybride (Ungarn 1968, Jugoslawien) — mit eigenen Pathologien</td></tr>
+        <tr><td>„Sozialismus mit menschlichem Antlitz" (Prag 1968)</td><td>extern abgebrochen</td><td>Durch Invasion beendet — die Empirie wurde gewaltsam verhindert</td></tr>
+        <tr><td colspan="3" style="font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#6E1F1F;background:rgba(110,31,31,.08)">✗ Erprobt und gescheitert</td></tr>
+        <tr><td>Totale Boden-Expropriation</td><td>UdSSR u. a.</td><td>Produktivitätskollaps, Hunger — NEP-Rückzug wurde Überlebensbedingung</td></tr>
+        <tr><td>Abschaffung des Erbrechts</td><td>UdSSR 1918</td><td>Vom System selbst 1922/1945 wieder eingeführt</td></tr>
+        <tr><td>Konfiskation bei Emigranten/„Rebellen"</td><td>UdSSR, DDR, Kuba</td><td>Wurde Instrument politischer Verfolgung und Fluchtbestrafung</td></tr>
+        <tr><td>Staatsfabriken-Vollmodell („gemeinsamer Plan")</td><td>Ostblock</td><td>Mündet zwingend in die Planwirtschafts-Pathologien (s. Vollplanung)</td></tr>
+        <tr><td>Arbeitszwang / „industrielle Armeen"</td><td>UdSSR ab 1920</td><td>Trotzkis Arbeitsarmeen → Gulag-Ökonomie; selbst intern defizitär</td></tr>
+        <tr><td>Stadt-Land-Aufhebung per Dekret</td><td>Extremfall Kambodscha</td><td>Stadtentleerung 1975 endete katastrophal; Urbanisierung stieg weltweit</td></tr>
+        <tr><td>Revolution als Emanzipationsmethode</td><td>alle großen Fälle</td><td>Endete ausnahmslos in zentralisierterer Diktatur (Skocpol-Befund)</td></tr>
+        <tr><td>Diktatur des Proletariats als befristeter Übergang</td><td>~30 Staaten</td><td>Kein Übergang fand je statt; Machtkonzentration nahm zu</td></tr>
+        <tr><td>„Absterben des Staates"</td><td>alle</td><td>Staatsapparate wuchsen auf historische Rekordgröße (Stasi-Dichte)</td></tr>
+        <tr><td>Totalverstaatlichung der Wirtschaft</td><td>UdSSR 1918–21 u. a.</td><td>Kollaps binnen drei Jahren; Teilmarkt-Rückzug erzwungen</td></tr>
+        <tr><td>Zwangskollektivierung der Landwirtschaft</td><td>UdSSR, China</td><td>≈ 5,5–8,7 bzw. 15–45 Mio. Hungertote; Rückbau 1978–84: +61 % Ertrag</td></tr>
+        <tr><td>Vollplanung (Gosplan-Modell)</td><td>Ostblock</td><td>Chronischer Mangel als Gleichgewicht (Kornai); Produktivität → Stagnation</td></tr>
+        <tr><td>Vollbeschäftigung als Effizienz-/Freiheitsversprechen</td><td>Ostblock</td><td>Arbeitspflicht („Parasitentum"-Strafrecht) + Produktivität ⅓–½ des Westens</td></tr>
+        <tr><td>Avantgardepartei / Berufsrevolutionäre</td><td>n ≈ 30 Machtfälle</td><td>100 % Einparteistaat; fraß die eigene Partei (XVII. Parteitag)</td></tr>
+        <tr><td>Rätemodell in der Staatspraxis</td><td>UdSSR</td><td>Kontrollmechanismen sofort demontiert (Kronstadt 1921); Akklamationsorgane</td></tr>
+        <tr><td>Terror als Herrschaftsinstrument</td><td>UdSSR u. a.</td><td>Moralisch, funktional und ökonomisch gescheitert; Entstalinisierung wurde nötig</td></tr>
+        <tr><td>These „nur Sozialismus liefert Soziales"</td><td>Vergleichstest</td><td>Finnland, Costa Rica, Südkorea widerlegen sie direkt</td></tr>
+        <tr><td>Staatsatheismus / Religionsverfolgung</td><td>UdSSR, Albanien</td><td>Religion kehrte 1991 zurück; der freie Westen säkularisierte stärker — ohne Zwang</td></tr>
+        <tr><td>Kulturlenkung / Zensur</td><td>UdSSR ab 1932/34</td><td>Beendete die Avantgarde-Blüte; bedeutende Kunst entstand fortan dagegen</td></tr>
+        <tr><td>Internationalismus als Staatsmaxime</td><td>Ostblock</td><td>Panzer gegen „Bruderstaaten" (1956/68), Bruderkriege 1969/1979</td></tr>
+      </table>
+      <div class="ednote"><b>Lesehinweis</b>„Erprobt?" benennt den realhistorischen Testumfang. Die Kategorie „nie oder nur in Ansätzen erprobt" ist bewusst ausgewiesen: Für diese Ideen erlaubt die Geschichte kein Scheitern-Urteil — aber auch keinen Erfolgs-Beleg.</div>
+    </div>
+  </details>
+</section>
+
+<div class="v06">
+  <svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="21" fill="none" stroke="#C9A24B" stroke-width="1.5"/><path d="M14 24 l6 6 12-13" fill="none" stroke="#C9A24B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <div>
+    <h2>Wie dieses Audit arbeitet</h2>
+    <p>Drei Regeln: <b>1) Quellentreue</b> — jede marxistische Position wird mit Originalstelle belegt (MEW-Band, Seite); wo das Projektarchiv nicht reicht, wird gegen marxists.org und akademische Editionen geprüft. <b>2) Empirie vor Ideologie</b> — die Bewertung folgt robusten Daten (Maddison, UNDP, V-Dem, akademische Demografie), nicht politischen Vorlieben. <b>3) Verdikt-Ehrlichkeit</b> — was funktioniert hat, wird als funktionierend ausgewiesen; was scheiterte, als gescheitert; was strittig ist, als strittig. Die Skala hat sechs Stufen, nicht zwei.</p>
+  </div>
+</div>
+
+<!-- ============ AUFTAKT: AUDIT-BILANZ ============ -->
+<section class="kapitel" id="dash">
+  <div class="kapkopf"><div class="keb">Auftakt · Prüfbericht</div><h2>Die Audit-Bilanz in einem Bild</h2></div>
+  <p class="kapintro">Finale Bilanz der Module M1–M12: 41 konsolidierte Kernmaßnahmen des politischen Marxismus, sechsstufig bewertet. (Zum Einfluss des Maßnahmen-Schnitts auf die Quoten: Hinweis Δ5.)</p>
+  <div class="dash">
+    <div class="karte">
+      <h3>Finale Verdikte über 41 Kernmaßnahmen</h3>
+      <svg viewBox="0 0 460 190" role="img" aria-label="Balkendiagramm der finalen Verdikt-Verteilung">
+        <g font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="#C7CEDC">
+          <text x="0" y="16">Empirisch nicht haltbar</text>
+          <rect x="0" y="22" width="240" height="13" rx="2" fill="#6E1F1F"/>
+          <text x="248" y="33" fill="#E39A9A" font-family="IBM Plex Mono">20 (49 %)</text>
+          <text x="0" y="56">Gemischte Bilanz / gespalten</text>
+          <rect x="0" y="62" width="84" height="13" rx="2" fill="#C07A2D"/>
+          <text x="92" y="73" fill="#E3B57F" font-family="IBM Plex Mono">7</text>
+          <text x="0" y="96">Empirisch gestützt / robust</text>
+          <rect x="0" y="102" width="108" height="13" rx="2" fill="#2E6E6A"/>
+          <text x="116" y="113" fill="#8FD0CB" font-family="IBM Plex Mono">5 + 4 = 9 (22 %)</text>
+          <text x="0" y="136">Kontrovers / Forschung uneins</text>
+          <rect x="0" y="142" width="36" height="13" rx="2" fill="#B23A3A"/>
+          <text x="44" y="153" fill="#E39A9A" font-family="IBM Plex Mono">3</text>
+          <text x="0" y="176">Nicht testbar</text>
+          <rect x="0" y="182" width="24" height="7" rx="2" fill="#5A6275"/>
+          <text x="32" y="189" fill="#C5CBD8" font-family="IBM Plex Mono">2</text>
+        </g>
+      </svg>
+      <div class="legend">
+        <span><i style="background:#2E6E6A"></i>gestützt/robust</span>
+        <span><i style="background:#C07A2D"></i>gespalten</span>
+        <span><i style="background:#B23A3A"></i>kontrovers</span>
+        <span><i style="background:#6E1F1F"></i>nicht haltbar</span>
+        <span><i style="background:#5A6275"></i>nicht testbar</span>
+      </div>
+    </div>
+    <div class="karte">
+      <h3>Leitbefund in einer Zahl</h3>
+      <div class="null">0</div>
+      <p>Null von rund dreißig realsozialistischen Staaten hat je das Übergangs-Versprechen erfüllt, eine kompetitive Wahl zugelassen — oder den Staat absterben lassen. Die tragfähigen ~22 % der Maßnahmen wurden ausnahmslos dort Wirklichkeit, wo sie ohne Machtmonopol umgesetzt wurden.</p>
+    </div>
+  </div>
+  <div class="ednote"><b>Audit-Marginalie</b>Diese Zahlen sind das Ergebnis der maßnahmenweisen Prüfung in M1–M12 (Einzelbelege dort, Konsolidierung in Sektion E.1). Wie stark solche Quoten vom gewählten Maßnahmen-Schnitt abhängen, legt Hinweis Δ5 offen.</div>
+</section>
+
+<!-- ============ AUFTAKT: ZEITSTRAHL ============ -->
+<section class="kapitel" id="zeit">
+  <div class="kapkopf"><div class="keb">Auftakt · Quellenkorpus</div><h2>Zeitstrahl: Programme und ihre Umsetzungen</h2></div>
+  <p class="kapintro">Goldene Marken: programmatische Quelltexte (was gefordert wurde). Rote Marken: Umsetzungs-Wendepunkte (was geschah). Das Audit spannt sich über 178 Jahre — vom Manifest bis zu den heutigen Daten über die letzten realsozialistischen Staaten.</p>
+  <div class="zeit">
+    <svg viewBox="0 0 960 210" role="img" aria-label="Zeitstrahl der Quellen und Ereignisse 1848 bis 2026">
+      <line x1="20" y1="105" x2="940" y2="105" stroke="#C9A24B" stroke-width="1.2" opacity=".6"/>
+      <!-- Programmatik (oben, gold) -->
+      <g font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#E3C87F">
+        <circle cx="40" cy="105" r="5" fill="#C9A24B"/>
+        <text x="40" y="86" text-anchor="middle">Manifest</text>
+        <text x="40" y="74" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#C9A24B">1848</text>
+        <circle cx="155" cy="105" r="5" fill="#C9A24B"/>
+        <text x="155" y="86" text-anchor="middle">Bürgerkrieg in Frankreich</text>
+        <text x="155" y="74" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#C9A24B">1871</text>
+        <circle cx="240" cy="105" r="5" fill="#C9A24B"/>
+        <text x="240" y="56" text-anchor="middle">Kritik Gothaer</text>
+        <text x="240" y="68" text-anchor="middle">Programm</text>
+        <text x="240" y="44" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#C9A24B">1875</text>
+        <circle cx="330" cy="105" r="5" fill="#C9A24B"/>
+        <text x="330" y="86" text-anchor="middle">Bernstein-Debatte</text>
+        <text x="330" y="74" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#C9A24B">1899</text>
+        <circle cx="395" cy="105" r="5" fill="#C9A24B"/>
+        <text x="395" y="56" text-anchor="middle">Was tun?</text>
+        <text x="395" y="44" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#C9A24B">1902</text>
+        <circle cx="470" cy="105" r="5" fill="#C9A24B"/>
+        <text x="470" y="86" text-anchor="middle">Staat u. Revolution</text>
+        <text x="470" y="74" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#C9A24B">1917</text>
+      </g>
+      <!-- Umsetzung (unten, karmin) -->
+      <g font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#E39A9A">
+        <circle cx="490" cy="105" r="5" fill="#B23A3A"/>
+        <text x="490" y="130" text-anchor="middle">Oktoberrevolution</text>
+        <text x="490" y="142" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#B23A3A">1917</text>
+        <circle cx="560" cy="105" r="5" fill="#B23A3A"/>
+        <text x="560" y="160" text-anchor="middle">Kollektivierung</text>
+        <text x="560" y="172" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#B23A3A">1929–33</text>
+        <circle cx="640" cy="105" r="5" fill="#B23A3A"/>
+        <text x="640" y="130" text-anchor="middle">VR China</text>
+        <text x="640" y="142" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#B23A3A">1949</text>
+        <circle cx="700" cy="105" r="5" fill="#B23A3A"/>
+        <text x="700" y="160" text-anchor="middle">Großer Sprung</text>
+        <text x="700" y="172" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#B23A3A">1958–62</text>
+        <circle cx="780" cy="105" r="5" fill="#B23A3A"/>
+        <text x="780" y="130" text-anchor="middle">Mauerfall</text>
+        <text x="780" y="142" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#B23A3A">1989</text>
+        <circle cx="845" cy="105" r="5" fill="#B23A3A"/>
+        <text x="845" y="160" text-anchor="middle">UdSSR-Ende</text>
+        <text x="845" y="172" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#B23A3A">1991</text>
+        <circle cx="920" cy="105" r="5" fill="#C9A24B"/>
+        <text x="920" y="130" text-anchor="middle">Daten-Stand</text>
+        <text x="920" y="142" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#C9A24B">2026</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ AUFTAKT: SELBST-AUDIT ============ -->
+<section class="kapitel" id="selbstaudit">
+  <div class="kapkopf"><div class="keb">Auftakt · Selbst-Audit</div><h2>Was dieses Dokument kann — und was nicht</h2></div>
+  <p class="kapintro">Ein Audit, das seine eigenen Grenzen nicht benennt, ist keines. Diese Karten gelten für alle zwölf Module.</p>
+  <div class="dash">
+    <div class="karte">
+      <h3>✓ Was dieses Dokument leistet</h3>
+      <p style="font-family:var(--ui);font-size:.88rem;color:#C7CEDC;line-height:1.7">
+      · Politische Kernmaßnahmen des Marxismus mit Originalstellen belegen (MEW-Band/Seite bzw. Werkausgabe)<br>
+      · Umsetzungsgeschichte in realsozialistischen Staaten mit akademischen Standardquellen dokumentieren<br>
+      · Empirischen Abgleich mit robusten Datensätzen (Maddison, UNDP-HDI, V-Dem, OECD, demografische Forschung)<br>
+      · Forschungskontroversen als Kontroversen ausweisen statt eine Seite als Wahrheit zu setzen<br>
+      · Sechsstufige Verdikte statt Schwarz-Weiß-Urteilen</p>
+    </div>
+    <div class="karte">
+      <h3>✗ Was dieses Dokument nicht leistet</h3>
+      <p style="font-family:var(--ui);font-size:.88rem;color:#C7CEDC;line-height:1.7">
+      · Keine Prüfung der Werttheorie/Ökonomie-Theorie (dafür: Begriffsableitungs-Edition)<br>
+      · Keine Archivforschung — es stützt sich auf publizierte Quellen und Editionen<br>
+      · Keine Kausalitäts-Beweise: historische Vergleiche sind keine Experimente; Verdikte sind Plausibilitätsurteile auf Datenbasis<br>
+      · Keine Gegenwartspolitik-Beratung — historische Bilanz, nicht Programm<br>
+      · Opferzahlen bleiben Schätzkorridore; das Dokument nennt Spannweiten statt Scheinpräzision</p>
+    </div>
+  </div>
+  <div class="ednote"><b>Halluzinations-Schutz</b>Jedes wörtliche Zitat trägt eine Stellensignatur. Signaturen mit dunkelblauem Hintergrund sind aus den Projektquellen verifiziert; grüne Signaturen (WEB ✓) wurden gegen marxists.org / akademische Online-Editionen geprüft. Zahlen ohne belastbare Quelle erscheinen als „≈" mit Spannweite. Wo das Audit unsicher ist, steht das im Text.</div>
+</section>
+
+<!-- ============ MODULE M1-M12 ============ -->
+
+<section class="kapitel" id="mod1">
+  <div class="kapkopf"><div class="keb">Grundlegung · Modul 1</div><div class="knum">M1</div><h2>Programmatik: Was wollte Marx politisch?</h2></div>
+  <p class="kapintro">Das einzige Mal, dass Marx und Engels ein konkretes Maßnahmenpaket formulierten, steht im Manifest von 1848: zehn Punkte „für die fortgeschrittensten Länder". Sie sind der ideale Audit-Einstieg, weil sich jeder Punkt einzeln an 178 Jahren Wirklichkeit messen lässt — und die Bilanz überraschend gespalten ausfällt.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">1.1</span><span class="bt">Der Rahmen: „despotische Eingriffe in das Eigentumsrecht"<small>Manifest, Abschnitt II · Selbstcharakterisierung der Maßnahmen</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Leitgedanke:</b> Marx/Engels nennen ihre eigenen Maßnahmen „despotische Eingriffe" — das Wort steht so im Original. Das Proletariat solle seine politische Herrschaft nutzen, um der Bourgeoisie „nach und nach alles Kapital zu entreißen" und alle Produktionsinstrumente beim Staat zu zentralisieren.</p>
+      <blockquote class="zit">… by means of despotic inroads on the rights of property, and on the conditions of bourgeois production …
+        <br><span class="qsig">Manifest (engl. Moore-Übers. 1888), Abschn. II — Pelican-Ed. 1967, Projektquelle · dt.: MEW 4, S. 481</span></blockquote>
+      <p>Wichtig für das Audit: Die Maßnahmen werden ausdrücklich als <b>ökonomisch „unhaltbar und unzureichend"</b> bezeichnet, die nur „im Lauf der Bewegung über sich selbst hinaustreiben". Das Manifest beansprucht also keine fertige Ordnungspolitik, sondern Übergangs-Hebel. Fairerweise muss das Audit beides messen: die Hebel selbst und das, wohin sie real „hinaustrieben".</p>
+      <div class="begr"><span>despotische Eingriffe</span><span>Übergangsmaßnahmen</span><span>Zentralisation</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">1.2</span><span class="bt">Die zehn Punkte — einzeln geprüft<small>Manifest 1848 · Verdikt je Maßnahme aus heutiger Sicht</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p>Wortlaut nach der von Engels autorisierten englischen Ausgabe 1888 (Projektquelle), Nummerierung MEW 4, S. 481 f. Verdikte beziehen sich auf die Frage: <b>Hat die Maßnahme dort, wo sie umgesetzt wurde, gehalten, was ihr Zweck war — und zu welchem Preis?</b></p>
+      <table class="etab" style="color:#1E2433">
+        <tr><th>#</th><th>Maßnahme (1848)</th><th>Realbilanz</th><th>Verdikt</th></tr>
+        <tr><td>1</td><td>Expropriation des Grundeigentums, Grundrente für Staatsausgaben</td><td>Totalverstaatlichung (UdSSR 1917 ff.) → Produktivitätskollaps, Hungersnöte; moderate Bodensteuern (Henry-George-Tradition) dagegen etabliert</td><td><span class="vbad vn">total: nicht haltbar</span><span class="vbad vu">Bodensteuer: gestützt</span></td></tr>
+        <tr><td>2</td><td>Starke Progressivsteuer</td><td>Weltweit Standard demokratischer Staaten; Spitzensätze 1950–80 bis 90 % (USA/UK) ohne Systemkollaps</td><td><span class="vbad vr">robust</span></td></tr>
+        <tr><td>3</td><td>Abschaffung des Erbrechts</td><td>Nirgends dauerhaft umgesetzt — auch UdSSR führte Erbrecht 1922/1945 wieder ein; Erbschaftssteuern dagegen üblich</td><td><span class="vbad vn">nicht haltbar</span></td></tr>
+        <tr><td>4</td><td>Konfiskation des Eigentums von Emigranten und Rebellen</td><td>Praktiziert in UdSSR/DDR/Cuba — wurde Instrument politischer Verfolgung und Fluchtbestrafung</td><td><span class="vbad vn">nicht haltbar</span></td></tr>
+        <tr><td>5</td><td>Kreditzentralisation: Staats-Nationalbank mit Monopol</td><td>Monobank-Systeme (Gosbank) scheiterten an Fehlallokation; staatliche Zentralbanken ohne Monopol dagegen Standard</td><td><span class="vbad vg">gespalten</span></td></tr>
+        <tr><td>6</td><td>Transport-/Kommunikationswesen beim Staat</td><td>Lange Normalfall (Reichsbahn, Post) auch in Marktwirtschaften; seit 1980ern teils re-privatisiert; kein Systemunterschied messbar</td><td><span class="vbad vg">gespalten</span></td></tr>
+        <tr><td>7</td><td>Staatsfabriken, Urbarmachung nach „gemeinschaftlichem Plan"</td><td>Kern der Planwirtschaft → Modul M5: chronische Mangelwirtschaft (Kornai)</td><td><span class="vbad vn">als Vollmodell: nicht haltbar</span></td></tr>
+        <tr><td>8</td><td>Gleicher Arbeitszwang für alle; „industrielle Armeen"</td><td>Realisiert als Arbeitspflicht/Arbeitslager (Gulag-Frühform „Arbeitsarmeen" Trotzkis 1920) — Zwangsarbeit statt Emanzipation</td><td><span class="vbad vn">nicht haltbar</span></td></tr>
+        <tr><td>9</td><td>Aufhebung des Stadt-Land-Gegensatzes, Bevölkerungsverteilung</td><td>Nirgends erreicht; Versuche (Kambodscha 1975: Stadtentleerung) endeten katastrophal; Urbanisierung stieg überall</td><td><span class="vbad vn">nicht haltbar</span></td></tr>
+        <tr><td>10</td><td>Unentgeltliche öffentliche Bildung; Verbot der Kinderfabrikarbeit</td><td>Weltweit verwirklicht — allerdings durch Demokratien wie durch Diktaturen gleichermaßen; heute UN-Standard</td><td><span class="vbad vr">robust</span></td></tr>
+      </table>
+      <div class="ednote"><b>Audit-Marginalie</b>Bilanz der zehn Punkte: 2 robust (Progressivsteuer, Schulbildung — beide heute sozialdemokratisch-demokratischer Konsens), 2 gespalten, 6 nicht haltbar. Auffällig: Die zwei robusten Punkte sind genau jene, die <b>ohne Enteignung und ohne Zwang</b> auskommen. Die OCR-Qualität der Projektquelle ist an mehreren Stellen mangelhaft; alle Zitate wurden gegen die MEW-4-Zählung plausibilisiert.</div>
+      <div class="begr"><span>Zehn-Punkte-Programm</span><span>MEW 4, 481 f.</span><span>Einzelverdikte</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">1.3</span><span class="bt">Was Marx NICHT vorschrieb<small>Die Leerstelle der Programmatik — und ihre Folgen</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Leitgedanke:</b> Marx verweigerte bewusst „Rezepte für die Garküche der Zukunft" (Nachwort zur 2. Aufl. des Kapital, MEW 23, S. 25). Es gibt bei ihm keine Verfassungslehre, keine Gewaltenteilung für die Übergangsperiode, keine Institutionenökonomik des Sozialismus. Die Inauguraladresse der IAA (1864) lobt sogar den Zehnstundentag und Kooperativen — also Reformerfolge innerhalb des Kapitalismus.</p>
+      <p><b>Audit-Befund:</b> Diese Leerstelle ist selbst ein prüfbarer Sachverhalt. Wo das Programm schwieg, füllten spätere Akteure die Lücke — Lenin mit der Avantgardepartei (M7), Stalin mit dem Telos der Planbürokratie (M5). Ob das „Verrat" oder „Konsequenz" war, ist die zentrale Forschungskontroverse dieses Audits (M3, Kontroversen-Kasten). Festzuhalten ist: <b>Ein Programm, das Machtkontrolle nicht regelt, hat empirisch in 100 % der Umsetzungsfälle unkontrollierte Macht hervorgebracht.</b></p>
+      <div class="begr"><span>keine Rezepte</span><span>Inauguraladresse 1864</span><span>Institutionen-Leerstelle</span></div>
+    </div>
+  </details>
+</section>
+
+<section class="kapitel" id="mod2">
+  <div class="kapkopf"><div class="keb">Grundlegung · Modul 2</div><div class="knum">M2</div><h2>Klassenkampf &amp; Revolution als Methode</h2></div>
+  <p class="kapintro">Das Manifest endet mit der offenen Ansage gewaltsamen Umsturzes. Doch Marx selbst hielt ab 1872 einen friedlichen Weg für möglich — eine Spannung, die die Bewegung spaltete. Das Audit prüft: Was hat die revolutionäre Methode dort geliefert, wo sie angewandt wurde?</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">2.1</span><span class="bt">Der Anspruch: gewaltsamer Umsturz<small>Manifest 1848 · Schlusspassage</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <blockquote class="zit">They openly declare that their ends can be attained only by the forcible overthrow of all existing social conditions. Let the ruling classes tremble at a Communistic revolution.
+        <br><span class="qsig">Manifest, Schluss — Pelican-Ed. 1967, Projektquelle · dt. „gewaltsamer Umsturz aller bisherigen Gesellschaftsordnung", MEW 4, S. 493</span></blockquote>
+      <p><b>Aber:</b> In der Amsterdamer Rede vom 8. September 1872 erklärte Marx, in Ländern wie <b>Amerika, England, eventuell Holland</b> könnten die Arbeiter „auf friedlichem Wege zu ihrem Ziel gelangen" (MEW 18, S. 160). Engels ging 1895 in seiner Einleitung zu Marx' „Klassenkämpfen" noch weiter: Der Wahlzettel habe sich als schärfere Waffe erwiesen als die Barrikade. Die Programmatik war also <b>doppeldeutig</b> — und beide Lager der späteren Spaltung konnten sich auf Originalstellen berufen.</p>
+      <div class="begr"><span>gewaltsamer Umsturz</span><span>Amsterdamer Rede 1872</span><span>Engels 1895</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">2.2</span><span class="bt">Die Empirie der großen Revolutionen<small>Skocpol-Befund · Was Revolutionen tatsächlich hervorbrachten</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Leitbefund (Theda Skocpol, „States and Social Revolutions", 1979, Projektquelle):</b> Die vergleichende Revolutionsforschung zeigt für Frankreich 1789, Russland 1917 und China 1949 ein einheitliches Muster: Soziale Revolutionen entstanden aus Staatskrisen (Krieg, fiskalischer Kollaps) — nicht primär aus Klassenreife — und endeten ausnahmslos in <b>stärker zentralisierten, bürokratischeren Staaten</b> als zuvor. Die marxistische Erwartung, die proletarische Revolution werde den Staat überwinden, ist im Gesamtbestand der Fälle (n = alle großen sozialen Revolutionen) <b>nullfach</b> eingetreten.</p>
+      <p><b>Ergänzende Daten:</b> Auch jenseits der drei Skocpol-Fälle (Kuba 1959, Vietnam 1945/75, Kambodscha 1975, Äthiopien 1974, Nicaragua 1979) führte keine marxistische Revolution zu einem Staat, der demokratischer, freier oder — nach spätestens zwei Jahrzehnten — wohlhabender gewesen wäre als vergleichbare nicht-revolutionäre Nachbarn (Vergleichspaare: Kuba/Costa Rica, Nordkorea/Südkorea, DDR/BRD, China/Taiwan bis 1980).</p>
+      <div class="ednote"><b>Audit-Marginalie</b>Methodische Fairness: Revolutionen brachen meist in Autokratien aus, wo Reformwege versperrt waren. Das Audit vergleicht deshalb, wo möglich, mit Fällen ähnlicher Startbedingungen. Selbst dann bleibt der Befund stabil: Der revolutionäre Pfad lieferte schnellere Alphabetisierung, aber niedrigere Lebenserwartung, Einkommen und Freiheit als der reformistische (Details: Sektion E).</div>
+      <div class="begr"><span>Skocpol 1979</span><span>Staatszentralisierung</span><span>Vergleichspaare</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">2.3</span><span class="bt">Bernsteins Echtzeit-Einwand — und seine Bestätigung<small>„Evolutionary Socialism" 1899 · Projektquelle</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Leitgedanke:</b> Eduard Bernstein zog schon 1899 die Konsequenz aus ausbleibender Verelendung und wachsender Demokratie: Nicht der finale Umsturz, sondern die Bewegung selbst — Wahlrecht, Gewerkschaften, Genossenschaften — verändere die Gesellschaft real.</p>
+      <blockquote class="zit">To me that which is generally called the ultimate aim of socialism is nothing, but the movement is everything.
+        <br><span class="qsig">Bernstein, Evolutionary Socialism (engl. Ausg. der „Voraussetzungen", 1899/1909), Preface — Projektquelle · dt.: „Das Endziel, was immer es sei, ist mir nichts, die Bewegung alles"</span></blockquote>
+      <blockquote class="zit">[Democracy is] an absence of class government, as the indication of a social condition where a political privilege belongs to no one class as opposed to the whole community.
+        <br><span class="qsig">Bernstein, Evolutionary Socialism, Kap. „Democracy" — Projektquelle</span></blockquote>
+      <p><b>Audit-Befund:</b> Bernsteins Prognose ist der am besten bestätigte Satz der gesamten marxistischen Traditionsdebatte. Überall, wo seine Linie regierte (Skandinavien, BRD, Österreich, Benelux), entstanden die egalitärsten Gesellschaften der Weltgeschichte ohne Massengewalt; überall, wo die revolutionäre Linie siegte, entstand Diktatur. Verdikt: <span class="vbad vr">robust</span></p>
+      <div class="begr"><span>Revisionismus</span><span>Bewegung statt Endziel</span><span>Demokratie-Definition</span></div>
+    </div>
+  </details>
+
+  <div class="kontro">
+    <span class="ksig">Kontroverse</span>
+    <h3>War die Gewalt der Revolutionen „notwendig"?</h3>
+    <p><b>Position A (klassisch-marxistisch):</b> Die herrschenden Klassen geben Macht nie freiwillig ab; ohne revolutionären Bruch wäre der Zarismus/die Kuomintang nie gefallen. Reformwege standen 1917 in Russland real nicht offen.</p>
+    <div class="pos">
+      <p><b>Position B (liberal/sozialdemokratisch):</b> Die Februarrevolution 1917 hatte bereits eine demokratische Republik geschaffen; der Oktober war ein Putsch gegen eine im Entstehen begriffene Demokratie (Wahlen zur Konstituante: Bolschewiki 24 %, Auflösung Januar 1918). Die Gewalt war nicht notwendig, sondern Wahl.</p>
+      <p><b>Audit-Einordnung:</b> Für Russland spricht die Konstituanten-Episode empirisch klar für Position B. Für China/Vietnam (Kolonial-/Bürgerkriegskontext) ist die Lage komplexer. Das Audit markiert die Frage als <span class="vbad vk">kontrovers</span>, den Outcome aber als gemessen: Auch „notwendige" Gewalt erzeugte keine Emanzipation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="kapitel" id="mod3">
+  <div class="kapkopf"><div class="keb">Grundlegung · Modul 3</div><div class="knum">M3</div><h2>Diktatur des Proletariats</h2></div>
+  <p class="kapintro">Marx' berühmteste politische Formel — von ihm nur skizzenhaft umrissen, von Lenin zur Lizenz unbeschränkter Gewalt verdichtet, von keinem Staat je in die versprochene Selbstauflösung überführt. Das Audit prüft Formel, Umdeutung und 74 Jahre Praxis.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">3.1</span><span class="bt">Marx' Formel: Übergangsperiode<small>Kritik des Gothaer Programms 1875 · Brief an Weydemeyer 1852</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <blockquote class="zit">Zwischen der kapitalistischen und der kommunistischen Gesellschaft liegt die Periode der revolutionären Umwandlung der einen in die andre. Der entspricht auch eine politische Übergangsperiode, deren Staat nichts andres sein kann als die revolutionäre Diktatur des Proletariats.
+        <br><span class="qsig web">Kritik des Gothaer Programms — MEW 19, S. 28</span></blockquote>
+      <p>Schon 1852 hatte Marx an Weydemeyer geschrieben, sein eigener Beitrag sei der Nachweis, dass der Klassenkampf „notwendig zur Diktatur des Proletariats führt", diese aber nur den <b>„Übergang zur Aufhebung aller Klassen"</b> bilde (MEW 28, S. 507 f.). Die Diktatur ist bei Marx also ausdrücklich <b>befristet und instrumentell</b> — ein Versprechen mit eingebautem Verfallsdatum, das sich prüfen lässt.</p>
+      <div class="ednote"><b>Editions-Marginalie</b>„Diktatur" meinte 1852/1875 nicht den modernen Totalitarismus-Begriff, sondern (in römischer Tradition) zeitweilige Ausnahmevollmacht. Das entlastet die Formel philologisch — nicht aber ihre Umsetzungen, die sämtlich unbefristet regierten.</div>
+      <div class="begr"><span>Übergangsperiode</span><span>MEW 19, 28</span><span>Weydemeyer-Brief</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">3.2</span><span class="bt">Lenins Zuspitzung: Gewalt ohne Gesetz<small>Staat und Revolution 1917 · Projektquelle</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Leitgedanke:</b> Lenin radikalisiert 1917 beide Marx-Motive: Die alte Staatsmaschine sei nicht zu übernehmen, sondern zu zerstören; an ihre Stelle trete die offene Klassengewalt.</p>
+      <blockquote class="zit">[Alle bisherigen] Revolutionen haben die Staatsmaschinerie vervollkommnet, man muß sie aber zerschlagen, zerbrechen.
+        <br><span class="qsig">Lenin, Staat und Revolution, Kap. II — Projektquelle (Verlag Neuer Weg, Essen 2017)</span></blockquote>
+      <blockquote class="zit">[Statt] Demokratie für die Reichen, bringt die Diktatur des Proletariats eine Reihe von Freiheitsbeschränkungen für die Unterdrücker, die Ausbeuter, die Kapitalisten.
+        <br><span class="qsig">Lenin, Staat und Revolution, Kap. V — Projektquelle</span></blockquote>
+      <p>Und das Endziel-Versprechen, mit dem all das gerechtfertigt wurde:</p>
+      <blockquote class="zit">Der Staat wird nicht ‚abgeschafft', er stirbt ab.
+        <br><span class="qsig">Lenin, Staat und Revolution, Kap. I (Engels zitierend, Anti-Dühring) — Projektquelle</span></blockquote>
+      <p><b>Audit-Befund:</b> Das Absterbe-Versprechen ist die am härtesten widerlegte Einzelthese des politischen Marxismus. In keinem der ~30 realsozialistischen Staaten schrumpfte der Staatsapparat; überall wuchs er auf historische Rekordgröße (Sicherheitsapparate: Stasi 1989 ≈ 91.000 Hauptamtliche auf 16,4 Mio. Einwohner — pro Kopf der größte Geheimdienst der Geschichte). Verdikt: <span class="vbad vn">nicht haltbar</span></p>
+      <div class="begr"><span>zerschlagen</span><span>Freiheitsbeschränkung</span><span>Absterben des Staates</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">3.3</span><span class="bt">74 Jahre Praxis: Die Übergangsperiode, die nie überging<small>UdSSR 1917–1991 als Längsschnitt-Test</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p>Die UdSSR ist der Langzeit-Testfall: 74 Jahre — drei Generationen — sind länger als jede plausible „Übergangsperiode". Ergebnis: Die Diktatur <b>verstetigte sich institutionell</b> (Fraktionsverbot 1921 → Nomenklatura-System → Art. 6 der Verfassung 1977: festgeschriebene Führungsrolle der KPdSU). Kein einziger realsozialistischer Staat hat je auch nur begonnen, die versprochene Selbstauflösung einzuleiten; alle endeten durch äußeren Druck, Bankrott oder Implosion — nie durch planmäßiges „Absterben".</p>
+      <p><b>Quantifizierung:</b> 0 von ~30 Staaten erfüllten das Übergangs-Versprechen. Bei den drei langlebigsten (UdSSR 74 J., China 76 J. und laufend, Nordkorea 78 J. und laufend) nahm die Machtkonzentration über die Zeit <b>zu</b>, nicht ab. Verdikt der Maßnahme „Diktatur als Übergang": <span class="vbad vn">nicht haltbar</span> — der Übergangscharakter, der die Maßnahme rechtfertigen sollte, trat in keinem Fall ein.</p>
+      <div class="begr"><span>Fraktionsverbot 1921</span><span>Art. 6 Verfassung 1977</span><span>0 von 30</span></div>
+    </div>
+  </details>
+
+  <div class="kontro">
+    <span class="ksig">Kontroverse</span>
+    <h3>Verrat oder Konsequenz? Die Lenin-Marx-Frage</h3>
+    <p>Die wichtigste Deutungsfrage des gesamten Audits: Folgt die Einparteien-Diktatur aus Marx — oder verriet sie ihn?</p>
+    <div class="pos">
+      <p><b>Position A (Kontinuitätsthese — Kolakowski, Pipes):</b> Eine Formel, die unbeschränkte Klassengewalt legitimiert und Institutionen-Kontrolle verweigert, trägt das Resultat in sich. Marx' Leerstelle (M1.3) war keine Unterlassung, sondern Einfallstor.</p>
+      <p><b>Position B (Bruchthese — Draper, Luxemburg-Tradition):</b> Marx dachte die Diktatur als Mehrheitsherrschaft der Arbeiterklasse (Pariser Kommune: allgemeines Wahlrecht, Absetzbarkeit!), Lenin ersetzte die Klasse durch die Partei, die Partei durch das ZK. Rosa Luxemburg sah das schon 1918: „Freiheit ist immer Freiheit der Andersdenkenden" (Zur russischen Revolution, GW 4, S. 359, postum 1922).</p>
+    </div>
+    <p><b>Audit-Einordnung:</b> Textlich hat Position B starke Belege (Kommune-Modell M8); kausal-historisch Position A (alle, nicht nur leninistische Umsetzungen endeten diktatorisch). Verdikt: <span class="vbad vk">kontrovers</span> — als einzige Maßnahmen-Frage dieses Moduls echt offen.</p>
+  </div>
+</section>
+
+<section class="kapitel" id="mod4">
+  <div class="kapkopf"><div class="keb">Eigentum &amp; Wirtschaft · Modul 4</div><div class="knum">M4</div><h2>Verstaatlichung &amp; Kollektivierung</h2></div>
+  <p class="kapintro">„Expropriation der Expropriateure" — die Kernoperation des Programms. Das Audit trennt, was die Bilanz sonst verschmiert: <b>partielle</b> Verstaatlichung in Demokratien vs. <b>totale</b> in Einparteistaaten vs. <b>Zwangskollektivierung</b> der Landwirtschaft. Drei Maßnahmen, drei sehr verschiedene Verdikte.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">4.1</span><span class="bt">Anspruch und Eskalationsstufen<small>Manifest · Kapital MEW 23 · Lenin-Dekrete · Stalin 1929</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Programm:</b> Manifest-Punkte 1, 5, 6, 7 (M1.2) fordern Zentralisation von Boden, Kredit, Transport, Fabriken beim Staat; das Kapital prophezeit: „Die Expropriateurs werden expropriiert" (MEW 23, S. 791). <b>Umsetzung in Stufen:</b> Lenins Dekret über den Boden (8. Nov. 1917) und Banken-Nationalisierung (Dez. 1917) → Kriegskommunismus (Totalverstaatlichung 1918–21, Wirtschaftskollaps, Kronstadt) → taktischer Rückzug NEP 1921 → Stalins „Großer Umschwung" 1929: Zwangskollektivierung der Landwirtschaft, „Liquidierung des Kulakentums als Klasse".</p>
+      <p><b>Schon die Sequenz ist Audit-relevant:</b> Das System musste nach drei Jahren Vollverstaatlichung zur Teilmarkt-Lösung (NEP) zurück, um das Überleben zu sichern — der erste empirische Beleg, dass die Maßnahme in Reinform nicht funktionsfähig war. Stalin beendete die NEP nicht, weil sie ökonomisch scheiterte (sie erholte die Wirtschaft), sondern aus Macht- und Ideologie-Gründen.</p>
+      <div class="begr"><span>MEW 23, 791</span><span>Kriegskommunismus</span><span>NEP 1921</span><span>Großer Umschwung 1929</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">4.2</span><span class="bt">Bilanz der Zwangskollektivierung<small>UdSSR 1929–33 · China 1958–62 · Forschungskorridore</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>UdSSR:</b> Die Kollektivierung 1929–33 zerstörte die produktivsten Betriebe (Dekulakisierung: ~1,8 Mio. Deportierte allein 1930/31), halbierte den Viehbestand (Pferde 1928: 33 Mio. → 1933: 17 Mio.) und mündete in die Hungersnot 1932/33 — Holodomor in der Ukraine, Hungerkatastrophe in Kasachstan. Forschungskorridor der Hungertoten: <b>5,5–8,7 Mio.</b> (Davies/Wheatcroft: ~5,5–6 Mio.; ukrainische Demografie-Schule: 3,9 Mio. allein Ukraine; Kasachstan: ~1,5 Mio. = ~38 % der Kasachen). Die sowjetische Agrarproduktivität blieb bis 1991 chronisch hinter westlichen Familienbetrieben zurück — das Land mit der meisten Schwarzerde der Welt wurde Netto-Getreideimporteur (ab 1963 regelmäßig, 1984: 46 Mio. t Import).</p>
+      <p><b>China:</b> Die Volkskommunen des Großen Sprungs (1958) erzeugten die größte Hungersnot der Menschheitsgeschichte: Forschungskorridor <b>15–45 Mio. Tote</b> (offizielle chinesische Demografie nach 1980: ~16,5 Mio.; Yang Jisheng „Tombstone": 36 Mio.; Dikötter: 45 Mio.). Audit-Konvention: Das Dokument nennt stets den Korridor, nicht eine Scheinpräzisions-Zahl.</p>
+      <p><b>Kontrolltest:</b> Wo Kollektivierung rückgängig gemacht wurde, explodierte die Produktion sofort — Chinas Haushaltsverantwortungssystem 1978–84: +61 % Agrarproduktion in sechs Jahren bei identischem Boden, Klima, Personal. Schärferer Kausalbeleg ist in der Geschichtswissenschaft kaum möglich. Verdikt Zwangskollektivierung: <span class="vbad vn">nicht haltbar</span> — in jeder Umsetzung Produktivitätskollaps und Massensterben.</p>
+      <div class="begr"><span>Holodomor-Korridor</span><span>Großer Sprung</span><span>Dekollektivierung 1978</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">4.3</span><span class="bt">Differenzialbefund: partiell vs. total<small>Acemoglu/Robinson · Mischwirtschaften als Kontrollgruppe</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Kontrollgruppe Mischwirtschaft:</b> Demokratien verstaatlichten ebenfalls — Frankreich 1945/1981, UK 1945–51, Österreich (verstaatlichte Industrie ~20 % des BIP), Norwegen (Statoil, Staatsfonds). Ergebnis: kein Systemversagen, teils Erfolge (norwegischer Ölfonds), teils Ineffizienzen, die ab den 1980ern Privatisierungen auslösten. <b>Der Unterschied liegt nicht im Staatseigentum an sich, sondern in dessen Einbettung:</b> Wettbewerb, Preise, unabhängige Gerichte, Abwahlbarkeit.</p>
+      <p><b>Theorie-Rahmen (Acemoglu/Robinson, „Warum Nationen scheitern", Projektquelle):</b> Entscheidend ist, ob Institutionen <b>inklusiv</b> (breiter Zugang, Pluralismus, Eigentumssicherheit) oder <b>extraktiv</b> (Abschöpfung durch schmale Elite) sind. Totalverstaatlichung plus Einparteistaat schuf die extraktivste Institutionenform des 20. Jahrhunderts — die Nomenklatura als neue Abschöpfungselite. Partielle Verstaatlichung in inklusiven Institutionen blieb dagegen reversibel und kontrollierbar.</p>
+      <p><b>Verdikt gesplittet:</b> Totalverstaatlichung <span class="vbad vn">nicht haltbar</span> · Partielle Verstaatlichung in Demokratien <span class="vbad vg">gespalten</span> (fallweise erfolgreich, fallweise ineffizient) · Strategisches Staatseigentum mit Markteinbettung (Norwegen-Modell) <span class="vbad vu">gestützt</span></p>
+      <div class="begr"><span>inklusiv vs. extraktiv</span><span>Nomenklatura</span><span>Norwegen-Modell</span></div>
+    </div>
+  </details>
+</section>
+
+<section class="kapitel" id="mod5">
+  <div class="kapkopf"><div class="keb">Eigentum &amp; Wirtschaft · Modul 5</div><div class="knum">M5</div><h2>Planwirtschaft</h2></div>
+  <p class="kapintro">Das Versprechen: Der Plan beendet die „Anarchie der Produktion" — Krisen, Verschwendung, Arbeitslosigkeit. Die Wirklichkeit, mit János Kornai als wichtigstem Insider-Analytiker: ein System, das Knappheit nicht abschaffte, sondern <b>chronifizierte</b>. Dieses Modul stützt sich erstmals direkt auf die Projektquelle Kornai.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">5.1</span><span class="bt">Das Versprechen: Plan statt Anarchie<small>Engels, Anti-Dühring · die Verheißung der Planbarkeit</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Programm:</b> Engels formulierte die Verheißung kanonisch: An die Stelle der „Anarchie der gesellschaftlichen Produktion" trete „gesellschaftlich-planmäßige Regelung der Produktion nach den Bedürfnissen der Gesamtheit wie jedes einzelnen" (Anti-Dühring, MEW 20, S. 261 f.); erst damit vollziehe die Menschheit den „Sprung aus dem Reiche der Notwendigkeit in das Reich der Freiheit" (ebd. S. 264). Lenin konkretisierte 1917 die Machbarkeits-These: Die Großbanken hätten das „Gerippe" der Verwaltung bereits geschaffen; Wirtschaft sei zu „Registrierung und Kontrolle" vereinfachbar, die jeder ausführen könne, der lesen und rechnen kann (Staat und Revolution, Kap. V — Projektquelle).</p>
+      <p><b>Prüfbarer Kern:</b> Drei messbare Teilversprechen — (a) keine Krisen/Arbeitslosigkeit, (b) weniger Verschwendung als der Markt, (c) Bedürfnisdeckung. (a) wurde formal erfüllt (M6), (b) und (c) sind die Bruchstellen.</p>
+      <div class="begr"><span>Anarchie der Produktion</span><span>MEW 20, 261 ff.</span><span>Registrierung und Kontrolle</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">5.2</span><span class="bt">Kornais Diagnose: weiche Budgets, chronischer Mangel<small>The Socialist System 1992 · Projektquelle</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Leitgedanke:</b> János Kornai — ungarischer Ökonom, der das System von innen erlebte und analysierte — identifizierte den Mechanismus, der Planwirtschaften systematisch (nicht zufällig) in den Mangel treibt: Staatsbetriebe können nicht pleitegehen; ihre Budgetbeschränkung ist „weich".</p>
+      <blockquote class="zit">The softness of the budget constraint does not simply arise because the higher organizations of control fail to keep tight financial discipline […]. Its appearance is a strong regularity, deeply rooted in the [system].
+        <br><span class="qsig">Kornai, The Socialist System (1992), Kap. 8 — Projektquelle</span></blockquote>
+      <p><b>Die Kausalkette (Kornai, Kap. 11–12):</b> Weiche Budgets → unstillbarer Investitionshunger der Betriebe („investment hunger") → Hortung von Material und Arbeit → ökonomieweite Knappheit → <b>shortage economy</b> als Dauerzustand mit Schlangen, Beziehungswirtschaft (blat), Qualitätsverfall. Der Mangel war keine Kinderkrankheit, sondern <b>Gleichgewichtszustand</b> des Systems — deshalb scheiterten alle Reformversuche innerhalb des Systems (Ungarn 1968, Perestroika), die das Eigentums- und Parteimonopol unangetastet ließen.</p>
+      <p><b>Daten-Abgleich:</b> Maddison-Projekt: UdSSR-BIP/Kopf fiel von ~36 % des US-Niveaus (1950er-Aufholphase) auf ~30 % (1989); Wachstum der totalen Faktorproduktivität ab Mitte der 1970er ≈ 0 bis negativ. Das CIA-historiografische Paradox: Westliche Schätzungen <b>über</b>trieben die Sowjetleistung sogar noch. Verdikt Vollplanung: <span class="vbad vn">nicht haltbar</span></p>
+      <div class="begr"><span>soft budget constraint</span><span>shortage economy</span><span>Investitionshunger</span><span>TFP-Stagnation</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">5.3</span><span class="bt">Die Kalkulationsdebatte — entschieden durch Geschichte<small>Mises 1920 · Lange 1936 · der empirische Schiedsspruch</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Die Debatte:</b> Ludwig von Mises (1920): Ohne echte Preise für Produktionsmittel ist rationale Wirtschaftsrechnung unmöglich. Oskar Lange (1936): Ein Planungsamt kann Preise simulieren (Markt-Sozialismus). Hayek (1945): Das verkennt das verteilte, implizite Wissen, das nur reale Preise aggregieren.</p>
+      <p><b>Empirischer Schiedsspruch:</b> Kein realsozialistischer Staat implementierte je Langes Modell konsequent — und die Annäherungen (Ungarns „Neuer Ökonomischer Mechanismus" 1968, jugoslawische Selbstverwaltung) erzeugten Hybride mit eigenen Pathologien (Inflation, Verschuldung, Arbeitslosigkeit in Jugoslawien trotz Sozialismus). Das sowjetische Gosplan bewirtschaftete am Ende ~24 Mio. Positionen mit Material-Bilanzen — die Komplexität wuchs schneller als jede Planungskapazität. Selbst mit heutiger Rechenleistung bleibt Hayeks Einwand bestehen: Das Problem ist nicht Rechnen, sondern <b>Wissen erzeugen</b> — Präferenzen und lokale Bedingungen entstehen erst im Marktprozess.</p>
+      <p><b>Fairer Gegenposten:</b> Indikative Planung und Industriepolitik in Marktwirtschaften (Frankreich Trente Glorieuses, Südkorea, Taiwan) funktionierten — weil Preise, Wettbewerb und Exit-Drohung erhalten blieben. Verdikt: Vollplanung <span class="vbad vn">nicht haltbar</span> · Indikative Planung/Industriepolitik <span class="vbad vg">gespalten</span> (fallweise erfolgreich)</p>
+      <div class="ednote"><b>Audit-Marginalie</b>Dies ist eine der wenigen Stellen, wo eine theoretische Debatte des 20. Jahrhunderts durch ein unfreiwilliges Großexperiment praktisch entschieden wurde. Das Audit wertet das als seltenen Glücksfall empirischer Eindeutigkeit — bei gleichzeitigem Respekt vor den Menschen, die das Experiment erlitten.</div>
+      <div class="begr"><span>Mises 1920</span><span>Lange-Modell</span><span>Gosplan-Komplexität</span><span>indikative Planung</span></div>
+    </div>
+  </details>
+</section>
+
+<section class="kapitel" id="mod6">
+  <div class="kapkopf"><div class="keb">Eigentum &amp; Wirtschaft · Modul 6</div><div class="knum">M6</div><h2>Arbeit &amp; Verteilung</h2></div>
+  <p class="kapintro">Die berühmteste Verteilungsformel der Ideengeschichte — und ihr zweistufiger Realitätstest: Was wurde aus dem Leistungsprinzip der „ersten Phase", was aus dem Bedürfnisprinzip der „höheren Phase"? Dazu das Doppelgesicht der Vollbeschäftigung und der dunkle Punkt 8 des Manifests.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">6.1</span><span class="bt">Die Formel und ihre zwei Phasen<small>Kritik des Gothaer Programms · MEW 19, S. 20 f.</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <blockquote class="zit">In einer höheren Phase der kommunistischen Gesellschaft […] erst dann kann der enge bürgerliche Rechtshorizont ganz überschritten werden und die Gesellschaft auf ihre Fahne schreiben: Jeder nach seinen Fähigkeiten, jedem nach seinen Bedürfnissen!
+        <br><span class="qsig web">Kritik des Gothaer Programms — MEW 19, S. 21</span></blockquote>
+      <p><b>Wichtig für faires Auditieren:</b> Für die <b>erste</b> Phase sah Marx ausdrücklich Leistungsverteilung vor — Arbeitszertifikate nach geleisteter Arbeitszeit (MEW 19, S. 20), ein „Recht der Ungleichheit". Das Bedürfnisprinzip war an Voraussetzungen geknüpft (Überwindung der Arbeitsteilung, Arbeit als „erstes Lebensbedürfnis", sprudelnde Springquellen des Reichtums). <b>Audit-Status des Bedürfnisprinzips:</b> Da kein Staat je behauptete, die „höhere Phase" erreicht zu haben, ist es streng genommen unfalsifiziert geblieben — Verdikt: <span class="vbad vt">nicht testbar</span>. Testbar ist aber, ob die realen Systeme sich der Voraussetzung <b>näherten</b>: Sie taten es nicht (Arbeitsproduktivität fiel relativ zum Westen zurück, M5.2).</p>
+      <div class="begr"><span>zwei Phasen</span><span>Recht der Ungleichheit</span><span>MEW 19, 20 f.</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">6.2</span><span class="bt">Vollbeschäftigung: erfüllt — mit doppeltem Boden<small>Recht auf Arbeit vs. Arbeitspflicht · Kornai zur Arbeitskräfte-Hortung</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Das eingelöste Versprechen:</b> Offene Arbeitslosigkeit existierte in reifen Planwirtschaften praktisch nicht (UdSSR erklärte sie 1930 für beseitigt; Recht auf Arbeit: Verfassung 1936 Art. 118, 1977 Art. 40; DDR-Verfassung Art. 24). Das ist ein realer Unterschied zur Massenarbeitslosigkeit der Weltwirtschaftskrise und ein Grund für die damalige Attraktivität des Modells.</p>
+      <p><b>Der doppelte Boden:</b> (1) Die Kehrseite war <b>Arbeitspflicht</b> — sowjetische Verfassung 1936 Art. 12: „Wer nicht arbeitet, soll auch nicht essen"; strafbewehrt als „Parasitentum" (Schmarotzer-Gesetze 1961, prominentestes Opfer: der spätere Nobelpreisträger Brodsky 1964). (2) Ökonomisch verbarg sich die Arbeitslosigkeit <b>im Betrieb</b>: Kornais Analyse der Arbeitskräfte-Hortung unter weichen Budgets — Überbeschäftigung bei Unterauslastung, treffend im DDR-Volksmund: „Wir tun so, als ob wir arbeiten, und sie tun so, als ob sie uns bezahlen." Produktivität pro Beschäftigtem lag 1989 bei ~⅓ bis ½ des Westniveaus (DDR/BRD-Vergleich nach Wiedervereinigungs-Erhebungen: ~30–40 %).</p>
+      <p><b>Verdikt gesplittet:</b> Beschäftigungsgarantie als soziale Sicherheit <span class="vbad vu">gestützt</span> (real erfüllt, real geschätzt) · als Effizienz- und Freiheitsversprechen <span class="vbad vn">nicht haltbar</span> (Zwangscharakter, versteckte Arbeitslosigkeit)</p>
+      <div class="begr"><span>Recht auf Arbeit</span><span>Parasitentum-Gesetze</span><span>Hortung</span><span>verdeckte Arbeitslosigkeit</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">6.3</span><span class="bt">Gleichheit: erreicht — auf welchem Niveau, mit welcher Elite?<small>Lohnspreizung · Nomenklatura-Privilegien · Gini im Systemvergleich</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Was stimmt:</b> Die monetäre Ungleichheit war real niedrig — Gini der UdSSR ~0,27–0,29, DDR ~0,20 (niedrigster je gemessener Wert eines Industrielandes), Lohnspreizung Direktor:Arbeiter selten über 4:1. <b>Was das Bild verzerrt:</b> (1) Die eigentliche Ungleichheit lief über <b>Zugang statt Geld</b> — Nomenklatura-Privilegien (Sonderläden, Datschen, Auslandsreisen, Wartelisten-Sprung beim Auto: Normalbürger 10–15 Jahre Trabant-Wartezeit), die in keinem Gini auftauchen. (2) Die Gleichheit lag auf <b>niedrigem Wohlstandsniveau</b>: Schwedens Gini (~0,27 in den 1980ern) war praktisch identisch — bei doppeltem bis dreifachem Realeinkommen und voller Freiheit.</p>
+      <p><b>Der entscheidende Vergleich:</b> Sozialdemokratische Marktwirtschaften erreichten dieselbe messbare Gleichheit ohne Mangelwirtschaft und ohne privilegierte Staatsklasse. Das entkräftet das stärkste verbliebene Argument für das Planmodell. Verdikt Verteilungs-Gleichheit: <span class="vbad vg">gespalten</span> — Gleichheit ja, aber dominiert von der sozialdemokratischen Alternative, die dasselbe besser lieferte.</p>
+      <div class="begr"><span>Gini ~0,20–0,29</span><span>Zugangs-Privilegien</span><span>Schweden-Vergleich</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">6.4</span><span class="bt">Manifest-Punkt 8: „industrielle Armeen"<small>Vom Programmtext zur Zwangsarbeit — die dunkelste Linie</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Programm → Praxis in direkter Linie:</b> Manifest-Punkt 8 fordert „gleichen Arbeitszwang für alle, Errichtung industrieller Armeen". Trotzki organisierte 1920 wörtlich „Arbeitsarmeen" (Armeeverbände in Produktionseinsatz) und verteidigte in „Terrorismus und Kommunismus" (1920) die Arbeitsmilitarisierung als sozialistisches Prinzip. Die Linie läuft weiter zum Gulag als <b>ökonomischem</b> System (Dalstroi-Goldminen, Weißmeerkanal 1931–33: ~12.000–25.000 Tote beim Bau) — Zwangsarbeit als Planposten. Detailbilanz des Lagersystems: Modul M9.</p>
+      <p><b>Audit-Befund:</b> Hier ist die Verbindung Programmtext→Verbrechen am direktesten. Das entlastet Marx nicht durch Kontext: Schon Zeitgenossen (Bakunin 1873!) warnten, der Punkt führe zur „Kasernengesellschaft". Verdikt: <span class="vbad vn">nicht haltbar</span> — die Maßnahme erzeugte in jeder Umsetzung Unfreiheit ohne kompensierende Produktivität (Gulag-Arbeit war selbst nach internen NKWD-Rechnungen defizitär).</p>
+      <div class="begr"><span>Arbeitsarmeen 1920</span><span>Weißmeerkanal</span><span>Bakunins Warnung</span></div>
+    </div>
+  </details>
+</section>
+
+<section class="kapitel" id="mod7">
+  <div class="kapkopf"><div class="keb">Staat &amp; Macht · Modul 7</div><div class="knum">M7</div><h2>Avantgarde-Partei</h2></div>
+  <p class="kapintro">Lenins Organisationsmodell von 1902 ist die folgenreichste politische Maßnahme der gesamten Tradition — keine Marx-Idee, sondern Lenins Antwort auf russische Verhältnisse, die zum Exportmodell aller realsozialistischen Staaten wurde. Das Audit prüft das Modell gegen seine eigene Begründung und gegen die Bilanz aller Anwendungsfälle.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">7.1</span><span class="bt">Das Modell: Berufsrevolutionäre und Bewusstsein „von außen"<small>Was tun? 1902 · Projektquelle</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Die zwei Bausteine:</b> (1) Die Arbeiterklasse entwickelt aus eigener Kraft nur „trade-unionistisches" Bewusstsein; das sozialistische muss ihr von außen — durch Intellektuelle — gebracht werden. (2) Daraus folgt die zentralisierte Kaderorganisation:</p>
+      <blockquote class="zit">Dieses [sozialistische Bewußtsein] konnte ihnen nur von außen gebracht werden.
+        <br><span class="qsig">Lenin, Was tun? (1902), Kap. II — Projektquelle (Grundschriften Bd. 5)</span></blockquote>
+      <blockquote class="zit">[…] eine Organisation, die aus Berufsrevolutionären besteht und von wirklichen politischen Führern des ganzen Volkes geleitet wird.
+        <br><span class="qsig">Lenin, Was tun? (1902), Kap. IV — Projektquelle</span></blockquote>
+      <p><b>Audit-relevanter Kern:</b> Das Modell kehrt Marx' Emanzipationsformel um. Die Inauguraladresse (1864) hatte erklärt, die Befreiung der Arbeiterklasse müsse „das Werk der Arbeiterklasse selbst" sein — bei Lenin wird sie zum Werk einer Stellvertreter-Elite. Die Hierarchie Klasse→Partei→ZK→Führer ist im Modell von 1902 bereits angelegt; Rosa Luxemburg benannte sie 1904 in Echtzeit („Organisationsfragen der russischen Sozialdemokratie": „Ultrazentralismus", der die Bewegung „an ein Zentralkomitee fesselt").</p>
+      <div class="begr"><span>von außen</span><span>Berufsrevolutionäre</span><span>Stellvertretung</span><span>Luxemburg 1904</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">7.2</span><span class="bt">Die Bilanz: n ≈ 30, Ausnahmen: 0<small>Vom Fraktionsverbot 1921 zur Nomenklatura · alle Anwendungsfälle</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Innenkonsequenz:</b> Das Modell fraß zuerst die eigene Partei: Fraktionsverbot auf dem X. Parteitag 1921 (noch unter Lenin) → Ausschaltung aller innerparteilichen Opposition 1923–29 → Großer Terror tötete die Mehrheit der eigenen Alt-Bolschewiki (vom XVII. Parteitag 1934: 1.108 von 1.966 Delegierten verhaftet, 98 von 139 ZK-Mitgliedern erschossen). Die Avantgarde schützte nicht einmal sich selbst vor der Logik, die sie schuf.</p>
+      <p><b>Außenbilanz:</b> Jede leninistische Avantgardepartei, die irgendwo die Macht eroberte (UdSSR, China, Vietnam, Kuba, Osteuropa, Nordkorea, Äthiopien, Kambodscha … n ≈ 30), errichtete ein Einparteisystem; <b>keine einzige</b> ließ je eine kompetitive Wahl zu, die sie hätte verlieren können (die Ausnahme bestätigt die Regel: Sandinistas verloren 1990 — nachdem sie das reine Avantgarde-Modell bereits verlassen hatten). Umgekehrt blieben leninistische Parteien in funktionierenden Demokratien marginal oder ent-leninisierten sich (Eurokommunismus der 1970er).</p>
+      <div class="ednote"><b>Audit-Marginalie</b>Parallel-Diagnose außerhalb des Marxismus: Robert Michels' „ehernes Gesetz der Oligarchie" (1911) sagte die Verselbständigung von Parteiapparaten generell voraus. Das leninistische Modell ist insofern der Extremfall einer allgemeinen Tendenz — mit dem Unterschied, dass es die Oligarchisierung nicht erlitt, sondern zum Prinzip erhob. Verdikt: <span class="vbad vn">nicht haltbar</span> als Emanzipationsinstrument — das Modell lieferte in 100 % der Machtfälle Parteidiktatur.</div>
+      <div class="begr"><span>Fraktionsverbot 1921</span><span>XVII. Parteitag</span><span>n ≈ 30 / 0</span><span>Michels 1911</span></div>
+    </div>
+  </details>
+</section>
+
+<section class="kapitel" id="mod8">
+  <div class="kapkopf"><div class="keb">Staat &amp; Macht · Modul 8</div><div class="knum">M8</div><h2>Räte vs. Parlament</h2></div>
+  <p class="kapintro">Marx' einziges institutionelles Vorbild war die Pariser Kommune von 1871: Wahl und jederzeitige Absetzbarkeit aller Funktionäre, Arbeiterlohn für Beamte, Verschmelzung von Legislative und Exekutive. Das Audit prüft, was aus diesen vier konkreten — und prüfbaren! — Mechanismen in der Räte-Praxis wurde.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">8.1</span><span class="bt">Das Kommune-Modell: vier prüfbare Mechanismen<small>Marx, Bürgerkrieg in Frankreich 1871 · zitiert nach Lenin, Projektquelle</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <blockquote class="zit">Die Kommune sollte nicht eine parlamentarische, sondern eine arbeitende Körperschaft sein, vollziehend und gesetzgebend zu gleicher Zeit.
+        <br><span class="qsig">Marx, Der Bürgerkrieg in Frankreich (MEW 17, S. 339) — zit. n. Lenin, Staat und Revolution, Projektquelle</span></blockquote>
+      <blockquote class="zit">Sie waren verantwortlich und jederzeit absetzbar. […] Von den Mitgliedern der Kommune an abwärts mußte der öffentliche Dienst für Arbeiterlohn besorgt werden.
+        <br><span class="qsig">Marx, ebd. — zit. n. Lenin, Staat und Revolution, Projektquelle</span></blockquote>
+      <p><b>Die vier Mechanismen:</b> (1) allgemeines Wahlrecht für alle Funktionen, (2) imperatives Mandat / jederzeitige Absetzbarkeit, (3) Funktionärsgehalt = Arbeiterlohn, (4) keine Gewaltenteilung („arbeitende Körperschaft"). Bemerkenswert: (1)–(3) sind <b>Demokratisierungs</b>-Mechanismen — radikaler als jedes Parlament. Nur (4) öffnet die Tür zur Machtkonzentration. Die Kommune selbst (72 Tage, pluralistisch: Blanquisten, Proudhonisten, nur Minderheit Marxisten) konnte den Langzeittest nie antreten.</p>
+      <div class="begr"><span>MEW 17, 339</span><span>Absetzbarkeit</span><span>Arbeiterlohn</span><span>Gewalteneinheit</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">8.2</span><span class="bt">Sowjet-Anspruch, Sowjet-Wirklichkeit<small>1917–1991: Was aus den vier Mechanismen wurde</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Mechanismus für Mechanismus:</b> (1) <b>Wahlrecht:</b> Ab 1918 Klassen-Wahlrecht (Entrechtung der „lischenzy"), ab 1936 formal allgemein — aber Einheitsliste ohne Auswahl; Wahlbeteiligung 99,x % als Ritual. (2) <b>Absetzbarkeit:</b> kehrte sich um — nicht die Wähler setzten Deputierte ab, sondern die Partei nominierte und entfernte sie; die Sowjets wurden Akklamationsorgane (der Oberste Sowjet stimmte zwischen 1938 und 1988 <b>kein einziges Mal</b> gegen eine Vorlage). (3) <b>Arbeiterlohn:</b> ersetzt durch das Gegenteil — Nomenklatura-Privilegiensystem (M6.3). (4) <b>Gewalteneinheit:</b> der einzige real umgesetzte Mechanismus — als Fusion von Partei, Staat, Justiz und Geheimpolizei.</p>
+      <p><b>Audit-Pointe:</b> Umgesetzt wurde exakt der eine Mechanismus, der Macht konzentriert; die drei, die Macht kontrollieren, wurden in jeder Räterepublik binnen Monaten bis weniger Jahre demontiert (Kronstadt 1921 forderte „Sowjets ohne Bolschewiki" — niedergeschlagen). Kein realsozialistischer Staat hat das Kommune-Modell praktiziert; alle haben es plakatiert. Verdikt Rätemodell als praktizierte Maßnahme: <span class="vbad vn">nicht haltbar</span> (nie ehrlich versucht, in Ansätzen sofort liquidiert) · Die Teil-Mechanismen (2) und (3) als solche: <span class="vbad vt">nicht testbar</span> im Großmaßstab — ihre Kurzlebigkeit in Selbstverwaltungs-Experimenten (Kommune, frühe Sowjets, Räterepubliken 1918/19, spanische Kollektive 1936) erlaubt kein Langzeit-Urteil.</p>
+      <div class="ednote"><b>Audit-Marginalie</b>Engels' und Lenins „Absterben des Staates" wurde in M3.2 bereits als härtest-widerlegte These eingestuft; M8 liefert den Mechanismus der Widerlegung nach: Wo Kontrollinstitutionen fehlen, „stirbt" nicht der Staat, sondern die Kontrolle.</div>
+      <div class="begr"><span>Einheitsliste</span><span>Akklamationsorgan</span><span>Kronstadt 1921</span></div>
+    </div>
+  </details>
+</section>
+
+<section class="kapitel" id="mod9">
+  <div class="kapkopf"><div class="keb">Staat &amp; Macht · Modul 9</div><div class="knum">M9</div><h2>Repression als System</h2></div>
+  <p class="kapintro">Das schwerste Kapitel. Das Audit dokumentiert die Repressionsmaßnahmen mit den zwei neu eingewechselten Projektquellen (Snyder; Courtois et al.), nennt Opferzahlen ausschließlich als Forschungskorridore mit benannten Schätzern — und stellt die Schwarzbuch-Kontroverse offen dar, statt sie zu verstecken.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">9.1</span><span class="bt">Terror als erklärte Politik<small>Roter Terror 1918 · Tscheka → NKWD → KGB / Stasi · Gulag</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Der Befund der Sequenz:</b> Die Repression begann nicht mit Stalin. Tscheka-Gründung: 20. Dezember 1917 — sechs Wochen nach der Machtübernahme, vor jedem Bürgerkriegs-Großereignis. Dekret „Über den Roten Terror" (5. September 1918) legalisierte Erschießungen und Konzentrationslager für Klassenfeinde offiziell; Tscheka-Führungsfiguren wie Lazis wiesen die Organe an, nicht nach individueller Schuld, sondern nach Klassenzugehörigkeit zu urteilen (Programmatik des Klassen-, nicht Tatstrafrechts). Das Lagersystem (SLON/Solowki ab 1923, GULag-Hauptverwaltung ab 1930) war damit <b>vor-stalinistisch fundiert</b>; Stalin industrialisierte es.</p>
+      <p><b>Dimension (Archivdaten seit 1991, Zemskov/Getty/Werth):</b> Durch das Gulag-System gingen 1930–1953 ~18 Mio. Häftlinge; dokumentierte Lagertote ~1,6–1,8 Mio. (ohne Deportierten-Sterblichkeit: +~1 Mio. bei ~6 Mio. Deportierten); Große Terror-Operation 1937/38: 681.692 dokumentierte Erschießungen in 16 Monaten (≈ 1.400/Tag). DDR-Endstufe des Modells: Stasi 1989 mit ~91.000 Hauptamtlichen + ~174.000 IM — Überwachung statt Massenexekution, dieselbe Funktionslogik: Sicherung des Parteimonopols.</p>
+      <div class="begr"><span>Tscheka 20.12.1917</span><span>Roter Terror 5.9.1918</span><span>681.692</span><span>Klassenstrafrecht</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">9.2</span><span class="bt">Die Opferbilanz — Korridore, keine Scheinpräzision<small>Snyder · Courtois · Werth · akademische Demografie · Projektquellen</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Die Maximal-Bilanz (Courtois, Schwarzbuch-Einleitung — Projektquelle):</b></p>
+      <blockquote class="zit">Sowjetunion: 20 Millionen Tote – China: 65 Millionen Tote – Vietnam: 1 Million Tote – Nordkorea: 2 Millionen Tote – Kambodscha: 2 Millionen Tote – Osteuropa: 1 Million Tote – Lateinamerika: 150 000 Tote – Afrika: 1,7 Millionen Tote – Afghanistan: 1,5 Millionen Tote […] Alles in allem kommt die Bilanz der Zahl von hundert Millionen Toten nahe.
+        <br><span class="qsig">Courtois u. a., Das Schwarzbuch des Kommunismus (Piper 1998), Einleitung — Projektquelle</span></blockquote>
+      <p><b>Die regionale Tiefenbohrung (Snyder — Projektquelle):</b></p>
+      <blockquote class="zit">[In the] middle of Europe in the middle of the twentieth century, the Nazi and Soviet regimes murdered some fourteen million people. […] The bloodlands extend from central Poland to western Russia, through Ukraine, Belarus, and the Baltic States.
+        <br><span class="qsig">Snyder, Bloodlands (2010), Preface — Projektquelle</span></blockquote>
+      <p><b>Präzisions-Hinweis des Audits:</b> Snyders 14 Mio. umfassen <b>beide</b> Mörderregime in dieser Region (NS-Anteil überwiegt: Holocaust, Hungerpolitik gegen Kriegsgefangene); der sowjetische Anteil der Bloodlands-Toten liegt bei grob einem Drittel. Die Zahl darf nicht als „14 Mio. Sowjet-Opfer" zitiert werden — genau solche Verschiebungen sind der Grund, warum dieses Audit Korridore mit Urhebern ausweist:</p>
+      <table class="etab" style="color:#1E2433">
+        <tr><th>Komplex</th><th>Korridor</th><th>Schätzer (Auswahl)</th></tr>
+        <tr><td>UdSSR gesamt, Exzess-Tote der Repression+Hunger 1918–53</td><td>≈ 9–20 Mio.</td><td>Wheatcroft/Davies (unten), Werth (~15), Conquest (oben)</td></tr>
+        <tr><td>— davon Holodomor/Hungersnot 1932/33</td><td>≈ 5,5–8,7 Mio.</td><td>Davies/Wheatcroft; ukrain. Demografie; Kasachstan-Anteil ~1,5 Mio.</td></tr>
+        <tr><td>— davon Gulag-Tote (dokumentiert)</td><td>≈ 1,6–1,8 Mio. (+Deportierte ~1 Mio.)</td><td>Zemskov-Archivdaten; Applebaum</td></tr>
+        <tr><td>China: Großer Sprung 1958–62</td><td>≈ 15–45 Mio.</td><td>amtl. Demografie ~16,5 · Yang Jisheng 36 · Dikötter 45</td></tr>
+        <tr><td>China: Kulturrevolution 1966–76</td><td>≈ 0,5–2 Mio.</td><td>Walder; MacFarquhar/Schoenhals</td></tr>
+        <tr><td>Kambodscha 1975–79</td><td>≈ 1,5–2 Mio. (≈ 21–25 % der Bevölkerung)</td><td>Kiernan; Heuveline</td></tr>
+        <tr><td>Nordkorea: Hungersnot 1995–98</td><td>≈ 0,6–2,5 Mio.</td><td>Goodkind/West; Haggard/Noland</td></tr>
+      </table>
+      <p><b>Verdikt der Maßnahme „Terror/Repression als Herrschaftsinstrument":</b> <span class="vbad vn">nicht haltbar</span> — in jeder Dimension: moralisch (Massensterben), funktional (kein Staat überlebte langfristig auf Terrorbasis; Entstalinisierung wurde Überlebensbedingung), ökonomisch (Gulag defizitär, M6.4).</p>
+      <div class="begr"><span>Korridor-Prinzip</span><span>Zemskov-Archive</span><span>Bloodlands-Drittel</span></div>
+    </div>
+  </details>
+
+  <div class="kontro">
+    <span class="ksig">Kontroverse</span>
+    <h3>Die Schwarzbuch-Debatte: Ist „100 Millionen" seriös? Ist Terror System oder Entgleisung?</h3>
+    <p><b>Position A (Courtois):</b> Die Gesamtaddition auf ~100 Mio. ist legitim und der Vergleich mit dem NS geboten; Terror sei dem Kommunismus wesenseigen.</p>
+    <div class="pos">
+      <p><b>Position B (Werth/Margolin — Mitautoren!):</b> Beide distanzierten sich öffentlich von Courtois' Einleitung: Die Addition vermenge Erschießungen, Lagertote und Hungersnöte unterschiedlicher Verursachungsgrade; die 100-Mio.-Zahl sei nach oben gerundet; die NS-Gleichsetzung verwische Unterschiede (kein industrieller Vernichtungs-Telos). Werths eigene UdSSR-Schätzung (~15 Mio.) liegt unter Courtois' 20.</p>
+      <p><b>Position C (Revisionisten, z. B. Getty):</b> Der Terror sei weniger Masterplan als chaotische Eskalation konkurrierender Apparate gewesen — was die Toten nicht mindert, aber die Kausalattribution verschiebt.</p>
+    </div>
+    <p><b>Audit-Einordnung:</b> Das Audit nutzt das Schwarzbuch als <b>eine</b> dokumentierte Stimme am oberen Rand, Werth/Wheatcroft als Mittelwert-Anker, und weist die Differenz offen aus. Zur Systemfrage: Die Tscheka-Chronologie (9.1) stützt Werths eigene These im Schwarzbuch — die Gewalt war von Beginn an konstitutiv, nicht erst stalinistische Entgleisung. Verdikt der Deutungsfrage: <span class="vbad vk">kontrovers</span> in der Gesamtzahl, <span class="vbad vu">gestützt</span> in der Systemik-These.</p>
+  </div>
+</section>
+
+<section class="kapitel" id="mod10">
+  <div class="kapkopf"><div class="keb">Gesellschaft · Modul 10</div><div class="knum">M10</div><h2>Soziale Maßnahmen</h2></div>
+  <p class="kapintro">Das Feld der echten Erfolge — und der Ort, an dem das Audit am sorgfältigsten gegen die Kontrollgruppe rechnen muss. Denn die Frage ist nie nur „Wurde es besser?", sondern „Besser als was — und besser als bei wem, der es ohne Diktatur versuchte?"</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">10.1</span><span class="bt">Die realen Leistungen<small>Alphabetisierung · Gesundheitswesen · Wohnen · soziale Garantien</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Alphabetisierung:</b> Die Likbez-Kampagne hob die russische Alphabetisierung von ~28 % (Zensus 1897, im Reich) auf ~81 % (1939) und ~99 % (1959) — eine der schnellsten Bildungsexpansionen der Geschichte. Kubas Kampagne 1961 (Analphabetismus 23 % → ~4 % binnen eines Jahres) wiederholte das Muster. <b>Gesundheit:</b> Semaschko-System mit flächendeckender kostenloser Versorgung; Ärztedichte UdSSR 1989 ~4,3/1000 (über Westniveau), Kuba heute ~8–9/1000 (Weltspitze); Lebenserwartung UdSSR 1926: ~44 J. → 1965: ~70 J. <b>Wohnen:</b> Massenwohnungsbau (Chruschtschowki: ~60 Mio. Menschen in zehn Jahren erstversorgt) bei symbolischen Mieten (~3–5 % des Einkommens). <b>Garantien:</b> Renten, Kindergärten (DDR-Krippenquote 1989: ~80 %, Weltrekord), Studiengebühren-Freiheit.</p>
+      <p>Diese Leistungen sind real, archivfest und erklären die Restloyalität, die diese Systeme bis heute in Teilen ihrer Ex-Bevölkerungen genießen. Ein Audit, das sie kleinredet, wäre so unbrauchbar wie eines, das die Lager kleinredet.</p>
+      <div class="begr"><span>Likbez</span><span>Semaschko-System</span><span>Chruschtschowki</span><span>Krippenquote 80 %</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">10.2</span><span class="bt">Der Kontrollgruppen-Test<small>Dieselben Erfolge ohne Diktatur? · Qualität hinter der Quantität</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Kontrollgruppe:</b> Finnland (1900 ärmer und analphabetischer als weite Teile Russlands) erreichte Vollalphabetisierung und Weltspitzen-Bildung als Demokratie. Südkorea, Taiwan, Costa Rica wiederholten Alphabetisierungs- und Gesundheitssprünge in ein bis zwei Generationen ohne Einparteistaat; Costa Rica erreichte Kubas Lebenserwartung (81,1 vs. 78,9, Stand 2024) bei doppeltem Einkommen und voller Freiheit. <b>Befund: Die sozialen Erfolge korrelieren mit Staatsinvestition in Grundversorgung — nicht mit dem Parteimonopol.</b> Das Monopol war für die Erfolge nicht notwendig (Kontrollgruppe) und für die Misserfolge hinreichend (M5, M9).</p>
+      <p><b>Qualitäts-Schicht:</b> Quantitäts-Kennziffern verdeckten Qualitätsdefizite: Medikamenten-/Gerätemangel (Mangelwirtschafts-Logik, M5.2), Zwei-Klassen-Zugang über Nomenklatura-Polikliniken, ab den 1970ern <b>stagnierende bis fallende männliche Lebenserwartung in der UdSSR</b> (1964: 64,4 J. → 1984: ~61,7 J.; einziger Industrieraum mit diesem Muster vor 1990) — der sensibelste Einzelindikator dafür, dass das Sozialmodell seine Versprechen nicht mehr trug.</p>
+      <p><b>Verdikt gesplittet:</b> Bildungsexpansion <span class="vbad vr">robust</span> (überall real, schnell, nachhaltig) · Gesundheitsgrundversorgung <span class="vbad vu">gestützt</span> (real, aber Qualitätsgrenzen + Spätstagnation) · Wohnungsprogramme <span class="vbad vg">gespalten</span> (Quantitätserfolg, Qualitäts-/Instandhaltungsversagen) · Implizite These „nur Sozialismus liefert das" <span class="vbad vn">nicht haltbar</span> (Kontrollgruppe).</p>
+      <div class="ednote"><b>Audit-Marginalie</b>Der Capability-Rahmen (Sen) erklärt das Muster: Investitionen in Fähigkeiten (Lesen, Gesundheit) wirken systemunabhängig — Freiheitsentzug wirkt systemspezifisch. Genau deshalb konnten Demokratien die Erfolge kopieren, ohne die Kosten zu importieren.</div>
+      <div class="begr"><span>Finnland-Test</span><span>Costa-Rica-Vergleich</span><span>LE-Männer-Knick</span></div>
+    </div>
+  </details>
+</section>
+
+<section class="kapitel" id="mod11">
+  <div class="kapkopf"><div class="keb">Gesellschaft · Modul 11</div><div class="knum">M11</div><h2>Frauen &amp; Familie</h2></div>
+  <p class="kapintro">Programmatisch bei Engels fundiert, in der Frühphase weltweit avantgardistisch, unter Stalin teilrevidiert, in der DDR zur halben Erfolgsgeschichte gereift: Kein Maßnahmenfeld zeigt so deutlich das Muster „Pionierleistung → Instrumentalisierung → Überholung durch Demokratien".</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">11.1</span><span class="bt">Programm und Pionierphase<small>Engels 1884 · Sowjetgesetze 1918/1920 · Kollontai</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <blockquote class="zit">Der Umsturz des Mutterrechts war die weltgeschichtliche Niederlage des weiblichen Geschlechts. Der Mann ergriff das Steuer auch im Hause, die Frau wurde entwürdigt, geknechtet, Sklavin seiner Lust und bloßes Werkzeug der Kinderzeugung.
+        <br><span class="qsig web">Engels, Der Ursprung der Familie, des Privateigentums und des Staats (1884) — MEW 21, Kap. II (S. 61)</span></blockquote>
+      <p><b>Programm:</b> Engels leitet Frauenunterdrückung aus Eigentum und Erbsicherung ab; Befreiung folge aus Erwerbsarbeit der Frau und Vergesellschaftung der Hausarbeit. <b>Umsetzung 1917–1926 — objektiv Weltspitze:</b> Zivilehe und erleichterte Scheidung (Dekrete Dez. 1917, Familiengesetzbuch 1918), volle rechtliche Gleichstellung, als erstes Land der Welt legaler Schwangerschaftsabbruch (Nov. 1920), Gleichstellung unehelicher Kinder, Frauenabteilung der Partei (Schenotdel, Kollontai als weltweit erste Ministerin). Kein Land der Zwischenkriegszeit hatte ein moderneres Familienrecht.</p>
+      <div class="begr"><span>MEW 21</span><span>Familiengesetzbuch 1918</span><span>Abtreibungslegalisierung 1920</span><span>Schenotdel</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">11.2</span><span class="bt">Rollback, Reifephase, Endbilanz<small>Stalin 1936/1944 · DDR-Modell · heutiger Vergleichsstand</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Der Rollback:</b> 1936 Abtreibungsverbot (bis 1955), Erschwerung der Scheidung, Mutterheldinnen-Kult; Familienedikt 1944 (Unterscheidung ehelich/unehelich wieder eingeführt, Scheidung nur per Gericht); Schenotdel bereits 1930 aufgelöst. Die Avantgarde-Gesetze fielen der Bevölkerungs- und Stabilitätspolitik zum Opfer — die Frauenfrage war Instrument, nicht Prinzip. <b>Reifephase DDR:</b> Frauenerwerbsquote ~91 % (1989, Weltrekord), Krippen/Kindergärten flächendeckend, legaler Schwangerschaftsabbruch ab 1972, ökonomische Unabhängigkeit real. <b>Aber:</b> Doppelbelastung blieb (Hausarbeit zu ~80 % weiblich, DDR-Zeitbudgetstudien), und die Macht blieb männlich — im SED-Politbüro saß in 40 Jahren <b>kein einziges weibliches Vollmitglied</b> mit eigenständiger Machtbasis (Margarete Müller u. a. nur Kandidatinnen).</p>
+      <p><b>Kontrollgruppe heute:</b> Die Spitzenplätze aller Gender-Indizes (Global Gender Gap, EIGE) halten die nordischen Sozialdemokratien — nicht die post-sozialistischen Staaten. Was bleibt, ist ein realer Ost-Vorsprung bei Erwerbsarbeit und Kinderbetreuung (heutige Ost-West-Differenz in Deutschland in Krippenquote und Vollzeit-Müttern), aber Westeuropa zog bei Rechten, Repräsentation und Selbstbestimmung vorbei — ohne Diktatur.</p>
+      <p><b>Verdikt gesplittet:</b> Rechtliche Gleichstellung + Erwerbsintegration <span class="vbad vu">gestützt</span> (real, langlebig, mit Ost-Nachwirkung) · Gesamtversprechen „Frauenbefreiung durch Sozialismus" <span class="vbad vg">gespalten</span> (Pionierphase ja, Rollback und Macht-Ausschluss nein, nordische Demokratien überholten).</p>
+      <div class="ednote"><b>Audit-Marginalie</b>Engels' ethnologische Grundlage (Morgan/Bachofen, Ur-Matriarchat) gilt fachlich als überholt; seine <b>soziologische</b> Kernthese — ökonomische Unabhängigkeit als Bedingung der Gleichstellung — ist dagegen durch moderne Forschung breit gestützt. Theorie-Verdikt getrennt vom Maßnahmen-Verdikt: Ethnologie <span class="vbad vn">überholt</span>, Ökonomie-These <span class="vbad vu">gestützt</span>.</div>
+      <div class="begr"><span>Rollback 1936/44</span><span>Erwerbsquote 91 %</span><span>Politbüro: 0 Frauen</span><span>Nordics vorn</span></div>
+    </div>
+  </details>
+</section>
+
+<section class="kapitel" id="mod12">
+  <div class="kapkopf"><div class="keb">Gesellschaft · Modul 12</div><div class="knum">M12</div><h2>Religion · Kultur · Internationalismus</h2></div>
+  <p class="kapintro">Drei Felder, ein Muster: Eine differenzierte (Religion), schöpferische (Kultur) bzw. universalistische (Internationale) Programmatik wurde in der Staatspraxis zu Verfolgung, Zensur und Hegemonie verengt — und scheiterte an dem, was sie verdrängen wollte.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">12.1</span><span class="bt">Religion: vom „Seufzer der Kreatur" zum Staatsatheismus<small>Marx 1844 · Lenin 1905 · Liga der Gottlosen · Albanien 1967</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <blockquote class="zit">Die Religion ist der Seufzer der bedrängten Kreatur, das Gemüt einer herzlosen Welt, wie sie der Geist geistloser Zustände ist. Sie ist das Opium des Volkes.
+        <br><span class="qsig web">Marx, Zur Kritik der Hegelschen Rechtsphilosophie. Einleitung (1844) — MEW 1, S. 378</span></blockquote>
+      <p><b>Programm-Differenz:</b> Bei Marx ist Religion Symptom („Ausdruck des wirklichen Elendes und Protestation gegen das wirkliche Elend", ebd.) — Therapie sei Weltveränderung, nicht Religionsverbot. Lenin verschärfte zum Kampfauftrag: Religion als „Art geistigen Fusels" (Sozialismus und Religion, 1905 — LW 10, S. 70 ff.). <b>Staatspraxis:</b> Kirchenenteignungen ab 1918, Liga der kämpferischen Gottlosen (1925, bis ~3,5 Mio. Mitglieder), Klerus-Verfolgung mit Höhepunkt 1937/38 (Größenordnung: ≈ 100.000 erschossene Geistliche und Kirchenaktive nach Kommissionsdaten der 1990er — Korridor unsicher), Kirchensprengungen (Christ-Erlöser-Kathedrale 1931); Albanien erklärte sich 1967 zum „ersten atheistischen Staat der Welt" (jede Religionsausübung strafbar).</p>
+      <p><b>Empirischer Ausgang:</b> Nach 1991 kehrte Religiosität überall zurück — Russland heute: ~70 % orthodoxe Selbstidentifikation; Polen blieb durchgängig katholisch geprägt; in Zentralasien Islam-Renaissance. Sieben Jahrzehnte Staatsatheismus konnten religiöse Bindung unterdrücken, nicht beseitigen — während sich West- und Nordeuropa im selben Zeitraum <b>ohne jede Repression</b> stärker säkularisierten (Kirchgangsquoten Skandinavien &lt; 5 %). Die Maßnahme erreichte ihr Ziel nicht einmal dort, wo sie am brutalsten war. Verdikt Staatsatheismus/Religionsverfolgung: <span class="vbad vn">nicht haltbar</span> · Marx' Säkularisierungs-Diagnose selbst (Religion schwindet mit materieller Sicherheit): <span class="vbad vu">gestützt</span> — bestätigt ausgerechnet durch die freien Wohlfahrtsstaaten.</p>
+      <div class="begr"><span>MEW 1, 378</span><span>geistiger Fusel</span><span>Albanien 1967</span><span>Säkularisierungs-Paradox</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">12.2</span><span class="bt">Kultur: Aufbruch, dann Gleichschaltung<small>Proletkult/Avantgarde → Sozialistischer Realismus 1934 → Zensur als Dauerzustand</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Die zwei Phasen:</b> 1917–1929 reale Avantgarde-Blüte (Konstruktivismus, Eisenstein, Majakowski, Meyerhold — Weltgeltung bis heute). Ab 1932/34 Zwangsvereinheitlichung: Dekret zur Auflösung aller Künstlervereinigungen (1932), Sozialistischer Realismus als <b>einzige</b> zulässige Methode (Schriftstellerkongress 1934), Glavlit-Zensur über jede Druckseite, Schdanowschtschina 1946 ff.; Künstlerschicksale als Systemindikator: Majakowski Suizid 1930, Meyerhold erschossen 1940, Mandelstam im Lager gestorben 1938, Pasternak/Solschenizyn-Verfolgung, DDR: Biermann-Ausbürgerung 1976.</p>
+      <p><b>Bilanz:</b> Die kreative Weltgeltung der Frühphase entstand <b>vor</b> der Maßnahme „Kulturlenkung" und wurde von ihr beendet; danach entstand bedeutende Kunst überwiegend gegen oder unter dem System (Samisdat, Schostakowitschs Doppelcodierung), kaum durch es. Verdikt Kulturlenkung/Zensur als Maßnahme: <span class="vbad vn">nicht haltbar</span> — sie zerstörte messbar das, was sie zu fördern beanspruchte.</p>
+      <div class="begr"><span>Dekret 1932</span><span>Glavlit</span><span>Samisdat</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">12.3</span><span class="bt">Internationalismus: „Proletarier aller Länder" vs. Panzer in Prag<small>Komintern · Breschnew-Doktrin · sozialistische Bruderkriege</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Programm → Instrument:</b> Die Komintern (1919) band über die 21 Aufnahmebedingungen (1920) alle Mitgliedsparteien an Moskauer Weisung; spätestens mit „Sozialismus in einem Land" (1925) und der Auflösung der Komintern (1943, als Geste an die Westalliierten) war der Universalismus der Staatsräson untergeordnet. <b>Praxis-Test im eigenen Lager:</b> Ungarn 1956 (~2.500 tote Ungarn), Prag 1968, Breschnew-Doktrin der „beschränkten Souveränität", Afghanistan 1979; dazu die Bruderkriege: sowjetisch-chinesischer Grenzkrieg 1969, Chinas Strafexpedition gegen Vietnam 1979, Vietnam-Kambodscha 1978/79 — <b>Kriege zwischen sozialistischen Staaten</b>, die es laut Programm nicht geben konnte.</p>
+      <p><b>Gegenprobe:</b> Wo Arbeiterbewegung tatsächlich grenzüberschreitend wirkte, war es die reformistische Linie (Internationale Arbeitsorganisation ILO 1919, internationale Gewerkschaftsbünde, EU-Sozialstandards). Verdikt proletarischer Internationalismus als Staatsmaxime: <span class="vbad vn">nicht haltbar</span> — er wurde in jeder Konfliktprobe von nationaler Macht-Logik geschlagen, im eigenen Lager mit Panzern.</p>
+      <div class="begr"><span>21 Bedingungen</span><span>Breschnew-Doktrin</span><span>1969/1979 Bruderkriege</span></div>
+    </div>
+  </details>
+</section>
+
+<!-- ============ EMPIRISCHER ABGLEICH ============ -->
+<section class="kapitel" id="empirie">
+  <div class="kapkopf"><div class="keb">Höhepunkt</div><div class="knum">E</div><h2>Empirischer Abgleich — die Gesamtbilanz</h2></div>
+  <p class="kapintro">Konsolidierung der Module M1–M12: 41 Kernmaßnahmen, sechs Verdikte, ein Systemvergleich, eine Tote-Bilanz in Korridoren — und die kontrafaktische Frage, an der alles hängt.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">E.1</span><span class="bt">Konsolidierte Verdikt-Tabelle<small>41 Kernmaßnahmen aus M1–M12, gruppiert nach Befund</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <table class="etab" style="color:#1E2433">
+        <tr><th>Verdikt</th><th>Maßnahmen (Modul)</th><th>n</th></tr>
+        <tr><td><span class="vbad vr">robust</span></td><td>Progressivsteuer (M1) · unentgeltliche Schulbildung (M1) · Bildungsexpansion/Alphabetisierung (M10) · Bernstein'sche Reformlinie (M2)</td><td>4</td></tr>
+        <tr><td><span class="vbad vu">gestützt</span></td><td>Bodenwertbesteuerung (M1) · strategisches Staatseigentum m. Markteinbettung (M4) · Beschäftigungsgarantie als soziale Sicherheit (M6) · Gesundheitsgrundversorgung (M10) · rechtl. Gleichstellung + Erwerbsintegration der Frauen (M11)</td><td>5</td></tr>
+        <tr><td><span class="vbad vg">gespalten</span></td><td>Kreditzentralisation (M1) · Staats-Transport/-Kommunikation (M1) · partielle Verstaatlichung (M4) · indikative Planung (M5) · Verteilungs-Gleichheit (M6) · Wohnungsprogramme (M10) · Gesamtversprechen Frauenbefreiung (M11)</td><td>7</td></tr>
+        <tr><td><span class="vbad vk">kontrovers</span></td><td>Notwendigkeit revolutionärer Gewalt (M2) · Lenin-Marx-Kontinuität (M3) · Opfer-Gesamtzahl „100 Mio." (M9)</td><td>3</td></tr>
+        <tr><td><span class="vbad vt">nicht testbar</span></td><td>Bedürfnisprinzip der „höheren Phase" (M6) · Kommune-Teilmechanismen im Großmaßstab (M8)</td><td>2</td></tr>
+        <tr><td><span class="vbad vn">nicht haltbar</span></td><td>Total-Bodenexpropriation · Erbrechtsabschaffung · Emigranten-Konfiskation · Staatsfabriken-Vollmodell · Arbeitszwang/industrielle Armeen · Stadt-Land-Aufhebung (alle M1) · Revolution als Emanzipationsmethode (M2) · Diktatur als Übergang · Absterben des Staates (M3) · Totalverstaatlichung · Zwangskollektivierung (M4) · Vollplanung (M5) · Vollbeschäftigung als Effizienz-/Freiheitsversprechen (M6) · Avantgardepartei (M7) · Rätemodell-Praxis (M8) · Terror als Herrschaftsinstrument (M9) · „nur Sozialismus liefert Soziales" (M10) · Staatsatheismus (M12) · Kulturlenkung/Zensur (M12) · Internationalismus als Staatsmaxime (M12)</td><td>20</td></tr>
+      </table>
+      <p><b>Quersumme:</b> 41 Maßnahmen → <b>20 nicht haltbar (49 %) · 7 gespalten (17 %) · 5 gestützt (12 %) · 4 robust (10 %) · 3 kontrovers (7 %) · 2 nicht testbar (5 %)</b>. Funktioniert haben damit ~22 % (robust + gestützt) — und diese neun Maßnahmen teilen ein Merkmal: Sie investieren in Fähigkeiten oder Absicherung, ohne Macht zu konzentrieren. Die 20 gescheiterten teilen das Gegenteil: Jede einzelne setzt Zwang oder Monopol voraus.</p>
+      <div class="begr"><span>41 Kernmaßnahmen</span><span>49 % nicht haltbar</span><span>22 % tragfähig</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">E.2</span><span class="bt">Der Systemvergleich: dieselben Ziele, zwei Wege<small>Sozialdemokratischer Reformpfad vs. realsozialistischer Revolutionspfad</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p>Beide Pfade entspringen derselben Arbeiterbewegung und beanspruchen dieselben Ziele (Gleichheit, Sicherheit, Emanzipation). Der Vergleich nutzt das jeweils stärkste Exemplar — Schweden vs. UdSSR — plus die Paartests gleicher Startbedingungen:</p>
+      <table class="etab" style="color:#1E2433">
+        <tr><th>Indikator (um 1989 / Ende)</th><th>Schweden</th><th>UdSSR</th></tr>
+        <tr><td>BIP/Kopf (PPP, Maddison)</td><td>~ 17.500 $</td><td>~ 7.000 $</td></tr>
+        <tr><td>Lebenserwartung</td><td>77,6 J.</td><td>69,5 J. (Männer ~64)</td></tr>
+        <tr><td>Gini (Einkommen)</td><td>~ 0,21–0,27</td><td>~ 0,27–0,29 (+ Zugangs-Privilegien)</td></tr>
+        <tr><td>Demokratie / Pressefreiheit</td><td>voll / frei</td><td>Einpartei / Glavlit</td></tr>
+        <tr><td>Tote bei Etablierung des Modells</td><td><b>0</b></td><td>Mio. (Korridore M9.2)</td></tr>
+        <tr><td>Ausreisefreiheit</td><td>ja</td><td>nein (Mauer/Schießbefehl im Block)</td></tr>
+        <tr><td>Systemende</td><td>besteht</td><td>Implosion 1991</td></tr>
+      </table>
+      <p><b>Paartests gleicher Startbedingungen:</b> BRD/DDR 1949→1989: BIP/Kopf ~2:1, Fluchtbewegung einseitig (Mauertote nur in eine Richtung). Costa Rica/Kuba 1955→2024: Startvorteil Kuba, Endstand Costa Rica ~2:1 bei BIP, +2,2 J. Lebenserwartung, volle Freiheit. Finnland/Estland 1939→1989: kulturell-ökonomisch nahezu identischer Start, 1989 Wohlstandsverhältnis ~3:1. Südkorea/Nordkorea: ~20:1. <b>In keinem Paartest gewann der realsozialistische Pfad</b> — bei keinem Hauptindikator außer formaler Beschäftigung und (teils) Kinderbetreuung. Verdikt der Pfad-Frage: Der reformistische Weg dominiert den revolutionären in jeder fairen Messung — <span class="vbad vr">robust</span>.</p>
+      <div class="begr"><span>4 Paartests</span><span>0 : 4 für Revolution</span><span>Maddison/HDI</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">E.3</span><span class="bt">Tote-Bilanz in Korridoren — und die Kontrafaktik<small>Visualisierung der Forschungsspannen · die Frage hinter der Bilanz</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <svg viewBox="0 0 460 150" role="img" aria-label="Korridor-Balken der Opferzahlen" style="max-width:100%">
+        <g font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1E2433">
+          <text x="0" y="14">China (Mao gesamt)</text>
+          <rect x="150" y="5" width="200" height="11" rx="2" fill="#6E1F1F" opacity=".35"/>
+          <rect x="195" y="5" width="110" height="11" rx="2" fill="#6E1F1F"/>
+          <text x="358" y="14" font-family="IBM Plex Mono" font-size="10">≈35–50 Mio.</text>
+          <text x="0" y="40">UdSSR (1918–53)</text>
+          <rect x="150" y="31" width="90" height="11" rx="2" fill="#6E1F1F" opacity=".35"/>
+          <rect x="168" y="31" width="50" height="11" rx="2" fill="#6E1F1F"/>
+          <text x="248" y="40" font-family="IBM Plex Mono" font-size="10">≈9–20 Mio.</text>
+          <text x="0" y="66">Kambodscha 1975–79</text>
+          <rect x="150" y="57" width="18" height="11" rx="2" fill="#6E1F1F"/>
+          <text x="176" y="66" font-family="IBM Plex Mono" font-size="10">≈1,5–2 Mio. (21–25 % d. Bev.)</text>
+          <text x="0" y="92">Nordkorea 1995–98</text>
+          <rect x="150" y="83" width="16" height="11" rx="2" fill="#6E1F1F" opacity=".6"/>
+          <text x="174" y="92" font-family="IBM Plex Mono" font-size="10">≈0,6–2,5 Mio.</text>
+          <text x="0" y="118">Reformpfad (Saltsjöbaden 1938 …)</text>
+          <rect x="150" y="109" width="3" height="11" rx="1" fill="#2E6E6A"/>
+          <text x="160" y="118" font-family="IBM Plex Mono" font-size="10" fill="#2E6E6A">0</text>
+          <text x="0" y="143" font-size="9" fill="#4A5266">Dunkle Balken: engerer Forschungskonsens · helle Enden: Spannweite (Schätzer in M9.2)</text>
+        </g>
+      </svg>
+      <p style="margin-top:1rem"><b>Die Kontrafaktik:</b> Hätte es ohne Oktober 1917 besser kommen können? Niemand weiß es — aber die Konstituante (Wahl Nov. 1917: Sozialrevolutionäre 40 %, Bolschewiki 24 %) zeigt, dass eine sozialreformerische Mehrheit existierte und gewaltsam aufgelöst wurde (Jan. 1918). Die Behauptung „es gab keine Alternative" ist mindestens so spekulativ wie ihr Gegenteil — mit dem Unterschied, dass die real gewählte Variante ihre Bilanz vorgelegt hat. <b>Schlussformel des Audits:</b> Der politische Marxismus hat seine tragfähigen Maßnahmen (Bildung, Sozialstaat, Gleichstellung, Progressivsteuer) ausnahmslos mit dem Reformwerkzeugkasten der Demokratie verwirklicht gesehen — und seine spezifischen Machtmaßnahmen (Avantgarde, Diktatur, Plan-Monopol, Terror) ausnahmslos scheitern sehen. Was funktionierte, brauchte den Bruch nicht; was den Bruch brauchte, funktionierte nicht.</p>
+      <div class="begr"><span>Konstituante 1917/18</span><span>Korridor-Grafik</span><span>Schlussformel</span></div>
+    </div>
+  </details>
+</section>
+
+<!-- ============ SYNTHESE ============ -->
+<section class="kapitel" id="synthese">
+  <div class="kapkopf"><div class="keb">Höhepunkt · Synthese</div><div class="knum">Σ</div><h2>Synthese — was dieses Audit zusammen ergibt</h2></div>
+  <p class="kapintro">Zwölf Module, 41 Maßnahmen, 178 Jahre: Hier laufen die Linien zusammen — in fünf Befunden, einer Erbschafts-Bilanz und einer Schlussformel.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">Σ.1</span><span class="bt">Fünf Befunde<small>Das Muster hinter den 41 Verdikten</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Befund 1 · Fähigkeits-Investitionen wirken systemunabhängig.</b> Alles, was im Audit „robust" oder „gestützt" ist, investiert in Menschen (Bildung, Gesundheit, Gleichstellung, Absicherung) oder verteilt Lasten fair (Progressivsteuer). Genau diese Maßnahmen wurden von Demokratien weltweit übernommen — sie brauchten den Marxismus als Anstoß, aber nie als Staatsform.</p>
+      <p><b>Befund 2 · Machtkonzentrations-Maßnahmen scheiterten ausnahmslos — und systemisch.</b> Alle 20 „nicht haltbaren" Maßnahmen setzen Zwang oder Monopol voraus. Ihr Scheitern war kein Pech einzelner Länder: Es wiederholte sich über jede Kultur, Epoche und Führungsfigur hinweg, und die Mechanik ist benennbar — weiche Budgets erzeugen Mangel (Kornai, M5), unkontrollierte Macht erzeugt Terror (Tscheka-Chronologie, M9), Stellvertretung erzeugt Diktatur (M7). Wo der Mechanismus rückgebaut wurde (NEP 1921, Dekollektivierung 1978), erholte sich die Lage sofort — der schärfste Kausalbeleg des Audits.</p>
+      <p><b>Befund 3 · Der Reformpfad dominiert in jedem fairen Vergleich.</b> Vier Paartests gleicher Startbedingungen (BRD/DDR, Costa Rica/Kuba, Finnland/Estland, Süd-/Nordkorea): 4:0. Dieselben erklärten Ziele — Gleichheit, Sicherheit, Würde — erreichte der demokratische Sozialstaat auf höherem Niveau, mit null Toten bei der Etablierung.</p>
+      <p><b>Befund 4 · Die Klassiker enthielten beides; umgesetzt wurde systematisch das Falsche.</b> Im selben Erbe stehen radikale Demokratisierungs-Mechanismen (Kommune: Absetzbarkeit, Arbeiterlohn — M8) und Zwangs-Programmpunkte (Arbeitsarmeen, Konfiskation — M1). Die Staatspraxis verwirklichte fast ausschließlich Letztere und liquidierte Erstere binnen kurzem (Kronstadt 1921). Die teuerste Einzelursache ist eine Leerstelle: Marx regelte die Kontrolle der neuen Macht nicht — und ungeregelte Macht wurde in 100 % der Fälle unkontrollierte Macht.</p>
+      <p><b>Befund 5 · Die Bilanz ist asymmetrisch, nicht ausgeglichen.</b> „Es gab Gutes und Schlechtes" wäre die falsche Zusammenfassung: Das Gute (22 %) war ohne das System zu haben und wird heute ohne es praktiziert; das Schlechte (49 %) war ohne das System nicht zu haben und kostete Millionen Leben. Erfolg und Scheitern stehen nicht nebeneinander — das Scheitern hängt an genau den Maßnahmen, die das System von der Sozialdemokratie unterschieden.</p>
+      <div class="begr"><span>Fähigkeiten vs. Macht</span><span>4:0 Paartests</span><span>Leerstelle Machtkontrolle</span><span>Asymmetrie</span></div>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">Σ.2</span><span class="bt">Erbe, Widerlegung, offene Fragen<small>Was bleibt — und was dieses Audit nicht behauptet</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Tragfähiges Erbe:</b> Der demokratische Sozialstaat trägt marxistische Fingerabdrücke — Progressivsteuer, Bildungsanspruch, Arbeitsrechte, Gleichstellungs-Anstoß — und die Kapitalismus-Kritik bleibt als Korrektiv produktiv: Ungleichheits-, Krisen- und Machtfragen, die Marx stellte, sind real, auch wo seine Antworten scheiterten. <b>Empirisch erledigt</b> ist das spezifisch Revolutionär-Leninistische: Avantgarde, Einparteistaat, Planmonopol, Terror — kein Befund dieses Audits lässt dort eine Rettung zu. <b>Offen bleiben</b> drei Deutungsfragen (Gewalt-Notwendigkeit 1917, Lenin-Marx-Kontinuität, Opfer-Gesamtzahl) — sie sind als kontrovers markiert, nicht entschieden.</p>
+      <p><b>Was dieses Audit nicht behauptet:</b> Es bewertet Maßnahmen, nicht Ideale, nicht Motive, nicht heutige demokratische Linke, die sich auf das reformerische Erbe beruft — deren Linie (Bernstein) ist hier im Gegenteil die am besten bestätigte. Und es erklärt den Kapitalismus nicht zum Sieger über jede Kritik: Gemessen wurde, welcher Weg die selbstgesteckten Ziele der Arbeiterbewegung erreichte. Die Antwort der Daten ist eindeutig — es war der Weg über Wahlzettel, Tarifvertrag und Rechtsstaat.</p>
+      <div style="margin-top:1.1rem;background:rgba(16,28,51,.06);border:1px solid rgba(16,28,51,.2);border-left:4px solid var(--einband);border-radius:5px;padding:1rem 1.2rem">
+        <div style="font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tinte-soft);margin-bottom:.4rem">Schlussformel des Audits</div>
+        <p style="font-family:var(--serif);font-size:1.08rem;line-height:1.55;margin:0"><b>Was funktionierte, brauchte den Bruch nicht; was den Bruch brauchte, funktionierte nicht.</b></p>
+      </div>
+      <div class="begr"><span>Erbe im Sozialstaat</span><span>Leninismus erledigt</span><span>3 offene Fragen</span><span>Maßnahmen ≠ Ideale</span></div>
+    </div>
+  </details>
+</section>
+
+<!-- ============ APPARAT ============ -->
+<section class="kapitel" id="glossar">
+  <div class="kapkopf"><div class="keb">Apparat</div><div class="knum">✦</div><h2>Glossar in einfacher Sprache</h2></div>
+  <p class="kapintro">32 Begriffe, je in einem Satz erklärt — für Leserinnen und Leser ohne Vorwissen.</p>
+  <div class="glossar">
+    <div class="geintrag"><b>Avantgardepartei</b><p>Lenins Idee einer kleinen Berufsrevolutionärs-Elite, die der Arbeiterklasse vorausgeht und für sie entscheidet.</p></div>
+    <div class="geintrag"><b>Blat</b><p>Sowjetische Beziehungswirtschaft: Wer jemanden kannte, bekam, was es offiziell nicht gab.</p></div>
+    <div class="geintrag"><b>Breschnew-Doktrin</b><p>Moskaus Anspruch ab 1968, in „Bruderstaaten" militärisch einzugreifen, wenn der Sozialismus dort wackelt.</p></div>
+    <div class="geintrag"><b>Demokratischer Zentralismus</b><p>Parteiprinzip: unten darf diskutiert werden, bis oben entschieden hat — dann gilt absolute Disziplin.</p></div>
+    <div class="geintrag"><b>Dekulakisierung</b><p>Stalins Vernichtungskampagne gegen „reiche" Bauern ab 1929 — Enteignung, Deportation, Tod.</p></div>
+    <div class="geintrag"><b>Diktatur des Proletariats</b><p>Marx' Formel für eine befristete Arbeiterherrschaft im Übergang — real wurde daraus unbefristete Parteidiktatur.</p></div>
+    <div class="geintrag"><b>Expropriation</b><p>Enteignung; „Expropriation der Expropriateure" = Enteignung der Kapitaleigentümer.</p></div>
+    <div class="geintrag"><b>Fraktionsverbot</b><p>Verbot organisierter Meinungsgruppen in der KPdSU (1921) — das Ende innerparteilicher Demokratie.</p></div>
+    <div class="geintrag"><b>Gini-Koeffizient</b><p>Maß für Einkommensungleichheit: 0 = alle gleich, 1 = einer hat alles.</p></div>
+    <div class="geintrag"><b>Glavlit</b><p>Sowjetische Zensurbehörde — ohne ihren Stempel erschien keine Druckseite.</p></div>
+    <div class="geintrag"><b>Gosplan</b><p>Staatliche Planungskommission der UdSSR, die Millionen Produktpositionen per Bilanz steuern sollte.</p></div>
+    <div class="geintrag"><b>Gulag</b><p>Hauptverwaltung der sowjetischen Zwangsarbeitslager; steht heute für das Lagersystem insgesamt.</p></div>
+    <div class="geintrag"><b>HDI</b><p>UN-Entwicklungsindex aus Einkommen, Bildung und Lebenserwartung.</p></div>
+    <div class="geintrag"><b>Holodomor</b><p>„Tötung durch Hunger": die Hungersnot 1932/33, die die Ukraine besonders traf.</p></div>
+    <div class="geintrag"><b>Imperatives Mandat</b><p>Abgeordnete sind an Wähleraufträge gebunden und jederzeit abrufbar — Kommune-Prinzip von 1871.</p></div>
+    <div class="geintrag"><b>Kalkulationsdebatte</b><p>Streit ab 1920, ob eine Wirtschaft ohne echte Preise rational rechnen kann (Mises/Hayek: nein).</p></div>
+    <div class="geintrag"><b>Klassenstrafrecht</b><p>Bestrafung nach sozialer Herkunft statt nach individueller Tat — Prinzip des Roten Terrors.</p></div>
+    <div class="geintrag"><b>Komintern</b><p>Kommunistische Internationale (1919–1943), Dachverband aller KPs unter Moskauer Führung.</p></div>
+    <div class="geintrag"><b>Kronstadt 1921</b><p>Matrosenaufstand für „Sowjets ohne Bolschewiki" — von der Roten Armee niedergeschlagen.</p></div>
+    <div class="geintrag"><b>Likbez</b><p>Sowjetische Alphabetisierungskampagne ab 1919 — einer der realen Erfolge des Systems.</p></div>
+    <div class="geintrag"><b>Lischenzy</b><p>„Entrechtete": Personen, denen die Sowjetverfassung bis 1936 das Wahlrecht wegen Herkunft entzog.</p></div>
+    <div class="geintrag"><b>Mangelwirtschaft</b><p>Kornais Begriff für Planwirtschaften, in denen Knappheit der Dauerzustand ist — nicht die Ausnahme.</p></div>
+    <div class="geintrag"><b>MEW</b><p>Marx-Engels-Werke: die in der DDR edierte Standardausgabe, nach der hier zitiert wird (Band, Seite).</p></div>
+    <div class="geintrag"><b>NEP</b><p>Neue Ökonomische Politik 1921–28: Lenins taktische Rückkehr zu Teilmärkten nach dem Kollaps des Kriegskommunismus.</p></div>
+    <div class="geintrag"><b>Nomenklatura</b><p>Die Liste der Partei-bestätigten Führungsposten — und die privilegierte Kaste, die sie besetzte.</p></div>
+    <div class="geintrag"><b>Proletariat</b><p>Bei Marx: die Klasse der Lohnabhängigen ohne eigene Produktionsmittel.</p></div>
+    <div class="geintrag"><b>Samisdat</b><p>„Selbstverlag": heimlich abgetippte verbotene Literatur im Ostblock.</p></div>
+    <div class="geintrag"><b>Schenotdel</b><p>Frauenabteilung der KPdSU (1919–1930) — Pionierinstitution, von Stalin aufgelöst.</p></div>
+    <div class="geintrag"><b>Soft Budget Constraint</b><p>„Weiche Budgetbeschränkung" (Kornai): Staatsbetriebe können nicht pleitegehen — und wirtschaften entsprechend.</p></div>
+    <div class="geintrag"><b>Sozialistischer Realismus</b><p>Ab 1934 die einzig erlaubte Kunstmethode der UdSSR: parteilich, optimistisch, verständlich.</p></div>
+    <div class="geintrag"><b>Tscheka</b><p>„Außerordentliche Kommission" — die erste sowjetische Geheimpolizei, gegründet Dezember 1917.</p></div>
+    <div class="geintrag"><b>Übergangsperiode</b><p>Bei Marx die befristete Phase zwischen Kapitalismus und Kommunismus — die real nie endete.</p></div>
+  </div>
+</section>
+
+<section class="kapitel" id="errata">
+  <div class="kapkopf"><div class="keb">Apparat · Faktencheck</div><div class="knum">Δ</div><h2>Quellenkritik &amp; Präzisierungs-Hinweise</h2></div>
+  <p class="kapintro">Sechs Hinweise zum sauberen Umgang mit den heikelsten Zahlen und Editionen dieses Themas — gegen die häufigsten Fehlzitate und Verzerrungen.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">Δ</span><span class="bt">Sechs Hinweise<small>Zahlen, Editionen, Verzerrungen</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Δ1 · Snyders „14 Millionen" nicht fehlzitieren.</b> Die Zahl aus „Bloodlands" umfasst NS- <b>und</b> Sowjetverbrechen in einer Region; der sowjetische Anteil liegt bei grob einem Drittel. Sie darf nicht als reine „Stalin-Zahl" verwendet werden — genau das geschieht in Debatten regelmäßig.</p>
+      <p><b>Δ2 · Courtois' „100 Millionen" ist der obere Rand, kein Konsens.</b> Selbst die Schwarzbuch-Mitautoren Werth und Margolin distanzierten sich öffentlich von der Addition; Werths eigene UdSSR-Schätzung liegt deutlich darunter. Dieses Dokument führt deshalb durchgängig Korridore mit benannten Schätzern (M9.2) statt einer Einzelzahl.</p>
+      <p><b>Δ3 · Manifest-Edition mit Vorsicht.</b> Das hier verwendete Digitalisat der Pelican-Ausgabe 1967 (Moore-Übersetzung 1888) enthält OCR-Fehler; alle Zitate wurden gegen die MEW-4-Zählung plausibilisiert. Für Zitierzwecke sind MEW 4 bzw. MEGA² maßgeblich.</p>
+      <p><b>Δ4 · Gini-Werte aus Mangelwirtschaften unterzeichnen die reale Ungleichheit.</b> Monetäre Gleichheit (DDR ~0,20) erfasst Zugangs-Privilegien der Nomenklatura nicht (Sonderläden, Wartelisten, Reisen) — Systemvergleiche brauchen deshalb Zusatzindikatoren (M6.3).</p>
+      <p><b>Δ5 · Erfolgsquoten hängen am Maßnahmen-Schnitt.</b> Dieses Dokument zählt 41 konsolidierte Kernmaßnahmen (22 % tragfähig). Wer feiner schneidet — jedes Repressionsinstrument einzeln —, senkt die Quote Richtung ~15 %; wer gröber schneidet, hebt sie. Quoten zu diesem Thema sind nur mit offengelegtem Schnitt vergleichbar (¶.3).</p>
+      <p><b>Δ6 · Editions-Hinweis Kornai.</b> Der zitierte Princeton-Reprint 2021 ist textidentisch mit der Erstausgabe „The Socialist System" (Princeton/Clarendon 1992); Kapitelzählung folgt der Erstausgabe.</p>
+      <div class="begr"><span>2 Zahlen-Schutzhinweise</span><span>2 Editions-Hinweise</span><span>2 Methoden-Hinweise</span></div>
+    </div>
+  </details>
+</section>
+
+<section class="kapitel" id="methodik">
+  <div class="kapkopf"><div class="keb">Apparat</div><div class="knum">¶</div><h2>Methodik &amp; Quellen dieser Edition</h2></div>
+  <p class="kapintro">Quellenkorpus, Verdikt-Kriterien, Prüfprotokoll, Limitationen — und das finale Selbst-Audit.</p>
+
+  <details class="blk" open>
+    <summary><span class="bn">¶.1</span><span class="bt">Quellenkorpus<small>Projektquellen (verifiziert) · Web-verifizierte Stellen · Datenbasen</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Projektquellen (Volltext im Archiv, direkt zitiert):</b> Marx/Engels, Manifest of the Communist Party (Moore-Übers. 1888, Pelican 1967) · Lenin, Was tun? (Grundschriften Bd. 5) · Lenin, Staat und Revolution (Verlag Neuer Weg 2017) · Bernstein, Evolutionary Socialism (engl. Ausg. d. „Voraussetzungen", 1909) · Kornai, The Socialist System (Princeton, Repr. 2021 = Erstausgabe 1992) · Snyder, Bloodlands (2010) · Courtois u. a., Das Schwarzbuch des Kommunismus (Piper 1998, Teilausgabe) · Skocpol, States and Social Revolutions (1979) · Acemoglu/Robinson, Warum Nationen scheitern (Fischer 2013).</p>
+      <p><b>Web-verifizierte Originalstellen (grüne Signatur):</b> Kritik des Gothaer Programms MEW 19, S. 21 u. 28 · Engels, Ursprung der Familie MEW 21 (Kap. II) · Marx, Zur Kritik der Hegelschen Rechtsphilosophie MEW 1, S. 378. <b>Referenzierte, nicht wörtlich zitierte Stellen</b> (MEW 4, 481 f.; MEW 17, 339 via Lenin; MEW 18, 160; MEW 20, 261 ff.; MEW 23, 25 u. 791; MEW 28, 507 f.; LW 10, 70 ff.; Luxemburg GW 4, 359) folgen den Standardausgaben. <b>Datenbasen:</b> Maddison Project (BIP-Reihen), UNDP-HDI, archivbasierte Gulag-Statistik (Zemskov), demografische Hungersnot-Forschung (Davies/Wheatcroft; chinesischer Zensus), Standardliteratur zu Einzelkomplexen (Applebaum, Yang Jisheng, Dikötter, Kiernan, Haggard/Noland).</p>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">¶.2</span><span class="bt">Verdikt-Kriterien und Prüfprotokoll<small>Wann vergibt das Audit welches Urteil?</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Skala:</b> <span class="vbad vr">robust</span> = in praktisch allen Umsetzungen zweckerfüllend, auch außerhalb des Systems übernommen · <span class="vbad vu">gestützt</span> = überwiegend zweckerfüllend, mit dokumentierten Grenzen · <span class="vbad vg">gespalten</span> = Erfolg und Misserfolg etwa gleichgewichtig, kontextabhängig · <span class="vbad vk">kontrovers</span> = Forschung uneins über Befund oder Deutung · <span class="vbad vn">nicht haltbar</span> = Zweck in keiner Umsetzung dauerhaft erreicht oder nur um zerstörerischen Preis · <span class="vbad vt">nicht testbar</span> = Voraussetzungen nie eingetreten oder Fallbasis zu klein.</p>
+      <p><b>Protokoll je Maßnahme:</b> (1) Programmstelle im Original sichern (Projektquelle oder WEB✓); (2) Umsetzungsgeschichte mit Standardliteratur dokumentieren; (3) Zweck der Maßnahme aus der Quelle selbst bestimmen (nicht unterstellen); (4) Outcome an Daten messen, wo möglich mit Kontrollgruppe/Paartest; (5) Zahlen nur als Korridor mit benannten Schätzern; (6) Gegenpositionen prüfen — mindestens eine pro strittigem Befund; (7) Verdikt mit Begründung im Text, nicht nur als Badge.</p>
+    </div>
+  </details>
+
+  <details class="blk">
+    <summary><span class="bn">¶.3</span><span class="bt">Limitationen und finales Selbst-Audit<small>Was nach fünf Subs steht — und was nicht</small></span><svg class="pfeil" viewBox="0 0 18 18"><path d="M6 4 l7 5 -7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="blk-body">
+      <p><b>Limitationen:</b> (1) Keine Archivforschung — Sekundär- und Editionsbasis. (2) Historische Vergleiche sind keine Experimente; auch Paartests tragen Restkonfundierung (Marshall-Plan, Embargos, Kriegsfolgen). (3) Auswahlentscheidung „41 Kernmaßnahmen" enthält Urteilsspielraum; andere Schnitte ergäben leicht andere Quoten (Schnitt offengelegt in Δ5). (4) Einzelbearbeitung ohne Peer-Review. (5) Sprachgrenze: russisch-/chinesischsprachige Primärforschung nur über Übersetzungen/Standardwerke. (6) Einzelne Kennziffern sind Standardwerte mit Unschärfe (DDR-Gini, Stasi-Personalstände, Klerus-Opferzahlen — jeweils im Text markiert).</p>
+      <p><b>Finales Selbst-Audit:</b> Gehalten hat das Dokument seine drei Eingangsregeln: <b>Quellentreue</b> — 18 wörtliche Zitate, davon 14 aus Projektquellen, 4 web-verifiziert, 0 aus dem Gedächtnis; <b>Empirie vor Ideologie</b> — jede Erfolgsbehauptung des Systems wurde gewürdigt (M10/M11 enthalten die stärksten Pro-Befunde des Dokuments), jede Opferzahl als Korridor geführt; <b>Verdikt-Ehrlichkeit</b> — 6 Stufen real genutzt (4/5/7/3/20/2), drei Fragen ausdrücklich offen gelassen (kontrovers). Bekannte Restschwäche: Die Module M10–M12 stützen sich stärker auf Standardwissen mit Web-Plausibilisierung als M1–M9 mit ihren Projektquellen-Zitaten; wer hier tiefer prüfen will, findet die Ansatzpunkte in ¶.1. <b>Gesamtcharakter:</b> Dieses Dokument ist eine belastbare, quellengestützte Bilanz mit transparenten Grenzen — kein Schlusswort, sondern ein prüfbarer Stand.</p>
+      <div class="begr"><span>6 Limitationen</span><span>18 Zitate / 0 unbelegt</span><span>3 offene Fragen</span></div>
+    </div>
+  </details>
+</section>
+
+<footer class="fuss">
+  <p><b>Marx-Politik-Audit V1</b> · HTML-Edition 2026 · Erstellt im Rahmen des Marx-Therapie-Audit-Projekts (Audit 1 · 2.0 · 2.1 · 3.0 → Politik-Audit V1).<br>
+  Umfang: Schnellüberblick (S.1–S.6) · 12 Module · Empirischer Abgleich (41 Kernmaßnahmen) · Synthese (Σ) · Glossar (32 Begriffe) · Quellenkritik (Δ, 6 Hinweise) · Methodik mit Selbst-Audit. Verdikt-Endstand: 20 nicht haltbar · 7 gespalten · 5 gestützt · 4 robust · 3 kontrovers · 2 nicht testbar.</p>
+</footer>
+
+</div>
+</main>
+
+<script>
+// Lesebändchen
+const band = document.getElementById('band');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  band.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+}, {passive:true});
+</script>
+</body>
+</html>

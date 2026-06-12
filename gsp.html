@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Wie das GegenStandpunkt-Denken gebaut ist und an welchen Stellen es bricht: sieben unbegründete Grundannahmen, die Bruchstelle zum Staat, ein gegen Widerlegung abgedichtetes System — und was trotzdem standhält. Mit Belegen und Quellen.">
+<title>Prüfbericht 2 · Eine Denkschule im Härtetest — der GegenStandpunkt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Lexend:wght@300..800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   BASISMODUL M1 — „Prüfbericht im Tageslicht“
+   Grundlage für: index.html · marx.html · gsp.html · politik.html
+   Zielgruppe: Leserinnen und Leser ohne Vorwissen.
+   Prinzip: Erst ein Satz. Dann ein Bild. Dann die Tiefe.
+   ============================================================ */
+
+/* ---------- 1 · FUNDAMENT: Farben, Schriften, Maße ---------- */
+:root{
+  /* Grundton: helles Papier, dunkle Tinte */
+  --papier:#FBFAF5;          /* Seitenhintergrund */
+  --karte:#FFFFFF;           /* Kartenflächen */
+  --tinte:#1C2536;           /* Fließtext, verwandt mit dem Einband der Originaleditionen */
+  --tinte-2:#56607A;         /* Nebentext */
+  --linie:#E6E2D5;           /* Hairlines */
+  --linie-2:#D8D3C3;         /* kräftigere Linien */
+
+  /* Markenakzent: Stempelblau-Violett — wie ein Behörden-Prüfstempel.
+     Nur für Siegel, Links, Interaktion. NIE für Urteile. */
+  --stempel:#4A47B4;
+  --stempel-tief:#37348F;
+  --stempel-hauch:#EFEEFA;
+
+  /* Urteilsfarben — jede mit Tinte (Text) und Hauch (Fläche).
+     Regel: Farbe trägt nie allein. Immer Symbol + Wort dazu. */
+  --v1-tinte:#1E6F3F; --v1-hauch:#E3F0E6;   /* bestätigt          ✓✓ */
+  --v2-tinte:#5E7318; --v2-hauch:#EDF1D9;   /* überwiegend best.  ✓  */
+  --v3-tinte:#8A6A00; --v3-hauch:#F6EFD2;   /* teils / teils      ◐  */
+  --v4-tinte:#B23A2E; --v4-hauch:#F8E5E0;   /* nicht haltbar      ✗  */
+  --s1-tinte:#A4571B; --s1-hauch:#F7EADC;   /* Sonderfall: Fachleute uneins ⇄ */
+  --s2-tinte:#6E7686; --s2-hauch:#EDEEF1;   /* Sonderfall: nicht prüfbar    – */
+
+  /* Drei Stimmen, drei Schriften */
+  --disp:'Archivo', system-ui, sans-serif;        /* Beschilderung: Titel, Siegel, Zahlen */
+  --sans:'Lexend', system-ui, sans-serif;         /* Prüfbericht: aller Fließtext (fürs Lesen entworfen) */
+  --serif:'Fraunces', Georgia, serif;             /* Die Theorie spricht: nur Originalzitate */
+
+  --radius:16px;
+  --radius-s:10px;
+  --schatten:0 1px 2px rgba(28,37,54,.05), 0 10px 28px -18px rgba(28,37,54,.28);
+  --mass:70ch;               /* maximale Zeilenlänge */
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+
+body{
+  margin:0; background:var(--papier); color:var(--tinte);
+  font:400 17px/1.7 var(--sans);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+@media(min-width:720px){ body{font-size:18px} }
+
+::selection{background:var(--stempel-hauch); color:var(--stempel-tief)}
+
+a{color:var(--stempel); text-decoration-thickness:1.5px; text-underline-offset:3px}
+a:hover{color:var(--stempel-tief)}
+:focus-visible{outline:3px solid var(--stempel); outline-offset:3px; border-radius:4px}
+
+h1,h2,h3,h4{font-family:var(--disp); line-height:1.12; margin:0; letter-spacing:-.01em; text-wrap:balance}
+p{margin:.4em 0 .9em; max-width:var(--mass)}
+small{color:var(--tinte-2)}
+strong{font-weight:650}
+
+.wrap{max-width:1080px; margin:0 auto; padding:0 20px}
+@media(min-width:720px){ .wrap{padding:0 32px} }
+
+.skip{position:absolute; left:-999px; top:8px; background:var(--tinte); color:#fff;
+  padding:10px 16px; border-radius:10px; z-index:99; font-weight:600}
+.skip:focus{left:8px}
+
+/* Kleines Etikett über Überschriften („Augenbraue“) */
+.brauen{display:inline-flex; align-items:center; gap:8px;
+  font:600 11.5px/1 var(--disp); font-stretch:115%; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--tinte-2)}
+.brauen::before{content:""; width:18px; height:2px; background:var(--stempel); border-radius:2px}
+
+/* „Für:“-Zuordnung der Bausteine */
+.fuer{display:flex; flex-wrap:wrap; gap:6px}
+.fuer i{font:600 11px/1 var(--disp); letter-spacing:.06em; font-style:normal;
+  padding:5px 9px; border:1px solid var(--linie-2); border-radius:999px; color:var(--tinte-2); background:var(--karte)}
+.fuer i.an{border-color:var(--stempel); color:var(--stempel); background:var(--stempel-hauch)}
+
+/* ---------- 2 · DAS SIEGEL (Sechseck-Plakette) ----------
+   Signatur des Systems. Wie die Prüfplakette am Auto:
+   ein Blick genügt. Neutral (Stempelblau) für „geprüft“,
+   farbig nur, wenn ein einzelnes Urteil dranhängt.       */
+.siegel{ --s:128px; --ring:var(--stempel); --fl:var(--karte); --tx:var(--stempel-tief);
+  width:var(--s); aspect-ratio:1/1.06; position:relative; flex:none;
+  filter:drop-shadow(0 6px 14px rgba(28,37,54,.16));
+}
+.siegel, .siegel>i{ clip-path:polygon(50% 0%, 96% 26%, 96% 74%, 50% 100%, 4% 74%, 4% 26%) }
+.siegel{background:var(--ring)}
+.siegel>i{ position:absolute; inset:calc(var(--s)*.045); background:var(--fl);
+  display:grid; place-content:center; text-align:center; gap:2px; font-style:normal}
+.siegel .sym{font:800 calc(var(--s)*.26)/1 var(--disp); color:var(--tx)}
+.siegel .wort{font:700 calc(var(--s)*.085)/1.15 var(--disp); font-stretch:120%;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--tx); max-width:calc(var(--s)*.74)}
+.siegel .zeile{font:600 calc(var(--s)*.07)/1 var(--disp); letter-spacing:.1em; color:var(--tinte-2); text-transform:uppercase}
+.siegel.s-m{--s:76px}
+.siegel.s-k{--s:54px; filter:drop-shadow(0 3px 7px rgba(28,37,54,.18))}
+
+/* Urteils-Einfärbung von Siegel & Co. über data-v */
+[data-v="bestaetigt"]{--v-t:var(--v1-tinte); --v-h:var(--v1-hauch)}
+[data-v="ueberwiegend"]{--v-t:var(--v2-tinte); --v-h:var(--v2-hauch)}
+[data-v="teils"]{--v-t:var(--v3-tinte); --v-h:var(--v3-hauch)}
+[data-v="gescheitert"]{--v-t:var(--v4-tinte); --v-h:var(--v4-hauch)}
+[data-v="fachstreit"]{--v-t:var(--s1-tinte); --v-h:var(--s1-hauch)}
+[data-v="nichtpruefbar"]{--v-t:var(--s2-tinte); --v-h:var(--s2-hauch)}
+.siegel[data-v]{--ring:var(--v-t); --tx:var(--v-t)}
+
+/* ---------- 3 · URTEILS-CHIP & MESSSKALA ---------- */
+.urteil{display:inline-flex; align-items:center; gap:7px;
+  font:650 13.5px/1 var(--disp); letter-spacing:.02em;
+  padding:7px 12px 7px 9px; border-radius:999px;
+  background:var(--v-h); color:var(--v-t); border:1.5px solid color-mix(in srgb, var(--v-t) 45%, transparent)}
+.urteil i{font-style:normal; font-weight:800; font-size:14px}
+.urteil.sonder{border-style:dashed}
+
+/* Messskala: vier feste Stufen, ein Zeiger. Wortmarken an jeder Stufe. */
+.skala{--pos:1; max-width:560px; margin-top:6px}
+.sk-spur{position:relative; height:34px}
+.sk-spur::before{content:""; position:absolute; left:0; right:0; top:50%;
+  height:3px; transform:translateY(-50%); border-radius:3px;
+  background:linear-gradient(90deg, var(--v1-hauch), var(--v3-hauch), var(--v4-hauch));
+  outline:1px solid var(--linie-2)}
+.sk-spur u{position:absolute; top:50%; width:9px; height:9px; border-radius:50%;
+  background:var(--papier); border:2px solid var(--linie-2); transform:translate(-50%,-50%)}
+.sk-spur u:nth-child(1){left:12.5%}.sk-spur u:nth-child(2){left:37.5%}
+.sk-spur u:nth-child(3){left:62.5%}.sk-spur u:nth-child(4){left:87.5%}
+.sk-zeiger{position:absolute; top:50%; left:calc((var(--pos) - .5) * 25%);
+  width:22px; height:22px; border-radius:50%; background:var(--karte);
+  border:5px solid var(--v-t, var(--stempel));
+  transform:translate(-50%,-50%) scale(0); box-shadow:0 2px 8px rgba(28,37,54,.25)}
+.in-sicht .sk-zeiger, .kein-motion .sk-zeiger{transform:translate(-50%,-50%) scale(1)}
+@media (prefers-reduced-motion:no-preference){
+  .sk-zeiger{transition:transform .55s cubic-bezier(.2,1.4,.4,1) .15s}
+}
+.skala[data-pos="1"]{--pos:1}.skala[data-pos="2"]{--pos:2}
+.skala[data-pos="3"]{--pos:3}.skala[data-pos="4"]{--pos:4}
+.sk-worte{display:grid; grid-template-columns:repeat(4,1fr); margin:2px 0 0; padding:0; list-style:none}
+.sk-worte li{font:600 11.5px/1.25 var(--disp); letter-spacing:.03em; text-align:center; color:var(--tinte-2)}
+.skala[data-pos="1"] li:nth-child(1), .skala[data-pos="2"] li:nth-child(2),
+.skala[data-pos="3"] li:nth-child(3), .skala[data-pos="4"] li:nth-child(4){
+  color:var(--v-t); font-weight:800}
+
+/* ---------- 4 · TEXTBAUSTEINE ---------- */
+/* Die Theorie spricht Serif — der Bericht spricht Sans. */
+.stimme-theorie{font-family:var(--serif); font-style:italic; font-weight:500;
+  font-size:1.22em; line-height:1.55; color:var(--tinte); letter-spacing:.002em}
+
+.beleg{display:flex; gap:8px; align-items:baseline; max-width:var(--mass);
+  font-size:.94em; color:var(--tinte-2); margin:.5em 0}
+.beleg b{flex:none; font:700 10.5px/1.6 var(--disp); letter-spacing:.12em;
+  text-transform:uppercase; color:var(--tinte); border-bottom:2px solid var(--stempel)}
+
+/* Begriffs-Chip: kein Wort ohne Erklärung */
+.begr-wrap{position:relative; display:inline-block}
+.begr{font:inherit; font-weight:600; color:var(--tinte); background:none; border:0; padding:0 1px;
+  cursor:pointer; border-bottom:2px dotted var(--stempel); border-radius:0}
+.begr::after{content:"?"; font:800 .62em/1 var(--disp); color:var(--stempel);
+  vertical-align:super; margin-left:2px}
+.begr[aria-expanded="true"]{background:var(--stempel-hauch)}
+.begr-erkl{position:absolute; left:50%; bottom:calc(100% + 10px); transform:translateX(-50%);
+  width:min(290px, 78vw); background:var(--tinte); color:#F4F2EA;
+  font-size:14.5px; line-height:1.55; padding:12px 14px; border-radius:12px;
+  box-shadow:0 12px 30px -10px rgba(28,37,54,.45); z-index:30;
+  opacity:0; visibility:hidden; translate:0 4px; transition:.18s ease}
+.begr-erkl::after{content:""; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  border:7px solid transparent; border-top-color:var(--tinte)}
+.begr-wrap.offen .begr-erkl{opacity:1; visibility:visible; translate:0 0}
+
+/* Akkordeon „Genauer erklärt“ — die freiwillige Tiefe */
+.tiefer{border-top:1px solid var(--linie); margin-top:14px}
+.tiefer summary{display:flex; align-items:center; gap:10px; cursor:pointer; list-style:none;
+  padding:12px 2px; font:650 14px/1 var(--disp); letter-spacing:.04em; color:var(--stempel-tief)}
+.tiefer summary::-webkit-details-marker{display:none}
+.tiefer summary::before{content:"+"; display:grid; place-content:center; width:22px; height:22px;
+  border:1.5px solid var(--stempel); border-radius:7px; color:var(--stempel);
+  font:800 15px/1 var(--disp); transition:transform .2s}
+.tiefer[open] summary::before{content:"–"}
+.tiefer .inhalt{padding:2px 2px 14px; color:var(--tinte-2); font-size:.96em}
+.tiefer .inhalt p{margin-top:0}
+
+/* ---------- 5 · GROSSE BAUSTEINE ---------- */
+
+/* B2 · In 30 Sekunden */
+.dreissig{border:2px solid var(--tinte); border-radius:var(--radius); background:var(--karte);
+  max-width:680px; overflow:hidden; box-shadow:var(--schatten)}
+.dreissig>header{display:flex; align-items:center; gap:10px; padding:11px 18px;
+  background:var(--tinte); color:var(--papier);
+  font:700 13px/1 var(--disp); font-stretch:115%; letter-spacing:.14em; text-transform:uppercase}
+.dreissig>header svg{width:16px; height:16px}
+.dreissig .zeilen{padding:6px 18px 14px}
+.dreissig .zeilen>div{display:grid; grid-template-columns:96px 1fr; gap:12px;
+  padding:11px 0; border-top:1px solid var(--linie); align-items:baseline}
+.dreissig .zeilen>div:first-child{border-top:0}
+.dreissig dt{font:700 11px/1.5 var(--disp); letter-spacing:.12em; text-transform:uppercase; color:var(--tinte-2)}
+.dreissig dd{margin:0; max-width:56ch}
+.dreissig .zahl{font:800 1.5em/1.2 var(--disp); color:var(--tinte); letter-spacing:-.01em}
+@media(max-width:540px){ .dreissig .zeilen>div{grid-template-columns:1fr; gap:2px} }
+
+/* B3 · Befund-Karte mit Aktenreiter */
+.befund{position:relative; background:var(--karte); border:1px solid var(--linie-2);
+  border-radius:var(--radius); padding:26px 22px 16px; max-width:680px;
+  box-shadow:var(--schatten); margin-top:14px}
+.befund .reiter{position:absolute; top:-13px; left:18px; padding:5px 12px;
+  background:var(--papier); border:1px solid var(--linie-2); border-bottom-color:var(--papier);
+  border-radius:9px 9px 0 0; font:700 11px/1 var(--disp); letter-spacing:.13em;
+  text-transform:uppercase; color:var(--tinte-2)}
+.befund h4{font-size:1.32em; font-weight:750; max-width:24ch}
+.befund .kopf{display:flex; justify-content:space-between; gap:16px; align-items:flex-start}
+.befund .kopf .urteil{flex:none; margin-top:4px}
+
+/* B4 · Versprochen / Eingetreten */
+.vergleich{display:grid; grid-template-columns:1fr auto 1fr; gap:14px; align-items:stretch; max-width:840px}
+.vergleich .seite{background:var(--karte); border:1px solid var(--linie-2);
+  border-radius:var(--radius); padding:18px; box-shadow:var(--schatten)}
+.vergleich .tag{font:700 10.5px/1 var(--disp); letter-spacing:.13em; text-transform:uppercase;
+  color:var(--tinte-2); display:inline-block; padding:5px 9px; border:1px solid var(--linie-2);
+  border-radius:999px; margin-bottom:10px; background:var(--papier)}
+.vergleich .seite.ist{background:var(--v-h); border-color:color-mix(in srgb, var(--v-t) 35%, transparent)}
+.vergleich .seite.ist .tag{background:var(--karte)}
+.vergleich .mitte{display:grid; place-content:center; gap:6px; justify-items:center}
+.vergleich .mitte .pfeil{font:800 22px/1 var(--disp); color:var(--tinte-2)}
+@media(max-width:680px){
+  .vergleich{grid-template-columns:1fr}
+  .vergleich .mitte .pfeil{transform:rotate(90deg)}
+}
+
+/* B5 · Zitat + „Einfach gesagt“ */
+.zitat{margin:0; max-width:680px}
+.zitat blockquote{margin:0; padding:4px 0 4px 20px; border-left:3px double var(--stempel)}
+.zitat figcaption{font:600 13px/1.5 var(--disp); letter-spacing:.04em; color:var(--tinte-2); margin:10px 0 0 23px}
+.zitat .einfach{display:flex; gap:12px; align-items:flex-start; margin:16px 0 0 0;
+  background:var(--stempel-hauch); border-radius:var(--radius-s); padding:14px 16px}
+.zitat .einfach b{flex:none; font:800 10.5px/1.7 var(--disp); letter-spacing:.12em;
+  text-transform:uppercase; color:var(--stempel-tief)}
+.zitat .einfach p{margin:0; font-size:.98em}
+
+/* B6 · Ableitungs-Kette: Begriff für Begriff */
+.kette{list-style:none; counter-reset:st; margin:0; padding:0; max-width:620px}
+.kette li{counter-increment:st; position:relative; padding:0 0 22px 56px}
+.kette li::before{content:counter(st); position:absolute; left:0; top:0;
+  width:36px; height:36px; display:grid; place-content:center;
+  background:var(--karte); border:2px solid var(--stempel); border-radius:12px;
+  font:800 15px/1 var(--disp); color:var(--stempel-tief); z-index:1}
+.kette li::after{content:""; position:absolute; left:17px; top:40px; bottom:-2px;
+  width:2px; background:var(--linie-2)}
+.kette li:last-child::after{display:none}
+.kette b{display:block; font:750 1.08em/1.3 var(--disp); margin-bottom:2px}
+.kette span{color:var(--tinte-2); font-size:.96em; max-width:52ch; display:block}
+.kette .haltung{font:600 11px/1 var(--disp); letter-spacing:.1em; text-transform:uppercase;
+  color:var(--stempel); margin-left:8px}
+
+/* B7 · Bilanz-Balken: alle Urteile in einem Streifen */
+.bilanz{max-width:680px}
+.bz-spur{display:flex; height:46px; border-radius:12px; overflow:hidden;
+  outline:1px solid var(--linie-2); box-shadow:var(--schatten)}
+.bz-spur i{display:grid; place-content:center; background:var(--v-h);
+  font:800 13px/1 var(--disp); color:var(--v-t); min-width:0}
+.bz-spur i+i{border-left:2px solid var(--papier)}
+.bz-legende{list-style:none; margin:12px 0 0; padding:0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:7px 16px}
+.bz-legende li{display:flex; align-items:baseline; gap:8px; font-size:14.5px}
+.bz-legende em{flex:none; font-style:normal; font:800 12px/1 var(--disp); color:var(--v-t);
+  background:var(--v-h); border:1px solid color-mix(in srgb, var(--v-t) 40%, transparent);
+  width:22px; height:22px; display:grid; place-content:center; border-radius:7px; align-self:center}
+.bz-legende b{font-weight:650}
+.bz-legende small{margin-left:auto; font:600 13px/1 var(--disp); color:var(--tinte-2); white-space:nowrap}
+
+/* B8 · Kritik & Zugeständnis — immer als Paar */
+.paar{display:grid; gap:14px; max-width:840px; grid-template-columns:1fr 1fr}
+@media(max-width:680px){ .paar{grid-template-columns:1fr} }
+.paar>div{background:var(--karte); border:1px solid var(--linie-2); border-radius:var(--radius);
+  padding:18px; box-shadow:var(--schatten); border-top:4px solid var(--v-t)}
+.paar .kopfz{display:flex; align-items:center; gap:9px; margin-bottom:8px;
+  font:800 12px/1 var(--disp); letter-spacing:.12em; text-transform:uppercase; color:var(--v-t)}
+.paar .kopfz i{font-style:normal; font-size:15px}
+.paar h5{font-size:1.12em; font-weight:750; margin-bottom:4px}
+.paar p{font-size:.97em; margin-bottom:.4em}
+
+/* B10 · Zeitstrahl kompakt */
+.zeit{list-style:none; margin:0; padding:0; display:grid; gap:0; max-width:680px;
+  grid-template-columns:repeat(3,1fr)}
+.zeit li{position:relative; padding:26px 14px 0 0}
+.zeit li::before{content:""; position:absolute; top:7px; left:0; right:0; height:2px; background:var(--linie-2)}
+.zeit li::after{content:""; position:absolute; top:0; left:0; width:16px; height:16px;
+  border-radius:50%; background:var(--karte); border:4px solid var(--stempel)}
+.zeit b{display:block; font:800 1.05em/1 var(--disp); margin-bottom:4px}
+.zeit span{font-size:.9em; color:var(--tinte-2); display:block; max-width:24ch}
+@media(max-width:560px){
+  .zeit{grid-template-columns:1fr}
+  .zeit li{padding:0 0 20px 30px}
+  .zeit li::before{top:0; bottom:0; left:7px; right:auto; width:2px; height:auto}
+  .zeit li:last-child::before{display:none}
+}
+
+/* B11 · Berichts-Karte (für die Indexseite) */
+.bericht{display:block; background:var(--karte); border:1px solid var(--linie-2);
+  border-radius:var(--radius); padding:22px; box-shadow:var(--schatten);
+  text-decoration:none; color:inherit; position:relative; transition:transform .18s ease, box-shadow .18s ease}
+.bericht:hover{transform:translateY(-3px); box-shadow:0 2px 3px rgba(28,37,54,.05), 0 18px 36px -18px rgba(28,37,54,.35)}
+.bericht .nr{font:800 13px/1 var(--disp); letter-spacing:.14em; color:var(--stempel)}
+.bericht h4{font-size:1.28em; font-weight:760; margin:8px 0 6px; max-width:22ch}
+.bericht .satz{color:var(--tinte-2); font-size:.96em; max-width:46ch}
+.bericht .meta{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px}
+.bericht .meta i{font:600 11.5px/1 var(--disp); letter-spacing:.05em; font-style:normal;
+  padding:6px 10px; background:var(--papier); border:1px solid var(--linie); border-radius:999px; color:var(--tinte-2)}
+.bericht .cta{position:absolute; right:18px; bottom:16px; font:800 13px/1 var(--disp);
+  letter-spacing:.06em; color:var(--stempel)}
+.mini-spur{display:flex; height:12px; border-radius:6px; overflow:hidden;
+  outline:1px solid var(--linie-2); max-width:300px; margin-top:14px}
+.mini-spur i{background:var(--v-h); border-right:1.5px solid var(--karte)}
+.mini-spur i:last-child{border-right:0}
+
+/* B1 · Seitenkopf (Demo) */
+.seitenkopf{display:grid; grid-template-columns:1fr auto; gap:28px; align-items:center;
+  background:var(--karte); border:1px solid var(--linie-2); border-radius:var(--radius);
+  padding:30px 28px; box-shadow:var(--schatten); max-width:840px}
+.seitenkopf h3{font-size:clamp(1.7em,4.4vw,2.3em); font-weight:800; max-width:17ch; margin:10px 0 8px}
+.seitenkopf .unter{color:var(--tinte-2); max-width:44ch; margin:0}
+@media(max-width:620px){ .seitenkopf{grid-template-columns:1fr} .seitenkopf .siegel{order:-1} }
+
+/* B12 · Vertiefungs-Fuß */
+.vertiefung{display:flex; gap:14px; align-items:center; max-width:680px;
+  border:1.5px dashed var(--linie-2); border-radius:var(--radius); padding:16px 18px; background:var(--karte)}
+.vertiefung .buch{flex:none; width:38px; height:48px; border-radius:4px 8px 8px 4px;
+  background:linear-gradient(135deg,#101C33,#1B2B4D); box-shadow:inset 3px 0 0 #C9A24B}
+.vertiefung p{margin:0; font-size:.95em; color:var(--tinte-2)}
+.vertiefung b{color:var(--tinte)}
+
+/* ---------- 6 · MODUL-RAHMEN (nur diese Seite) ---------- */
+.modulkopf{padding:60px 0 36px; border-bottom:1px solid var(--linie)}
+.modulkopf .lage{display:grid; grid-template-columns:auto 1fr; gap:32px; align-items:center}
+@media(max-width:640px){ .modulkopf .lage{grid-template-columns:1fr; justify-items:start} }
+.modulkopf h1{font-size:clamp(1.9em,5vw,2.7em); font-weight:820; max-width:18ch; margin:12px 0 10px}
+.modulkopf .untertitel{font-size:1.06em; color:var(--tinte-2); max-width:52ch}
+.zielkette{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px}
+.zielkette code{font:650 12.5px/1 var(--disp); letter-spacing:.03em; color:var(--stempel-tief);
+  background:var(--stempel-hauch); border:1px solid color-mix(in srgb,var(--stempel) 28%,transparent);
+  padding:7px 11px; border-radius:9px}
+
+.modulnav{position:sticky; top:0; z-index:40; background:color-mix(in srgb, var(--papier) 86%, transparent);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--linie)}
+.modulnav ul{list-style:none; display:flex; gap:4px; margin:0; padding:10px 0; overflow-x:auto}
+.modulnav a{display:block; padding:9px 14px; border-radius:999px; text-decoration:none;
+  font:650 13.5px/1 var(--disp); letter-spacing:.03em; color:var(--tinte-2); white-space:nowrap}
+.modulnav a:hover{background:var(--karte); color:var(--tinte)}
+.modulnav a.hier{background:var(--tinte); color:var(--papier)}
+
+section.teil{padding:54px 0 30px; border-bottom:1px solid var(--linie)}
+.teil>.wrap>h2{font-size:clamp(1.5em,3.6vw,2em); font-weight:800; margin:10px 0 8px}
+.teil .vorwort{color:var(--tinte-2); max-width:62ch; margin-bottom:26px}
+
+/* Baustein-Gehäuse: Etikett + Zweck + Bühne */
+.baustein{margin:34px 0 8px}
+.baustein .bkopf{display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; margin-bottom:4px}
+.baustein .bnr{font:800 13px/1 var(--disp); letter-spacing:.06em; color:var(--papier);
+  background:var(--stempel); padding:7px 11px; border-radius:9px}
+.baustein .bkopf h3{font-size:1.22em; font-weight:780}
+.baustein .zweck{color:var(--tinte-2); max-width:62ch; margin:.2em 0 16px; font-size:.98em}
+.buehne{background:linear-gradient(var(--papier),var(--papier)) padding-box,
+  repeating-linear-gradient(45deg, var(--linie-2) 0 6px, transparent 6px 12px) border-box;
+  border:1.5px dashed transparent; border-radius:calc(var(--radius) + 8px); padding:26px 18px}
+@media(min-width:720px){ .buehne{padding:30px 26px} }
+.hinweis{display:flex; gap:9px; margin-top:12px; max-width:62ch; font-size:.92em; color:var(--tinte-2)}
+.hinweis::before{content:"※"; color:var(--stempel); font-weight:800; flex:none}
+
+/* Übersetzungstafel der Urteile */
+.tafel{width:100%; max-width:760px; border-collapse:separate; border-spacing:0;
+  background:var(--karte); border:1px solid var(--linie-2); border-radius:var(--radius);
+  overflow:hidden; box-shadow:var(--schatten); font-size:15px}
+.tafel th{font:700 11px/1.4 var(--disp); letter-spacing:.12em; text-transform:uppercase;
+  text-align:left; color:var(--tinte-2); padding:12px 14px; background:var(--papier);
+  border-bottom:1px solid var(--linie-2)}
+.tafel td{padding:12px 14px; border-bottom:1px solid var(--linie); vertical-align:middle}
+.tafel tr:last-child td{border-bottom:0}
+.tafel .fach{font:650 13px/1.4 var(--disp); color:var(--tinte-2)}
+@media(max-width:620px){ .tafel .spalte-skala{display:none} }
+
+/* Drei-Ebenen-Treppe */
+.ebenen{list-style:none; margin:0; padding:0; max-width:680px; counter-reset:eb}
+.ebenen li{counter-increment:eb; display:grid; grid-template-columns:52px 1fr auto; gap:14px;
+  align-items:center; background:var(--karte); border:1px solid var(--linie-2);
+  border-radius:var(--radius-s); padding:14px 16px; margin-bottom:10px; box-shadow:var(--schatten)}
+.ebenen li::before{content:counter(eb); width:38px; height:38px; display:grid; place-content:center;
+  background:var(--stempel-hauch); color:var(--stempel-tief); border-radius:11px;
+  font:800 16px/1 var(--disp)}
+.ebenen li:nth-child(2){margin-left:26px}
+.ebenen li:nth-child(3){margin-left:52px}
+.ebenen b{display:block; font:750 1.02em/1.3 var(--disp)}
+.ebenen span{color:var(--tinte-2); font-size:.92em}
+.ebenen .takt{font:700 12px/1 var(--disp); letter-spacing:.06em; color:var(--stempel);
+  background:var(--stempel-hauch); padding:6px 10px; border-radius:999px; white-space:nowrap}
+@media(max-width:560px){ .ebenen li{grid-template-columns:42px 1fr} .ebenen .takt{display:none}
+  .ebenen li:nth-child(2){margin-left:14px} .ebenen li:nth-child(3){margin-left:28px} }
+
+/* Bauplan-Blaupausen */
+.plaene{display:grid; gap:20px; grid-template-columns:1fr 1fr; align-items:start}
+@media(max-width:760px){ .plaene{grid-template-columns:1fr} }
+.plan{background:var(--karte); border:1px solid var(--linie-2); border-radius:var(--radius);
+  padding:18px; box-shadow:var(--schatten)}
+.plan h4{font-size:1.05em; font-weight:780; display:flex; gap:10px; align-items:center}
+.plan h4 code{font:700 11.5px/1 var(--disp); color:var(--stempel-tief); background:var(--stempel-hauch);
+  padding:5px 8px; border-radius:7px}
+.plan ol{list-style:none; margin:14px 0 0; padding:0}
+.plan li{display:grid; grid-template-columns:auto 1fr; gap:10px; align-items:baseline;
+  padding:10px 4px; border-top:1px dashed var(--linie-2); font-size:14.5px}
+.plan li b{font:750 12px/1.6 var(--disp); color:var(--stempel-tief); white-space:nowrap}
+.plan li span{color:var(--tinte-2)}
+.plan li.frei b{color:var(--tinte-2)}
+
+/* Regel-Karten */
+.regeln{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); counter-reset:rg}
+.regeln>li{counter-increment:rg; list-style:none; background:var(--karte); border:1px solid var(--linie-2);
+  border-radius:var(--radius-s); padding:16px; box-shadow:var(--schatten)}
+.regeln>li::before{content:"Regel " counter(rg); font:800 11px/1 var(--disp);
+  letter-spacing:.13em; text-transform:uppercase; color:var(--stempel)}
+.regeln b{display:block; font:750 1.04em/1.35 var(--disp); margin:7px 0 4px}
+.regeln p{font-size:.93em; color:var(--tinte-2); margin:0}
+.regeln ul{margin:0; padding:0}
+
+.check{list-style:none; margin:0; padding:0; max-width:680px;
+  display:grid; gap:8px; grid-template-columns:1fr 1fr}
+@media(max-width:620px){ .check{grid-template-columns:1fr} }
+.check li{display:flex; gap:10px; align-items:flex-start; font-size:.95em;
+  background:var(--karte); border:1px solid var(--linie); border-radius:var(--radius-s); padding:11px 13px}
+.check li::before{content:"✓"; flex:none; width:20px; height:20px; display:grid; place-content:center;
+  background:var(--v1-hauch); color:var(--v1-tinte); border-radius:6px; font:800 12px/1 var(--disp)}
+
+.modulfuss{padding:44px 0 64px; color:var(--tinte-2); font-size:.93em}
+.modulfuss .wrap{display:grid; gap:6px}
+
+/* ---------- 7 · SEITEN-RAHMEN (alle vier Seiten) ---------- */
+/* Hauptnavigation: verbindet die vier Seiten */
+.hauptnav{position:sticky; top:0; z-index:40; background:color-mix(in srgb, var(--papier) 88%, transparent);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--linie)}
+.navlage{display:flex; align-items:center; gap:18px; padding-top:10px; padding-bottom:10px}
+.marke{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--tinte);
+  font:750 14px/1.2 var(--disp); letter-spacing:.01em; flex:none}
+.marke small{font:600 10.5px/1.2 var(--disp); letter-spacing:.1em; text-transform:uppercase; color:var(--tinte-2)}
+.marke .siegel{filter:none; --s:36px}
+
+/* Berichts-Karten (Index): Subgrid synchronisiert die Zeilen aller Karten —
+   Nummer, Titel, Satz, Balken, Aufklapper und Meta liegen kartenübergreifend
+   auf derselben Höhe, auch wenn ein Aufklapper geöffnet ist. */
+.regal{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(265px,1fr))}
+article.bericht{display:grid; grid-template-rows:subgrid; grid-row:span 6; row-gap:0; align-content:start}
+article.bericht>*{min-width:0}
+article.bericht .tlink{color:inherit; text-decoration:none}
+article.bericht .tlink:hover{color:var(--stempel-tief)}
+article.bericht h4{align-self:start}
+article.bericht .satz{align-self:start}
+article.bericht .mini-spur{align-self:center; margin-top:10px; margin-bottom:2px}
+article.bericht .tiefer{align-self:stretch; margin-top:14px; margin-bottom:4px}
+article.bericht .tiefer summary{font-size:13px}
+article.bericht .tiefer .inhalt{font-size:.92em}
+article.bericht .tiefer .inhalt p{max-width:none}
+article.bericht .meta{align-self:end; margin-top:10px; margin-bottom:30px}
+@supports not (grid-template-rows: subgrid){
+  article.bericht{display:flex; flex-direction:column}
+}
+
+/* Verlässlichkeits-Siegel: drei Karten + großes Gesamtsiegel */
+.siegel .sym.pz{font-size:calc(var(--s)*.2); letter-spacing:-.02em}
+.siegel.s-xl{--s:clamp(170px,26vw,240px)}
+.siegel.s-xl>i{inset:calc(var(--s)*.075); gap:calc(var(--s)*.012)}
+.siegel.s-xl .sym.pz{font-size:calc(var(--s)*.155)}
+.siegel.s-xl .wort{font-size:calc(var(--s)*.052); letter-spacing:.07em; line-height:1.1; max-width:calc(var(--s)*.8)}
+.siegel.s-xl .zeile{font-size:calc(var(--s)*.045); letter-spacing:.08em; line-height:1.25; max-width:calc(var(--s)*.8)}
+.siegelreihe{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.vkarte{background:var(--karte); border:1px solid var(--linie-2); border-radius:var(--radius);
+  padding:16px 16px 6px; box-shadow:var(--schatten)}
+.vkarte .vkopf{display:flex; gap:13px; align-items:center; margin-bottom:8px}
+.vkarte h3{font-size:1em; font-weight:770; line-height:1.25}
+.vkarte .kenn{display:block; font:600 12.5px/1.45 var(--disp); color:var(--tinte-2); margin-top:3px}
+.vkarte .tiefer{margin-top:6px}
+.vkarte .tiefer summary{font-size:12.5px}
+.vkarte .tiefer .inhalt{font-size:.9em}
+.vgesamt{margin-top:28px; display:grid; grid-template-columns:auto 1fr; gap:14px 30px; align-items:center;
+  background:var(--karte); border:2px solid var(--tinte); border-radius:var(--radius);
+  padding:26px 26px 14px; max-width:880px; box-shadow:var(--schatten)}
+.vgesamt h3{font-size:clamp(1.25em,2.6vw,1.5em); font-weight:800; max-width:22ch}
+.vgesamt .kpis{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px}
+.vgesamt .kpis i{font:600 11.5px/1 var(--disp); letter-spacing:.05em; font-style:normal;
+  padding:6px 10px; background:var(--papier); border:1px solid var(--linie); border-radius:999px; color:var(--tinte-2)}
+.vgesamt .verlass{font:700 11px/1 var(--disp); letter-spacing:.12em; text-transform:uppercase;
+  color:var(--v1-tinte); margin:14px 0 8px}
+.vgesamt .check{grid-template-columns:1fr; gap:6px; max-width:none}
+.vgesamt .check li{padding:9px 12px; font-size:.92em}
+.vgesamt>.tiefer{grid-column:1/-1; margin-top:4px}
+.vgesamt .tiefer .inhalt{font-size:.93em}
+@media(max-width:640px){
+  .vgesamt{grid-template-columns:1fr; justify-items:center; text-align:center}
+  .vgesamt .kpis{justify-content:center}
+  .vgesamt>.tiefer{justify-self:stretch; text-align:left}
+}
+
+/* Zeitstrahl-Varianten mit 4/5 Stationen — mobil weiter einspaltig */
+@media(min-width:561px){
+  .zeit.z4{grid-template-columns:repeat(4,1fr); max-width:840px}
+  .zeit.z5{grid-template-columns:repeat(5,1fr); max-width:1000px}
+}
+.hauptnav ul{list-style:none; display:flex; gap:4px; margin:0 0 0 auto; padding:0; overflow-x:auto}
+.hauptnav ul a{display:block; padding:9px 13px; border-radius:999px; text-decoration:none;
+  font:650 13px/1 var(--disp); letter-spacing:.02em; color:var(--tinte-2); white-space:nowrap}
+.hauptnav ul a:hover{background:var(--karte); color:var(--tinte)}
+.hauptnav ul a.hier{background:var(--tinte); color:var(--papier)}
+@media(max-width:680px){ .marke span:last-child{display:none} }
+
+/* Seiten-Hero: nutzt .seitenkopf ohne Kartenrahmen */
+.hero{padding:46px 0 8px}
+.hero .seitenkopf{background:transparent; border:0; box-shadow:none; padding:0; max-width:none}
+.hero .seitenkopf h1{font-size:clamp(1.85em,4.8vw,2.6em); font-weight:820; max-width:18ch; margin:12px 0 10px; line-height:1.1}
+.hero .unter{font-size:1.05em}
+
+/* Kapitel = section.teil aus dem Modul; letzter Abschnitt ohne Trennlinie */
+section.teil:last-of-type{border-bottom:0}
+
+/* Quellenverzeichnis */
+.quellen{list-style:none; margin:0; padding:0; max-width:840px; columns:2; column-gap:34px}
+@media(max-width:680px){ .quellen{columns:1} }
+.quellen>li{break-inside:avoid; padding:9px 0 9px 14px; border-left:2px solid var(--linie-2);
+  margin-bottom:6px; font-size:14px; color:var(--tinte-2); line-height:1.55}
+.quellen b{color:var(--tinte); font-weight:650}
+.quellen .qgruppe{border-left:0; padding-left:0; margin:14px 0 4px;
+  font:700 11px/1 var(--disp); letter-spacing:.13em; text-transform:uppercase; color:var(--stempel)}
+.quellen .qgruppe:first-child{margin-top:0}
+
+/* Wörterbuch der Seite (B·9 gesammelt) */
+.woerter{list-style:none; margin:0; padding:0; max-width:840px;
+  display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(245px,1fr))}
+.woerter li{background:var(--karte); border:1px solid var(--linie); border-radius:var(--radius-s);
+  padding:13px 15px; font-size:14.5px; line-height:1.55; color:var(--tinte-2)}
+.woerter b{display:block; color:var(--tinte); font:750 1.02em/1.3 var(--disp); margin-bottom:3px}
+.woerter b::after{content:""; display:inline-block; width:7px; height:7px; margin-left:7px;
+  border-radius:50%; background:var(--stempel-hauch); border:2px dotted var(--stempel); vertical-align:2px}
+
+/* Paartests: gleiche Startbedingungen, zwei Wege */
+.duelle{list-style:none; margin:0; padding:0; max-width:680px; display:grid; gap:9px}
+.duelle li{display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:10px;
+  background:var(--karte); border:1px solid var(--linie-2); border-radius:var(--radius-s);
+  padding:11px 14px; font-size:14.5px}
+.duelle .wegA, .duelle .wegB{font-weight:650}
+.duelle .wegA{text-align:right; color:var(--v1-tinte)}
+.duelle .wegB{color:var(--v4-tinte)}
+.duelle .vs{font:800 10.5px/1 var(--disp); letter-spacing:.08em; color:var(--tinte-2);
+  border:1px solid var(--linie-2); border-radius:999px; padding:5px 8px; background:var(--papier)}
+.duelle small{display:block; font-size:12px; color:var(--tinte-2); font-weight:400}
+
+/* Ableitungskette: Status-Pillen und Bruchstationen (GSP) */
+.kette .pille{display:inline-block; font:650 10.5px/1 var(--disp); letter-spacing:.05em;
+  padding:4px 8px; border-radius:999px; margin-left:8px; vertical-align:1px;
+  background:var(--v-h, var(--stempel-hauch)); color:var(--v-t, var(--stempel-tief));
+  border:1px solid color-mix(in srgb, var(--v-t, var(--stempel)) 35%, transparent)}
+.kette li.bruch::before{content:"✕"; background:var(--v4-hauch); border-color:var(--v4-tinte); color:var(--v4-tinte)}
+.kette li.bruch::after{background:repeating-linear-gradient(var(--v4-tinte) 0 5px, transparent 5px 10px); width:2px}
+.kette li.bruch>b{color:var(--v4-tinte)}
+
+/* Herkunfts-Balken (GSP): keine Urteilsfarben — Herkunft ist kein Wahrheitsurteil */
+.bz-spur.herkunft i{color:#fff}
+.bz-spur.herkunft .h1{background:var(--stempel-tief)}
+.bz-spur.herkunft .h2{background:var(--stempel)}
+.bz-spur.herkunft .h3{background:#8A90A6}
+.bz-spur.herkunft .h4{background:var(--tinte)}
+.bz-legende .hk{flex:none; width:22px; height:22px; border-radius:7px; align-self:center}
+
+/* Σ-Gesamturteil-Karte */
+.gesamt{border-width:2px; border-color:var(--tinte)}
+.gesamt .reiter{font-weight:800; color:var(--tinte); border-color:var(--linie-2)}
+.gesamt p.formel{font:750 1.18em/1.45 var(--disp); max-width:30ch; letter-spacing:-.005em; margin:.3em 0 .6em}
+
+/* Vor/Zurück zwischen den Berichten */
+.weiter{display:grid; grid-template-columns:1fr 1fr; gap:14px; padding-top:34px; padding-bottom:8px}
+.wkarte{display:block; background:var(--karte); border:1px solid var(--linie-2); border-radius:var(--radius);
+  padding:15px 18px; text-decoration:none; color:var(--tinte); box-shadow:var(--schatten);
+  transition:transform .18s ease}
+.wkarte:hover{transform:translateY(-2px); color:var(--tinte)}
+.wkarte small{display:block; font:700 11px/1 var(--disp); letter-spacing:.12em;
+  text-transform:uppercase; color:var(--stempel); margin-bottom:6px}
+.wkarte b{font:700 1em/1.35 var(--disp)}
+.wkarte.vor{text-align:right}
+@media(max-width:560px){ .weiter{grid-template-columns:1fr} .wkarte.vor{text-align:left} }
+
+.seitenfuss{padding:30px 0 64px; color:var(--tinte-2); font-size:.92em}
+.seitenfuss .wrap{display:grid; gap:7px; border-top:1px solid var(--linie); padding-top:22px}
+
+/* Editions-Links im Vertiefungs-Hinweis (B12) */
+.vertiefung a{color:var(--stempel-tief); font-weight:700; text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1.5px}
+.vertiefung a:hover,.vertiefung a:focus-visible{color:var(--stempel)}
+.vertiefung .ed-cta{display:inline-block; margin-top:2px; white-space:nowrap}
+</style>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<nav class="hauptnav" aria-label="Prüfberichte">
+<div class="wrap navlage"><a class="marke" href="index.html"><span class="siegel s-k" aria-hidden="true"><i><span class="sym">✓</span></i></span><span>Prüfberichte<br><small>in einfacher Sprache</small></span></a><ul><li><a href="index.html">Übersicht</a></li><li><a href="marx.html">Bericht 1 · Marx-Theorie</a></li><li><a href="gsp.html" class="hier" aria-current="page">Bericht 2 · GSP-Denkschule</a></li><li><a href="politik.html">Bericht 3 · Politik & Praxis</a></li></ul></div>
+</nav>
+<main id="inhalt">
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="seitenkopf">
+      <div>
+        <span class="brauen">Prüfbericht 2 von 3 · Die Denkschule</span>
+        <h1>Eine Theorie, die nicht verlieren kann?</h1>
+        <p class="unter">Der „GegenStandpunkt“ (GSP) ist eine strenge marxistische Denkschule aus München.
+        Dieser Bericht prüft, wie ihr Gedankengebäude gebaut ist — und an welchen Stellen es bricht.
+        Jede Karte trägt ihre Quellen direkt im Aufklapper.</p>
+      </div>
+      <div class="siegel"><i><span class="zeile">24 Bausteine</span><span class="sym">✓</span><span class="wort">Geprüft 2026</span></i></div>
+    </div>
+  </div>
+</header>
+
+<!-- B·2 30 SEKUNDEN -->
+<section class="teil" style="padding-top:26px">
+  <div class="wrap">
+    <aside class="dreissig" aria-label="Das Wichtigste in 30 Sekunden">
+      <header>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
+        In 30 Sekunden
+      </header>
+      <dl class="zeilen" style="margin:0">
+        <div><dt>Die Frage</dt><dd>Hält das GSP-Gedankengebäude einer Prüfung stand?</dd></div>
+        <div><dt>Der Befund</dt><dd>Es ist am festesten, wo es schlicht Marx nachspricht. Wo es Eigenes baut,
+        wird gesetzt statt bewiesen. Und an allen tragenden Stellen ist es so abgedichtet,
+        dass kein Befund es je widerlegen könnte.</dd></div>
+        <div><dt>Die Zahl</dt><dd><span class="zahl">7 / 0</span> — sieben Grundannahmen tragen das ganze Gebäude.
+        Begründet wird keine einzige.</dd></div>
+      </dl>
+      <details class="tiefer" style="margin:0 18px 8px">
+        <summary>Was die sieben Annahmen sind — mit Quellen</summary>
+        <div class="inhalt"><p>Die sieben unbegründeten Setzungen: (1) Das Interesse ist der letzte Maßstab.
+        (2) Richtiges Denken braucht keine Prüfung des eigenen Standpunkts. (3) Begriffe folgen zwingend
+        auseinander. (4) Die Kategorien gelten zeitlos. (5) Der Staat ist ein Subjekt mit einem Zweck.
+        (6) Jede Einrichtung hat genau eine Funktion. (7) Aufklärung ist der Hebel der Veränderung.
+        <strong>Quellen der Setzungen:</strong> Held (Hg.), Der bürgerliche Staat, München 1979;
+        ders., Die Psychologie des bürgerlichen Individuums, 1981; Decker (Hg.), Demokratie, 2013.
+        <strong>Kritik daran:</strong> Bierwirth, „Der Grabbeltisch der Erkenntnis“, Krisis 2/2016;
+        Meyer, Dissertation Universität Hamburg 2024/25.</p></div>
+      </details>
+    </aside>
+  </div>
+</section>
+
+<!-- HERKUNFTS-BALKEN -->
+<section class="teil">
+  <div class="wrap">
+    <span class="brauen">Woher die Bausteine stammen</span>
+    <h2>24 Bausteine — und ihre Herkunft</h2>
+    <p class="vorwort">Das ist keine Wahrheits-Skala, sondern eine Herkunfts-Bilanz: Wie viel ist wirklich Marx —
+    und wie viel eigene Konstruktion, die sich auf ihn beruft?</p>
+    <div class="bilanz">
+      <div class="bz-spur herkunft" role="img" aria-label="Herkunft der 24 Bausteine: 3 von Marx übernommen, 13 abgewandelt, 6 eigene Konstruktion, 2 im Bruch mit der eigenen Tradition">
+        <i class="h1" style="flex:3">3</i>
+        <i class="h2" style="flex:13">13</i>
+        <i class="h3" style="flex:6">6</i>
+        <i class="h4" style="flex:2">2</i>
+      </div>
+      <ul class="bz-legende">
+        <li><em class="hk" style="background:var(--stempel-tief)" aria-hidden="true"></em><b>Von Marx übernommen</b><small>3 von 24</small></li>
+        <li><em class="hk" style="background:var(--stempel)" aria-hidden="true"></em><b>Abgewandelt</b><small>13 von 24</small></li>
+        <li><em class="hk" style="background:#8A90A6" aria-hidden="true"></em><b>Eigene Konstruktion</b><small>6 von 24</small></li>
+        <li><em class="hk" style="background:var(--tinte)" aria-hidden="true"></em><b>Bruch mit der Tradition</b><small>2 von 24</small></li>
+      </ul>
+    </div>
+    <p class="hinweis">„Bruch“ heißt: steht gegen ausdrückliche Positionen von Marx oder Lenin — bei gleichzeitiger
+    Berufung auf genau diese Tradition.</p>
+    <details class="tiefer" style="max-width:680px">
+      <summary>Wie die Herkunft bestimmt wurde — mit Beispielen und Quellen</summary>
+      <div class="inhalt"><p>Jeder Baustein wurde Satz für Satz mit den Originaltexten verglichen — auf GSP-Seite
+      vor allem Held (Hg.), Der bürgerliche Staat (1979), und Decker (Hg.), Demokratie (2013); auf Marx/Engels-Seite
+      die Werkausgabe (MEW, Dietz) und Lenins Schriften (LW). <strong>Beispiele:</strong>
+      Übernommen: Kapital als „Geld, das mehr Geld werden muss“ — direkt aus Das Kapital, Bd.&nbsp;1 (MEW&nbsp;23).
+      Abgewandelt: der Staat als „ideeller Gesamtkapitalist“ — das Wort stammt von Engels (Anti-Dühring, MEW&nbsp;20,
+      S.&nbsp;260), der GSP macht daraus eine Allzweck-Erklärung. Eigene Konstruktion: die Demokratie-These
+      (Decker 2013). Bruch: Lenins Imperialismus-Theorie (LW&nbsp;22) wird verworfen, und Organisierung wird
+      abgelehnt — gegen Marx’ Feuerbachthese&nbsp;11 (MEW&nbsp;3) und Lenins „Was tun?“ (LW&nbsp;5).</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- B·3 BEFUND-KARTEN -->
+<section class="teil">
+  <div class="wrap">
+    <span class="brauen">Die wichtigsten Befunde</span>
+    <h2>Sieben Karten — geprüft am eigenen Material</h2>
+    <p class="vorwort">Jede Aussage wurde an den GSP-Originaltexten geprüft. Ein präziser GSP-Vertreter könnte
+    den Tatsachen nicht widersprechen — nur der Bewertung.</p>
+
+    <article class="befund" data-v="bestaetigt">
+      <span class="reiter">Befund 1 · Das Fundament</span>
+      <div class="kopf">
+        <h4>Sieben tragende Annahmen — keine einzige wird begründet.</h4>
+        <span class="urteil" data-v="bestaetigt"><i>✓✓</i> Stimmt</span>
+      </div>
+      <p style="max-width:54ch">Das ganze Gebäude ruht auf sieben
+      <span class="begr-wrap"><button class="begr" type="button" aria-expanded="false">Setzungen</button><span class="begr-erkl" role="note">Eine Setzung ist eine Annahme, die einfach festgelegt wird — ohne Begründung und ohne Prüfung. Das Gegenteil einer belegten Behauptung.</span></span> —
+      etwa: Begriffe folgen zwingend auseinander; der Staat ist ein Subjekt mit genau einem Zweck;
+      Aufklärung ist der Hebel der Veränderung. Der GSP bestreitet sogar, überhaupt Annahmen zu machen.</p>
+      <p class="beleg"><b>Beleg</b> Die Setzungen stehen in den Gründungstexten selbst: Held (Hg.), Der bürgerliche Staat, 1979, §&nbsp;1; ders., Psychologie, 1981.</p>
+      <div class="skala" data-pos="1" data-v="bestaetigt">
+        <div class="sk-spur"><u></u><u></u><u></u><u></u><span class="sk-zeiger" aria-hidden="true"></span></div>
+        <ol class="sk-worte" aria-hidden="true"><li>stimmt</li><li>überwiegend</li><li>teils, teils</li><li>stimmt nicht</li></ol>
+      </div>
+      <details class="tiefer">
+        <summary>Warum das so schwer wiegt — mit Quellen</summary>
+        <div class="inhalt"><p>Was nicht als Voraussetzung auf dem Tisch liegt, kann niemand prüfen.
+        „Voraussetzungslosigkeit“ ist hier keine Tugend, sondern ein Versteck. Dazu kommt ein innerer Widerspruch:
+        Die Kritik beginnt beim Interesse — verweigert sich aber dem einzigen Maßstab, den Interessen kennen:
+        dem Erfolg. <strong>Quellen:</strong> Held (Hg.), Der bürgerliche Staat, 1979 (Neuauflage 2024) — der
+        Anspruch, ohne Voraussetzungen zu beginnen · Bierwirth, „Der Grabbeltisch der Erkenntnis“, Krisis 2/2016 ·
+        Meyer, Dissertation Universität Hamburg 2024/25 · zum Erfolgs-Einwand: Ess, „Kritik des GegenStandpunkts“,
+        Conne Island 2014.</p></div>
+      </details>
+    </article>
+
+    <article class="befund" data-v="bestaetigt" style="margin-top:26px">
+      <span class="reiter">Befund 2 · Die Bruchstelle</span>
+      <div class="kopf">
+        <h4>Der wichtigste Schritt — von der Wirtschaft zum Staat — wird gesetzt, nicht hergeleitet.</h4>
+        <span class="urteil" data-v="bestaetigt"><i>✓✓</i> Stimmt</span>
+      </div>
+      <p style="max-width:54ch">Die berühmteste GSP-Formel — der Staat als
+      <span class="begr-wrap"><button class="begr" type="button" aria-expanded="false">ideeller Gesamtkapitalist</button><span class="begr-erkl" role="note">Formel (nach einem Engels-Wort): Der Staat handle wie ein gedachter Ober-Kapitalist, der das System im Ganzen am Laufen hält.</span></span> —
+      hängt genau an der Lücke, die fünfzig Jahre Theoriearbeit nie geschlossen haben.
+      Ab dort erbt jede weitere Station die offene Voraussetzung.</p>
+      <p class="beleg"><b>Beleg</b> „Nicht geleistete Herleitung“ — Befund der Dissertation von Meyer, Universität Hamburg 2024/25, am Text von Held 1979.</p>
+      <div class="skala" data-pos="1" data-v="bestaetigt">
+        <div class="sk-spur"><u></u><u></u><u></u><u></u><span class="sk-zeiger" aria-hidden="true"></span></div>
+        <ol class="sk-worte" aria-hidden="true"><li>stimmt</li><li>überwiegend</li><li>teils, teils</li><li>stimmt nicht</li></ol>
+      </div>
+      <details class="tiefer">
+        <summary>Genauer erklärt — mit Quellen</summary>
+        <div class="inhalt"><p>Warum richtet ein Staat ausgerechnet die Konkurrenz-Wirtschaft ein und erhält sie?
+        Das wäre der Beweis-Schritt — er wird behauptet, nicht entwickelt. Dass dieser Übergang das harte Problem
+        jeder marxistischen Staatstheorie ist, zeigt die Fachdebatte der 1970er („Staatsableitungsdebatte“):
+        Dort wurde um genau diese Herleitung jahrelang gerungen. <strong>Quellen:</strong> Held (Hg.),
+        Der bürgerliche Staat, 1979 — die Setzung · Engels, Anti-Dühring (MEW&nbsp;20, S.&nbsp;260) — Ursprung des
+        Wortes „ideeller Gesamtkapitalist“ · Meyer, Diss. Univ. Hamburg 2024/25 — „nicht geleistete Herleitung“ ·
+        Blanke/Jürgens/Kastendiek 1974 und Poulantzas 1978 — die Vergleichsdebatte.</p></div>
+      </details>
+    </article>
+
+    <article class="befund" data-v="bestaetigt" style="margin-top:26px">
+      <span class="reiter">Befund 3 · Die Abdichtung</span>
+      <div class="kopf">
+        <h4>Das System ist so gebaut, dass ihm nichts widersprechen kann.</h4>
+        <span class="urteil" data-v="bestaetigt"><i>✓✓</i> Stimmt</span>
+      </div>
+      <p style="max-width:54ch">Zustimmung beweist die Theorie — Widerspruch beweist sie auch: Wer zweifelt, hat demnach
+      nur sein Interesse noch nicht begriffen. Der Ideologie-Verdacht gilt für alle Köpfe der Welt, nur für den eigenen nicht.
+      Und diese Ausnahme darf nie geprüft werden.</p>
+      <p class="beleg"><b>Beleg</b> Bewusstseins- und Demokratie-Konstruktion in Held, Psychologie, 1981, und Decker (Hg.), Demokratie, 2013; analysiert bei Kapfinger 2011.</p>
+      <div class="skala" data-pos="1" data-v="bestaetigt">
+        <div class="sk-spur"><u></u><u></u><u></u><u></u><span class="sk-zeiger" aria-hidden="true"></span></div>
+        <ol class="sk-worte" aria-hidden="true"><li>stimmt</li><li>überwiegend</li><li>teils, teils</li><li>stimmt nicht</li></ol>
+      </div>
+      <details class="tiefer">
+        <summary>Warum das kein Marxismus-Problem ist — mit Quellen</summary>
+        <div class="inhalt"><p>Dieselbe Bauform — ein Denksystem, das jede Beobachtung als Bestätigung verbucht —
+        findet sich bei fünf ganz anderen Schulen wieder: bei Mises’ Praxeologie (Human Action, 1949),
+        in Peikoffs Objektivismus („Fact and Value“, 1989), bei Lacan (Seminar&nbsp;XI, 1964), in Steiners
+        Hochschul-Esoterik (1924) und bei Avakians „New Synthesis“. Die Abdichtung ist also keine Eigenheit
+        marxistischen Denkens, sondern eine Organisationsform, die sich jeden Inhalt suchen kann.
+        Den Maßstab dafür, dass eine unwiderlegbare Theorie nichts mehr aussagt, liefert die
+        Wissenschaftstheorie (Lakatos, Forschungsprogramme; klassisch Popper).</p></div>
+      </details>
+    </article>
+
+    <article class="befund" data-v="bestaetigt" style="margin-top:26px">
+      <span class="reiter">Befund 4 · Der gestrichene Test</span>
+      <div class="kopf">
+        <h4>Fünfzig Jahre: keine eigene Datenerhebung, kein Praxis-Versuch.</h4>
+        <span class="urteil" data-v="bestaetigt"><i>✓✓</i> Stimmt</span>
+      </div>
+      <p style="max-width:54ch">Die Welt kommt nur als Beispiel vor: Was passt, wird einsortiert; was nicht passt,
+      wird als „bürgerliches Denken“ wegsortiert. Organisierung lehnt der GSP „aus Prinzip“ ab — eine Theorie,
+      die nie in Praxis übersetzt wird, kann an keiner Praxis scheitern.</p>
+      <p class="beleg"><b>Beleg</b> Die Praxis-Verweigerung dokumentieren Spanidis (2018) und Ess (2014); der Gegen-Maßstab steht in der eigenen Tradition: Marx, Feuerbachthese&nbsp;11 (MEW&nbsp;3).</p>
+      <div class="skala" data-pos="1" data-v="bestaetigt">
+        <div class="sk-spur"><u></u><u></u><u></u><u></u><span class="sk-zeiger" aria-hidden="true"></span></div>
+        <ol class="sk-worte" aria-hidden="true"><li>stimmt</li><li>überwiegend</li><li>teils, teils</li><li>stimmt nicht</li></ol>
+      </div>
+      <details class="tiefer">
+        <summary>Genauer erklärt — mit Quellen</summary>
+        <div class="inhalt"><p>Der Maßstab kommt aus der eigenen Tradition: „Die Philosophen haben die Welt nur
+        verschieden interpretiert; es kömmt drauf an, sie zu verändern“ (Marx, Thesen über Feuerbach, MEW&nbsp;3) —
+        und Lenin machte Agitation und Organisierung zum Kern (Was tun?, LW&nbsp;5). Der GSP streicht beides:
+        keine Partei, keine Gewerkschaftsarbeit, Organisierung „aus Prinzip nicht“. Nach fünf Jahrzehnten ohne
+        messbare Wirkung ist das kein Unfall mehr. <strong>Quellen:</strong> Spanidis, Standpunkt gegen den
+        Marxismus, 2018 · Ess, CEE IEH #217, Conne Island 2014 · Kapfinger, Eine Sektenkunde, 2011 —
+        zur Verwendungspraxis der Theorie.</p></div>
+      </details>
+    </article>
+
+    <article class="befund" data-v="teils" style="margin-top:26px">
+      <span class="reiter">Befund 5 · Eine Kernthese im Daten-Test</span>
+      <div class="kopf">
+        <h4>„Der Lohn erhält den Arbeiter — und hält ihn abhängig.“</h4>
+        <span class="urteil" data-v="teils"><i>◐</i> Teils, teils</span>
+      </div>
+      <p style="max-width:54ch">Eine der GSP-Thesen, die sich an Daten messen lässt. Belege sprechen dafür
+      und dagegen — es kommt auf Land, Zeitraum und Arbeitsmarkt an.</p>
+      <p class="beleg"><b>Beleg</b> These: Held 1979. Dagegen: Reallöhne vervielfacht (Bank of England, Langzeitreihen). Dafür: sinkende Lohnquote (ILO 2024).</p>
+      <div class="skala" data-pos="3" data-v="teils">
+        <div class="sk-spur"><u></u><u></u><u></u><u></u><span class="sk-zeiger" aria-hidden="true"></span></div>
+        <ol class="sk-worte" aria-hidden="true"><li>stimmt</li><li>überwiegend</li><li>teils, teils</li><li>stimmt nicht</li></ol>
+      </div>
+      <details class="tiefer">
+        <summary>Genauer erklärt — mit Quellen beider Seiten</summary>
+        <div class="inhalt"><p>Liest man die These als „Löhne halten Beschäftigte bloß am Existenzminimum“,
+        widerlegen sie die Reallohn-Reihen seit dem 19.&nbsp;Jahrhundert (Bank of England, A Millennium of
+        Macroeconomic Data). Liest man sie als „die Abhängigkeit vom Lohn bleibt, und der Lohn-Anteil am
+        Gesamteinkommen sinkt“, stützen sie ILO-Daten (Lohnquote −1,6 Punkte seit 2004) und die
+        OECD-Beschäftigungsstatistik (85–90&nbsp;% abhängig beschäftigt). Beide Lesarten sind ehrlich zu nennen —
+        darum „teils, teils“. <strong>Quellen:</strong> Held (Hg.), Der bürgerliche Staat, 1979 · Bank of England,
+        Millennium of Data · ILO, World Employment and Social Outlook 2024 · OECD-/ILO-Beschäftigungsdaten.</p></div>
+      </details>
+    </article>
+
+    <article class="befund" data-v="nichtpruefbar" style="margin-top:26px">
+      <span class="reiter">Befund 6 · Die Demokratie-These · Sonderfall</span>
+      <div class="kopf">
+        <h4>„Demokratie ist die perfekte Form der Herrschaft“ — so gebaut, dass nichts sie widerlegen kann.</h4>
+        <span class="urteil sonder" data-v="nichtpruefbar"><i>–</i> Nicht prüfbar</span>
+      </div>
+      <p style="max-width:54ch">Jeder Wahlausgang bestätigt die These, jede Zustimmung gilt als Beweis falschen Bewusstseins.
+      Eine Aussage, der kein denkbares Ergebnis widersprechen kann, lässt sich nicht testen —
+      darum kein Skalen-Urteil, sondern dieser ehrliche Sonderfall.</p>
+      <p class="beleg"><b>Beleg</b> Quelle der These: Decker (Hg.), Demokratie — die perfekte Form bürgerlicher Herrschaft, 2013.</p>
+      <details class="tiefer">
+        <summary>Genauer erklärt — und wie man es prüfbar machen könnte</summary>
+        <div class="inhalt"><p>„Nicht prüfbar“ ist kein Freispruch: Es heißt, die These ist so formuliert, dass sie
+        an nichts scheitern kann — nach dem Maßstab der Wissenschaftstheorie (Popper; Lakatos) sagt sie damit
+        nichts Überprüfbares aus. Dass sich Fragen nach Macht in Demokratien sehr wohl empirisch testen lassen,
+        zeigt die Forschung: Gilens/Page (2014) messen etwa, wessen Vorlieben Politik tatsächlich folgt —
+        mit ernüchternden, aber widerlegbaren Ergebnissen. Genau diese Angreifbarkeit fehlt der GSP-Fassung.
+        <strong>Quellen:</strong> Decker (Hg.), 2013 · Gilens/Page, „Testing Theories of American Politics“,
+        Perspectives on Politics 2014 · Lakatos, The Methodology of Scientific Research Programmes.</p></div>
+      </details>
+    </article>
+
+    <article class="befund" data-v="bestaetigt" style="margin-top:26px">
+      <span class="reiter">Befund 7 · Das Gegengewicht</span>
+      <div class="kopf">
+        <h4>Wo der GSP Marx nachspricht, steht er am festesten.</h4>
+        <span class="urteil" data-v="bestaetigt"><i>✓✓</i> Stimmt</span>
+      </div>
+      <p style="max-width:54ch">Fairness verlangt das Gegengewicht: Die Stationen Ware, Geld, Kapital und Wachstumszwang
+      sind solide. Die GSP-Darstellung der Geldschöpfung ist sogar moderner als das alte Lehrbuch —
+      Notenbanken bestätigen sie heute.</p>
+      <p class="beleg"><b>Beleg</b> Geldschöpfung durch Kreditvergabe: McLeay/Radia/Thomas, Bank of England Quarterly Bulletin Q1/2014.</p>
+      <div class="skala" data-pos="1" data-v="bestaetigt">
+        <div class="sk-spur"><u></u><u></u><u></u><u></u><span class="sk-zeiger" aria-hidden="true"></span></div>
+        <ol class="sk-worte" aria-hidden="true"><li>stimmt</li><li>überwiegend</li><li>teils, teils</li><li>stimmt nicht</li></ol>
+      </div>
+      <details class="tiefer">
+        <summary>Genauer erklärt — mit Quellen</summary>
+        <div class="inhalt"><p>Der Wachstumszwang („Geld, das mehr Geld werden muss“) stammt direkt aus Das Kapital,
+        Bd.&nbsp;1 (MEW&nbsp;23) und gehört zu den am besten gestützten Marx-Bausteinen — siehe Prüfbericht&nbsp;1.
+        Und die GSP-Darstellung, dass Banken Geld durch Kreditvergabe schaffen (statt nur Spareinlagen
+        weiterzureichen), bestätigte die Bank of England 2014 ausdrücklich: Der alte „Geldmultiplikator“
+        des Lehrbuchs sei „kein akkurates Bild“. <strong>Quellen:</strong> Held (Hg.), 1979 — die GSP-Fassung ·
+        Marx, MEW&nbsp;23 — die Vorlage · McLeay/Radia/Thomas, „Money creation in the modern economy“,
+        Bank of England Quarterly Bulletin 2014.</p></div>
+      </details>
+    </article>
+
+  </div>
+</section>
+
+<!-- B·6 KETTE MIT BRUCHSTELLEN -->
+<section class="teil">
+  <div class="wrap">
+    <span class="brauen">Die Bauweise der Denkschule</span>
+    <h2>Die Gedankenkette — mit ihren Bruchstellen</h2>
+    <p class="vorwort">Der GSP baut Begriff auf Begriff. Die Pillen zeigen den Prüf-Status je Station;
+    rote ✕-Stationen markieren, wo die Kette reißt.</p>
+    <ol class="kette">
+      <li><b>Eigeninteresse <span class="pille">Setzung</span></b><span>Alle verfolgen ihren Vorteil — der Einstieg der Kette. Warum genau das der Maßstab ist, bleibt unbegründet.</span></li>
+      <li><b>Ware &amp; Geld <span class="pille" data-v="fachstreit">kontrovers</span></b><span>Tauschform und Geld als Zweck des Tauschens — bei Marx entlehnt, in der Forschung umstritten.</span></li>
+      <li><b>Kapital: Geld → mehr Geld <span class="pille" data-v="bestaetigt">robust</span></b><span>Wachstum als Systemzwang, nicht als Gier. Die festeste Station der Kette.</span></li>
+      <li><b>Lohnarbeit <span class="pille" data-v="teils">gemischt</span></b><span>Der Lohn erhält den Arbeiter — und reproduziert laut GSP seine Abhängigkeit. Befundlage geteilt.</span></li>
+      <li class="bruch"><b>Bruchstelle: der Sprung zum Staat</b><span>Der wichtigste Übergang wird behauptet, nicht entwickelt — „nicht geleistete Herleitung“. Ab hier erbt jede Station die offene Voraussetzung.</span></li>
+      <li><b>Der Staat als „ideeller Gesamtkapitalist“ <span class="pille">Setzung</span></b><span>Ein Subjekt mit genau einem Zweck: das System erhalten. Begründet die fünf Folge-Stationen.</span></li>
+      <li><b>Demokratie als „perfekte Form“ <span class="pille" data-v="nichtpruefbar">nicht prüfbar</span></b><span>So gebaut, dass jeder Wahlausgang sie bestätigt.</span></li>
+      <li class="bruch"><b>Konsequenz: nur Aufklärung</b><span>Organisierung „aus Prinzip nicht“ — Bruch mit Feuerbachthese 11 und Lenins Agitationsbegriff. Wirksamkeit nach 50 Jahren offen.</span></li>
+    </ol>
+    <details class="tiefer" style="max-width:620px">
+      <summary>Die Stationen genauer — mit Quellen</summary>
+      <div class="inhalt"><p>Die Marx-Strecke (Stationen 1–4) folgt Das Kapital, Bd.&nbsp;1 (MEW&nbsp;23);
+      die Staats-Strecke ab Station 6 steht in Held (Hg.), Der bürgerliche Staat (1979),
+      die Demokratie-Station in Decker (Hg.), Demokratie (2013).
+      Die erste Bruchstelle benennt Meyers Dissertation (Univ. Hamburg 2024/25) als „nicht geleistete
+      Herleitung“; den fachlichen Hintergrund liefert die Staatsableitungsdebatte
+      (Blanke/Jürgens/Kastendiek 1974). Die zweite Bruchstelle steht gegen Marx’ Feuerbachthese&nbsp;11
+      (MEW&nbsp;3) und Lenins „Was tun?“ (LW&nbsp;5); dokumentiert bei Spanidis (2018) und Ess (2014).</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- Σ GESAMTURTEIL -->
+<section class="teil">
+  <div class="wrap">
+    <span class="brauen">Verdichtung</span>
+    <h2>Das Gesamturteil in zwei Sätzen</h2>
+    <article class="befund gesamt">
+      <span class="reiter">Σ · Synthese</span>
+      <p class="formel">Ein brillant gebautes Lehrgebäude auf unbegründeten Fundamenten.</p>
+      <p style="max-width:58ch">Stark, wo es Marx nachspricht. Gesetzt statt bewiesen, wo es Eigenes baut.
+      Und an allen tragenden Stellen so abgedichtet, dass kein Befund und kein Verhalten es je widerlegen könnte —
+      wer prüfen will, findet keinen Ort, an dem die Theorie das Risiko des Irrtums eingeht.</p>
+      <details class="tiefer">
+        <summary>Worauf dieses Urteil fußt — mit Quellen</summary>
+        <div class="inhalt"><p>Das Urteil bündelt die vier Befunde oben: unbegründete Fundamente (Held 1979, §&nbsp;1;
+        Kritik: Bierwirth 2016, Meyer 2024/25), der gesetzte Staats-Schritt (Meyer; Hintergrund:
+        Blanke/Jürgens/Kastendiek 1974), die Abdichtung gegen Widerlegung (Held 1981; Decker 2013; Kapfinger 2011;
+        Maßstab: Lakatos) und der gestrichene Praxis-Test (Spanidis 2018; Ess 2014; Gegen-Maßstab: MEW&nbsp;3,
+        Feuerbachthese&nbsp;11). Das Gegengewicht bleibt benannt: Die Marx-Strecke trägt, die
+        Geldschöpfungs-Darstellung bestätigt die Bank of England (2014).</p></div>
+      </details>
+    </article>
+  </div>
+</section>
+
+<!-- B·8 PAAR -->
+<section class="teil">
+  <div class="wrap">
+    <span class="brauen">Fair bleiben</span>
+    <h2>Die schärfste Kritik — und das ehrliche Zugeständnis</h2>
+    <div class="paar">
+      <div data-v="gescheitert">
+        <div class="kopfz"><i>✗</i> Die schärfste Kritik</div>
+        <h5>Eine Theorie, die nie falsch sein kann, sagt nichts mehr aus.</h5>
+        <p>Zustimmung beweist sie, Widerspruch beweist sie auch. Ein Denksystem ohne mögliches Gegenargument
+        verwaltet nur noch sein eigenes Rechthaben — radikal im Urteil, folgenlos im Ergebnis.</p>
+        <p class="beleg" style="margin:0"><b>Beleg</b> Kapfinger 2011; Ess 2014; Bierwirth, Krisis 2/2016 — an den Texten von Held 1979/1981 und Decker 2013.</p>
+      </div>
+      <div data-v="bestaetigt">
+        <div class="kopfz"><i>✓</i> Das ehrliche Zugeständnis</div>
+        <h5>Die Marx-Strecke trägt — und differenziert besser als manche Konkurrenz.</h5>
+        <p>Wachstumszwang statt Gier-These, Geldschöpfung moderner als der Lehrbuch-Multiplikator,
+        Ideologie ohne plumpe Manipulations-These: Diese Stärken sind real.</p>
+        <p class="beleg" style="margin:0"><b>Beleg</b> Bank of England, Quarterly Bulletin Q1/2014; Vorlage: Marx, Das Kapital Bd.&nbsp;1 (MEW&nbsp;23).</p>
+      </div>
+    </div>
+    <details class="tiefer" style="max-width:840px">
+      <summary>Hintergrund dieser Gegenüberstellung — mit Quellen</summary>
+      <div class="inhalt"><p>Die Kritik trifft die Konstruktion, nicht jede Einzelaussage: Wo der GSP Inhalte
+      von Marx übernimmt (MEW&nbsp;23), gelten für sie dieselben Daten wie in Prüfbericht&nbsp;1 — und dort schneiden
+      Wachstumszwang und Kredittheorie gut ab (De&nbsp;Loecker u.&nbsp;a. 2020; Bank of England 2014).
+      Wo er Eigenes baut (Staat, Demokratie, Bewusstsein: Held 1979/1981; Decker 2013), greift die
+      Unwiderlegbarkeits-Kritik (Kapfinger 2011; Bierwirth 2016; Meyer 2024/25). Beides zugleich zu sagen
+      ist kein Widerspruch — es ist die Pointe des Befunds.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- B·10 ZEITSTRAHL -->
+<section class="teil">
+  <div class="wrap">
+    <span class="brauen">Zur Einordnung</span>
+    <h2>Vier Stationen der Denkschule</h2>
+    <ol class="zeit z4">
+      <li><b>1970er</b><span>Münchener Ursprung: Marxistische Gruppe, Zeitschriften-Umfeld (MSZ, „Resultate“).</span></li>
+      <li><b>1979</b><span>„Der bürgerliche Staat“ erscheint — das Kernwerk der Staats-Theorie.</span></li>
+      <li><b>1992</b><span>Die Zeitschrift „GegenStandpunkt“ wird zum Namen der Schule.</span></li>
+      <li><b>2026</b><span>Dieser Prüfstand: 24 Bausteine an den Originaltexten gemessen.</span></li>
+    </ol>
+    <details class="tiefer" style="max-width:840px">
+      <summary>Die Stationen genauer — mit Quellen</summary>
+      <div class="inhalt"><p>Die Reihe „Resultate der Arbeitskonferenz“ erschien ab den späten 1970ern in München;
+      ihr Band „Der bürgerliche Staat“ (Held, Hg., 1979; unveränderte Neuauflage im GegenStandpunkt-Verlag 2024)
+      blieb das Staats-Kernwerk. 1981 folgte „Die Psychologie des bürgerlichen Individuums“.
+      Nach dem Ende der Marxistischen Gruppe erschien die Zeitschrift „GegenStandpunkt“ ab 1992
+      (erstes Heft: GegenStandpunkt 1/1992); 2013 bündelte Decker (Hg.) die Demokratie-These als Buch.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- B·9 WÖRTERBUCH -->
+<section class="teil">
+  <div class="wrap">
+    <span class="brauen">Wörterbuch der Seite</span>
+    <h2>Fünf Begriffe, je in einem Satz</h2>
+    <ul class="woerter">
+      <li><b>Ableitung</b>Die Methode, einen Begriff zwingend aus dem vorigen zu entwickeln — beim GSP das Bauprinzip der ganzen Theorie.</li>
+      <li><b>Setzung</b>Eine Annahme, die festgelegt statt begründet wird — diese Prüfung zählt beim GSP sieben davon.</li>
+      <li><b>Ideeller Gesamtkapitalist</b>Formel für den Staat: ein gedachter Ober-Kapitalist, der das System im Ganzen erhält.</li>
+      <li><b>Unfalsifizierbar</b>So formuliert, dass kein denkbares Ergebnis die Aussage widerlegen kann — damit ist sie nicht prüfbar.</li>
+      <li><b>Provenienz</b>Die Herkunft eines Begriffs: von Marx übernommen, abgewandelt, eigene Konstruktion — oder Bruch mit der Tradition.</li>
+    </ul>
+    <details class="tiefer" style="max-width:840px">
+      <summary>Wo die Begriffe herkommen — Fundorte</summary>
+      <div class="inhalt"><p>„Ableitung“ als Bauprinzip: programmatisch im Vorspann der Resultate-Reihe und
+      durchgeführt in Held (Hg.), 1979. „Ideeller Gesamtkapitalist“: das Wort prägt Engels im Anti-Dühring
+      (MEW&nbsp;20, S.&nbsp;260) — der GSP weitet es zur Allzweck-Erklärung. „Unfalsifizierbar“: Maßstab der
+      Wissenschaftstheorie (Popper, Logik der Forschung, 1934; verfeinert bei Lakatos).
+      „Setzung“ und „Provenienz“: gängige Fachsprache der Methodenlehre bzw. Quellenkunde —
+      hier als Prüfwerkzeuge verwendet.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- QUELLEN -->
+<section class="teil">
+  <div class="wrap">
+    <span class="brauen">Belegt statt behauptet</span>
+    <h2>Quellen dieses Berichts</h2>
+    <p class="vorwort">Primärtexte, kritische Studien und Vergleichsliteratur — dieselben, die in den
+    Aufklappern oben stehen, hier gesammelt.</p>
+    <ul class="quellen">
+      <li class="qgruppe">GSP-Primärtexte</li>
+      <li><b>Karl Held (Hg.),</b> Der bürgerliche Staat — Resultate, München 1979 (Neuauflage GegenStandpunkt-Verlag 2024).</li>
+      <li><b>Karl Held (Hg.),</b> Die Psychologie des bürgerlichen Individuums — Resultate 1981.</li>
+      <li><b>Peter Decker (Hg.),</b> Demokratie — die perfekte Form bürgerlicher Herrschaft, GegenStandpunkt-Verlag 2013.</li>
+      <li><b>MSZ</b> 3/1989 („Kritik — wie geht das?“) sowie Einzelstellen aus MSZ/GSP-Heften 1981–2008.</li>
+      <li class="qgruppe">Kritische Studien</li>
+      <li><b>Bierwirth,</b> Der Grabbeltisch der Erkenntnis — Krisis 2/2016 · <b>Creydt,</b> Der bürgerliche Materialismus und seine Gegenspieler, VSA 2015 · <b>Spanidis,</b> Standpunkt gegen den Marxismus, 2018 · <b>Ess,</b> Kritik des GegenStandpunkts, Conne Island 2014 · <b>Kapfinger,</b> Der Gegenstandpunkt: Eine Sektenkunde, 2011 · <b>Meyer,</b> Dissertation Universität Hamburg 2024/25.</li>
+      <li class="qgruppe">Vergleich &amp; Empirie</li>
+      <li><b>Marx/Engels:</b> MEW (Dietz), u.&nbsp;a. Bd.&nbsp;3 (Feuerbachthesen), Bd.&nbsp;20 (Anti-Dühring, S.&nbsp;260), Bd.&nbsp;23 · <b>Lenin:</b> Was tun? (LW&nbsp;5), Der Imperialismus (LW&nbsp;22), Staat und Revolution (LW&nbsp;25).</li>
+      <li><b>Bank of England,</b> McLeay/Radia/Thomas: Money Creation in the Modern Economy, Quarterly Bulletin Q1/2014.</li>
+      <li><b>Staats- &amp; Sozialstaatsforschung:</b> Blanke/Jürgens/Kastendiek 1974 (Staatsableitungsdebatte); Poulantzas 1978; Skocpol, States and Social Revolutions, 1979; Esping-Andersen 1990; Korpi 1983; Gilens/Page, Perspectives on Politics 2014.</li>
+      <li><b>Wissenschaftstheorie &amp; Strukturvergleich:</b> Popper, Logik der Forschung, 1934; Lakatos, Forschungsprogramme; Mannheim, Ideologie und Utopie, 1929; Mises, Human Action, 1949; Peikoff 1989; Lacan, Seminar&nbsp;XI, 1964; Steiner 1924; Avakian (RCP).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- B·12 -->
+<section class="teil">
+  <div class="wrap">
+    <div class="vertiefung">
+      <span class="buch" aria-hidden="true"></span>
+      <p><b>Du liest die Kurzfassung — sie steht für sich.</b> Wer noch tiefer will: Die vollständige Edition
+      <a href="edition_gsp.html">„GSP-Begriffsarchitektur V01“</a> enthält alle 24 Prüf-Karten, die zehn Kritiken im Wortlaut und das Selbst-Audit.
+      <a class="ed-cta" href="edition_gsp.html">Edition öffnen&nbsp;→</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+<div class="weiter wrap"><a class="wkarte zurueck" href="marx.html"><small>← Bericht 1</small><b>Marx-Theorie an den Daten</b></a><a class="wkarte vor" href="politik.html"><small>Bericht 3 →</small><b>Politik & Praxis: 41 Maßnahmen</b></a></div>
+<footer class="seitenfuss">
+  <div class="wrap">
+    <span><strong style="color:var(--tinte)">Prüfberichte in einfacher Sprache</strong> · Kurzfassungen dreier Editionen, Stand Juni 2026.</span>
+    <span>Grundlage: <em>Marx-Begriffsableitung V06</em> · <em>GSP-Begriffsarchitektur V01</em> · <em>Politischer Marxismus — Audit V1</em>. Alle Zahlen stammen aus den dort belegten Quellen; die Urteile sind Plausibilitätsurteile auf Datenbasis, keine Experimente.</span>
+    <span>Aufbereitung mit KI-Unterstützung (Claude) nach dem Basismodul „Prüfbericht im Tageslicht“. Fehler gefunden? Die Originaleditionen enthalten die vollständigen Belege.</span>
+  </div>
+</footer>
+<script>
+(function(){
+  "use strict";
+  var motionOk = matchMedia("(prefers-reduced-motion: no-preference)").matches;
+  if(!motionOk){ document.documentElement.classList.add("kein-motion"); }
+
+  /* Begriffs-Chips: ein offener zugleich, schließt bei Klick außerhalb und Esc */
+  var wraps = Array.prototype.slice.call(document.querySelectorAll(".begr-wrap"));
+  function schliesseAlle(ausser){
+    wraps.forEach(function(w){
+      if(w !== ausser){
+        w.classList.remove("offen");
+        var b = w.querySelector(".begr");
+        if(b) b.setAttribute("aria-expanded","false");
+      }
+    });
+  }
+  wraps.forEach(function(w){
+    var b = w.querySelector(".begr");
+    if(!b) return;
+    b.addEventListener("click", function(e){
+      e.stopPropagation();
+      var offen = w.classList.toggle("offen");
+      b.setAttribute("aria-expanded", offen ? "true" : "false");
+      schliesseAlle(offen ? w : null);
+    });
+  });
+  document.addEventListener("click", function(){ schliesseAlle(null); });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") schliesseAlle(null);
+  });
+
+  /* Messskalen: Zeiger erscheint, wenn die Skala ins Bild scrollt */
+  var skalen = document.querySelectorAll(".skala");
+  if("IntersectionObserver" in window && motionOk){
+    var io = new IntersectionObserver(function(eintraege){
+      eintraege.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add("in-sicht"); io.unobserve(en.target); }
+      });
+    }, {threshold:.6});
+    skalen.forEach(function(s){ io.observe(s); });
+  } else {
+    skalen.forEach(function(s){ s.classList.add("in-sicht"); });
+  }
+})();</script>
+</body>
+</html>
